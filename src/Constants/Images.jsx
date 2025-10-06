@@ -5,7 +5,7 @@ import room2 from '../assets/room2.jpg';
 import room3 from '../assets/room3.jpg';
 import room4 from '../assets/room4.jpg';
 
-import logo from '../assets/logo.png';
+import logo from '../assets/Logo.png';
 import logo2 from '../assets/Logo2.png';
 
 import alter1 from '../assets/alter1.jpg';
