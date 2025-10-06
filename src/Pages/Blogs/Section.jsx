@@ -36,37 +36,34 @@ const Section = () => {
     ]
 
     return (
-        <div className="section-container ">
+        <div className="section-container my-10">
+            <div className="flex flex-col lg:flex-row gap-6">
 
-            <div className='my-10'>
-                <div className="flex gap-6">
-
-                    {/* Left Section - Blogs (70% width) */}
-                    <div className="w-7/10">
-                        {blogs.map((blog, index) => (
-                            <div key={index} className="mb-6">
-                                <BlogCard
-                                    imageUrl={blog.imageUrl}
-                                    title={blog.title}
-                                    excerpt={blog.excerpt}
-                                    author={blog.author}
-                                    commentsCount={blog.commentsCount}
-                                    date={blog.date}
-                                    blogId={blog.BlogId}
-                                />
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Right Section - Sidebar (30% width) */}
-                    <div className="w-3/10">
-                        <div className='sticky top-20'>
-                            <AvatarBox />
+                {/* Left Section - Blogs */}
+                <div className="w-full lg:w-7/10 md:w-2/3">
+                    {blogs.map((blog, index) => (
+                        <div key={index} className="mb-6">
+                            <BlogCard
+                                imageUrl={blog.imageUrl}
+                                title={blog.title}
+                                excerpt={blog.excerpt}
+                                author={blog.author}
+                                commentsCount={blog.commentsCount}
+                                date={blog.date}
+                                blogId={blog.BlogId}
+                            />
                         </div>
+                    ))}
+                </div>
+
+                {/* Right Section - Sidebar */}
+                <div className="w-full lg:w-3/10 md:w-1/3">
+                    <div className="lg:sticky lg:top-20">
+                        <AvatarBox />
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     )
 }
