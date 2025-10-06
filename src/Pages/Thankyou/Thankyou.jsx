@@ -3,6 +3,7 @@ import CommonHero from '../../components/CommonHero'
 import Theme from '../../Constants/Theme'
 import { ExternalLink } from 'lucide-react'
 import Button from '../../components/Button'
+import IMAGES from '../../Constants/Images'
 
 // 🌐 Facebook Icon
 const FacebookIcon = ({ size = 32, className = "" }) => (
@@ -46,6 +47,7 @@ const Thankyou = () => {
   return (
     <div>
       <CommonHero
+        image={IMAGES.THANKYOUHERO}
         title={
           <div
             className="text-6xl"
@@ -64,7 +66,7 @@ const Thankyou = () => {
       <div className="flex flex-col md:flex-row justify-center items-center h-[50vh] gap-16 px-8">
         {/* Social Media Section */}
         <div
-          className="p-8 rounded-2xl shadow-xl backdrop-blur-sm flex flex-col justify-center items-center"
+          className="p-8 h-[250px] shadow-xl backdrop-blur-sm flex flex-col justify-center items-center"
           style={{
             backgroundColor: Theme.colors.background,
           }}
@@ -96,7 +98,7 @@ const Thankyou = () => {
 
         {/* Website Button Section */}
         <div
-          className="p-8 rounded-2xl shadow-xl backdrop-blur-sm flex flex-col items-center justify-center"
+          className="p-8 h-[250px] shadow-xl backdrop-blur-sm flex flex-col items-center justify-center"
           style={{
             backgroundColor: Theme.colors.background,
           }}
@@ -111,7 +113,7 @@ const Thankyou = () => {
             icon={false}
             variant="secondary"
             className="flex items-center gap-3 px-8 py-4 rounded-xl text-white font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group"
-            onClick={() => window.open('https://yourwebsite.com', '_blank')}
+            onClick={() => window.open('https://valoura-stays-z7gb.vercel.app/', '_blank')}
           >
             <ExternalLink
               size={24}

@@ -2,15 +2,25 @@ import { MapPin, Mail, Phone } from 'lucide-react'
 import React from 'react'
 import Button from '../../components/Button'
 import Theme from '../../Constants/Theme'
+import { useNavigate } from 'react-router-dom' // ✅ Import navigation hook
 
 const ContactForm = () => {
+    const navigate = useNavigate() // ✅ Initialize navigation
+
+    const handleSubmit = (e) => {
+        e.preventDefault() // Prevent default form reload
+
+        // Optionally: You can add form validation or send data to backend here
+
+        // Navigate to thank-you page
+        navigate('/thankyou')
+    }
+
     return (
         <div className="section-container">
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-12 my-16 mx-20">
-
-                {/* Left Section - Contact Details (30%) */}
+                {/* Left Section - Contact Details */}
                 <div className="space-y-10 lg:col-span-4">
-                    {/* Address */}
                     <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0 w-20 h-20 bg-[#F7F5F1] rounded-full flex items-center justify-center">
                             <MapPin className="w-9 h-9 text-gray-800" />
@@ -27,7 +37,6 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    {/* Message Us */}
                     <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0 w-20 h-20 bg-[#F7F5F1] rounded-full flex items-center justify-center">
                             <Mail className="w-9 h-9 text-gray-800" />
@@ -42,7 +51,6 @@ const ContactForm = () => {
                         </div>
                     </div>
 
-                    {/* Contact Us */}
                     <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0 w-20 h-20 bg-[#F7F5F1] rounded-full flex items-center justify-center">
                             <Phone className="w-7 h-9 text-gray-800" />
@@ -58,13 +66,12 @@ const ContactForm = () => {
                     </div>
                 </div>
 
-                {/* Right Section - Contact Form (70%) */}
+                {/* Right Section - Contact Form */}
                 <div className="lg:col-span-6 bg-[#F7F5F1] shadow-lg p-10 rounded-lg">
                     <h2 className="text-3xl font-bold mb-6 text-center" style={{ color: Theme.colors.text }}>
                         Get In Touch
                     </h2>
-                    <form className="space-y-6 mt-6">
-                        {/* First Row - First Name & Last Name */}
+                    <form className="space-y-6 mt-6" onSubmit={handleSubmit}>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
@@ -84,7 +91,6 @@ const ContactForm = () => {
                             </div>
                         </div>
 
-                        {/* Second Row - Phone Number & Subject */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
@@ -104,7 +110,6 @@ const ContactForm = () => {
                             </div>
                         </div>
 
-                        {/* Comment/Message Field */}
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">Write a comment</label>
                             <textarea
@@ -114,9 +119,8 @@ const ContactForm = () => {
                             ></textarea>
                         </div>
 
-                        {/* Submit Button */}
                         <div className="flex justify-center">
-                            <Button type="submit" icon={false} variant="secondary" className='w-full'>
+                            <Button onClick={handleSubmit} type="submit" icon={false} variant="secondary" className='w-full'>
                                 Submit Now
                             </Button>
                         </div>

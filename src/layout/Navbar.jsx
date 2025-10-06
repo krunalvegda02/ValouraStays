@@ -33,7 +33,7 @@ const Navbar = () => {
   useEffect(() => {
     setActivePath(location.pathname);
   }, [location]);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -58,7 +58,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='relative'>
+      <div className="relative overflow-x-hidden w-full max-w-[100vw]">
+
         {/* Top Bar */}
         <div
           className={`w-full text-${Theme.colors.text} transition-all duration-500 fixed top-0 z-50 ${isScrolled
@@ -205,84 +206,74 @@ const Navbar = () => {
 
 
 
-              {/* CTA & Mobile Menu */}
-              <div className="flex items-center space-x-4 z-50">
-                {/* Book Button */}
-                {isScrolled ? (
-                  <Button variant="secondary" icon={false}>
-                    <span className="font-serif text-white font-bold ">Book Your Villa!</span>
-                  </Button>
-                ) : (
-                  <Button variant="outline" icon={false} className='border-[#f1e5d1]' >
-                    <span className="font-serif text-[#f1e5d1] font-bold ">Book Your Villa!</span>
-                  </Button>
-                )}
 
-                {/* Mobile Menu Button */}
+              {/* CTA + Mobile Toggle */}
+              <div className="flex items-center space-x-2 sm:space-x-4 z-50 ">
+                <Button
+                  onClick={() => navigate("/villas")}
+                  variant={isScrolled ? "secondary" : "outline"}
+                  icon={false}
+                  className={`${isScrolled ? "" : "border-[#f1e5d1]"} px-4 sm:px-6 py-2 sm:py-3 hidden lg:flex`}
+                >
+                  <span
+                    className={`font-serif font-bold text-sm sm:text-base ${isScrolled ? "text-white" : "text-[#f1e5d1]"}`}
+                  >
+                    Book Your Villa!
+                  </span>
+                </Button>
+
+
+                {/* Mobile Toggle */}
                 <button
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="lg:hidden p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  aria-label="Toggle menu"
+                  className="lg:hidden p-2 sm:p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all"
                 >
-                  <div className="w-6 h-6 flex flex-col justify-center space-y-1.5">
-                    <span
-                      className={`block h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'
-                        }`}
-                    ></span>
-                    <span
-                      className={`block h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'w-6'
-                        }`}
-                    ></span>
-                    <span
-                      className={`block h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'w-6 -rotate-45 -translate-y-2' : 'w-6'
-                        }`}
-                    ></span>
+                  <div className="flex flex-col justify-center space-y-1.5">
+                    <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? 'rotate-45 translate-y-1.5 w-6' : 'w-6'}`}></span>
+                    <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? 'opacity-0' : 'w-6'}`}></span>
+                    <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? '-rotate-45 -translate-y-1.5 w-6' : 'w-6'}`}></span>
                   </div>
                 </button>
               </div>
             </div>
 
+
+
+
             {/* Mobile Menu */}
             <div
-              className={`lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl shadow-xl border-t border-gray-100 transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-                }`}
+              className={`lg:hidden fixed top-[70px] left-0 w-screen h-[calc(100vh-70px)] overflow-y-auto bg-[#F7F5F1] backdrop-blur-xl shadow-xl border-t border-gray-200 rounded-b-2xl transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0'}`}
             >
-              <div className="section-container py-6">
-                <div className="flex flex-col space-y-4">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      onClick={() => setIsMenuOpen(false)}
-                      className={`px-6 py-4 rounded-xl font-medium transition-all duration-300 ${activePath === item.path
-                        ? 'text-[#403B21] bg-amber-50 border-l-4 border-amber-500'
-                        : 'text-gray-600 hover:text-[#403B21] hover:bg-amber-50/50'
-                        }`}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-
-                  {/* Mobile Book Button */}
+              <div className="flex flex-col space-y-3 p-6">
+                {navItems.map((item) => (
                   <Link
-                    to="/book"
+                    key={item.path}
+                    to={item.path}
                     onClick={() => setIsMenuOpen(false)}
-                    className="px-6 py-4 rounded-xl font-semibold text-center bg-[#403B21] text-white hover:bg-amber-600 transition-all duration-300 transform hover:scale-105 shadow-lg mt-4"
+                    className={`px-4 py-3 rounded-lg font-serif text-lg text-center transition ${activePath === item.path
+                      ? 'bg-[#403B21] text-white'
+                      : 'text-[#403B21] hover:bg-[#E6DCC4]'
+                      }`}
                   >
-                    Book Your Villa
+                    {item.label}
                   </Link>
-                </div>
+                ))}
+                <Link
+                  to="/book"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full mt-3 bg-[#403B21] text-white text-lg font-serif py-3 rounded-xl shadow-md hover:bg-[#594f2e] transition"
+                >
+                  Book Your Villa
+                </Link>
               </div>
             </div>
+
           </nav>
-        </div >
+        </div>
 
         {/* Spacer for fixed navbar */}
-        < div
-          className={`transition-all duration-500 ${isScrolled ? 'h-20' : 'h-32'}`
-          }
-        ></div >
-      </div >
+        <div className={`${isScrolled ? 'h-20' : 'h-32'}`}></div>
+      </div>
     </>
   );
 };

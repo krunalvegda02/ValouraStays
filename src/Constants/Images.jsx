@@ -129,6 +129,7 @@ import izarahero6 from "../assets/villaIzara/izarahero6.jpg"
 
 import contactushero from "../assets/contactushero.jpg"
 import udaipurHero2 from "../assets/VillasPage/UdaipurHero2.jpg"
+import Thankyouhero from "../assets/Thankyouhero.jpg"
 
 const IMAGES = {
     ROOM1: room1,
@@ -253,7 +254,8 @@ const IMAGES = {
 
     CONTACTUSHERO: contactushero,
 
-    UDAIPURHERO2: udaipurHero2
+    UDAIPURHERO2: udaipurHero2,
+    THANKYOUHERO: Thankyouhero
 
 };
 

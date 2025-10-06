@@ -5,6 +5,7 @@ import IMAGES from '../Constants/Images';
 
 const Footer = () => {
   return (
+    
     <footer className="bg-[#F1E5D1] text-[#403B21] py-16 relative overflow-hidden ">
       <div className="container mx-auto px-4 relative z-10 section-container ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">

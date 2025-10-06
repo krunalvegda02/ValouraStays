@@ -25,7 +25,7 @@ function App() {
           <Route path="villas" element={<Villas />} />
           <Route path="blogs" element={<Blogs />} />
           <Route path="villasIzara" element={<VillaIzara />} />
-          <Route path="thankyou" element={<Thankyou />} />
+          <Route path="/thankyou" element={<Thankyou />} />
           <Route path="blog/:id" element={<Blog />} />
           <Route path="destinations/udaipur" element={<UdaipurPage />} />
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
