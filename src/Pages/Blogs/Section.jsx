@@ -1,0 +1,73 @@
+import React from 'react'
+import BlogCard from '../../components/Blogcard'
+import AvatarBox from '../../components/AvatarBox'
+
+const Section = () => {
+
+    const blogs = [
+        {
+            imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            title: "Why Is Villa Izara More Than Just A Private Villa In Udaipur?",
+            excerpt: "Meta Description: Discover why Villa Izara is more than just a private villa in Udaipur. Click to learn about the personalized services offered at reasonable rates!",
+            author: "Sarah Johnson",
+            commentsCount: 80,
+            date: "25 Sep 2022",
+            BlogId: 1
+        },
+        {
+            imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            title: "A-Frame Hanging Villa In Udaipur: Experience Luxury Like Never Before",
+            excerpt: "Meta Description: Have you ever heard of hanging villas? Udaipur’s best A-Frame Hanging Villa is coming soon to offer you a luxury experience you've never had before.",
+            author: "Sarah Johnson",
+            commentsCount: 50,
+            date: "23 Sep 2022",
+            BlogId: 2
+        },
+        {
+            imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            title: "Top Reasons to Choose Izara Hanging Villa in Udaipur",
+            excerpt: "Udaipur is often at the top of the list when it comes to having a perfect getaway, as it has a royal charm, lakes, and amazing views.",
+            author: "Sarah Johnson",
+            commentsCount: 30,
+            date: "21 Sep 2022",
+            BlogId: 3
+        }
+    ]
+
+    return (
+        <div className="section-container ">
+
+            <div className='my-10'>
+                <div className="flex gap-6">
+
+                    {/* Left Section - Blogs (70% width) */}
+                    <div className="w-7/10">
+                        {blogs.map((blog, index) => (
+                            <div key={index} className="mb-6">
+                                <BlogCard
+                                    imageUrl={blog.imageUrl}
+                                    title={blog.title}
+                                    excerpt={blog.excerpt}
+                                    author={blog.author}
+                                    commentsCount={blog.commentsCount}
+                                    date={blog.date}
+                                    blogId={blog.BlogId}
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Right Section - Sidebar (30% width) */}
+                    <div className="w-3/10">
+                        <div className='sticky top-20'>
+                            <AvatarBox />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+
+export default Section
