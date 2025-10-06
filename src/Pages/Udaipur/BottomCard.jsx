@@ -29,7 +29,7 @@ const BottomCard = () => {
             <div className='relative w-full h-[400px] overflow-hidden shadow-2xl'>
                 {/* Background Image */}
                 <img
-                    src={IMAGES.HERO1}
+                    src={IMAGES.UDAIPURHERO2}
                     alt="Luxury Villa"
                     className='w-full h-full object-cover'
                 />

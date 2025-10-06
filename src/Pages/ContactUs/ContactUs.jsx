@@ -4,12 +4,13 @@ import { Contact } from 'lucide-react'
 import ContactForm from './EmailForm'
 import Map from './Map'
 import OffersEmail from '../../components/OffersEmail'
+import IMAGES from '../../Constants/Images'
 
 const ContactUs = () => {
   return (
     <div>
       <CommonHero
-        image="/path/to/image.jpg"
+        image={IMAGES.CONTACTUSHERO}
         title="Contact Us"
         description="Home / Contact Us"
       />

@@ -2,11 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../layout/Navbar";
 
-// Import images directly from assets
-import hero1 from "../../assets/hero1.jpeg";
-import hero2 from "../../assets/hero2.jpg";
-import hero3 from "../../assets/hero3.webp";
-import hero4 from "../../assets/hero4.jpg";
+import IMAGES from "../../Constants/Images";
 // import HeaderTitle from "../../components/HeaderTitle";
 import Theme from "../../Constants/Theme";
 // import DividerWithIcon from "./HorizontalDivider";
@@ -18,7 +14,7 @@ const HeroIzara = () => {
     const navigate = useNavigate();
 
     // Use imported images directly
-    const heroImages = [hero1, hero2, hero3, hero4];
+    const heroImages = [IMAGES.IZARAHERO2, IMAGES.IZARAHERO1, IMAGES.IZARAHERO3, IMAGES.IZARAHERO4,];
 
     const handleNavigation = (path) => {
         navigate(path);
@@ -81,9 +77,9 @@ const HeroIzara = () => {
                             }}
                         >
                             {/* Enhanced Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-black/40"></div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/10 to-black/10"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/30"></div>
                         </div>
                     ))}
                 </div>

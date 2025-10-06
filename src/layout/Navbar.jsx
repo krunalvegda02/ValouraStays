@@ -33,7 +33,7 @@ const Navbar = () => {
   useEffect(() => {
     setActivePath(location.pathname);
   }, [location]);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -101,7 +101,7 @@ const Navbar = () => {
 
           {/* Main Navigation */}
           <nav className="section-container ">
-            <div className="flex justify-between items-center mt-2">
+            <div className="flex justify-between items-center mt-4">
               {/* Logo */}
               <div className="flex items-center z-50">
                 {isScrolled ? (
@@ -139,7 +139,7 @@ const Navbar = () => {
                             : "text-gray-600"
                             }`}
                         >
-                          <span className="font-serif text-2xl">Destinations</span>
+                          <span className="font-serif text-xl">Destinations</span>
                           <svg
                             className={`w-4 h-4 transition-transform ${showDestinations ? "rotate-180" : "rotate-0"
                               }`}
@@ -164,7 +164,7 @@ const Navbar = () => {
                                 key={dest}
                                 to={`/destinations/${dest.toLowerCase()}`}
                                 onClick={() => setShowDestinations(false)}
-                                className={`block px-4 py-2 text-2xl font-serif hover:scale-110 transition-all duration-200 mx-auto w-full`}
+                                className={`block px-4 py-2 text-xl font-serif hover:scale-110 transition-all duration-200 mx-auto w-full`}
                                 style={{
                                   color: Theme.colors.background
                                 }}
@@ -193,7 +193,7 @@ const Navbar = () => {
                         }`}
                     >
                       <span
-                        className={`flex items-center text-2xl whitespace-nowrap font-serif ${!isScrolled ? `text-[${Theme.colors.background}]` : "text-gray-600"
+                        className={`flex items-center text-xl whitespace-nowrap font-serif ${!isScrolled ? `text-[${Theme.colors.background}]` : "text-gray-600"
                           }`}
                       >
                         {item.label}

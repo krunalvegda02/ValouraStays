@@ -119,6 +119,17 @@ import blog2 from "../assets/blogs/blog2.jpg"
 import blog3 from "../assets/blogs/blog3.jpg"
 import bloghero from "../assets/blogs/bloghero.jpg"
 
+
+import izarahero1 from "../assets/villaIzara/izarahero1.jpg"
+import izarahero2 from "../assets/villaIzara/izarahero2.jpg"
+import izarahero3 from "../assets/villaIzara/izarahero3.jpg"
+import izarahero4 from "../assets/villaIzara/izarahero4.jpg"
+import izarahero5 from "../assets/villaIzara/izarahero5.jpg"
+import izarahero6 from "../assets/villaIzara/izarahero6.jpg"
+
+import contactushero from "../assets/contactushero.jpg"
+import udaipurHero2 from "../assets/VillasPage/UdaipurHero2.jpg"
+
 const IMAGES = {
     ROOM1: room1,
     ROOM2: room2,
@@ -232,7 +243,18 @@ const IMAGES = {
     BLOG1: blog1,
     BLOG2: blog2,
     BLOG3: blog3,
-    BLOGHERO: bloghero
+    BLOGHERO: bloghero,
+
+    IZARAHERO1: izarahero1,
+    IZARAHERO2: izarahero2,
+    IZARAHERO3: izarahero3,
+    IZARAHERO4: izarahero4,
+    IZARAHERO6: izarahero6,
+
+    CONTACTUSHERO: contactushero,
+
+    UDAIPURHERO2: udaipurHero2
+
 };
 
 export default IMAGES;

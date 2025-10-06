@@ -5,11 +5,13 @@ import PopularAttraction from './PopularAttraction'
 import BottomCard from './BottomCard'
 import OffersEmail from '../../components/OffersEmail'
 import Theme from '../../Constants/Theme'
+import IMAGES from '../../Constants/Images'
 
 const UdaipurPage = () => {
     return (
         <div>
             <CommonHero
+                image={IMAGES.VILLAPAGEHERO}
                 description="Home / Udaipur Villa"
                 title="Udaipur Villa"
             />
