@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import HeaderTitle from '../../components/HeaderTitle'
+import IMAGES from '../../Constants/Images'
+import Theme from '../../Constants/Theme'
 
 const Wander = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -10,50 +12,43 @@ const Wander = () => {
     { id: 2, label: "Urban Gateways" }
   ]
 
-  const photoCards = [
-    {
-      id: 1,
-      image: "/api/placeholder/400/250",
-      location: "Bali, Indonesia",
-      state: "Tropical Paradise"
-    },
-    {
-      id: 2,
-      image: "/api/placeholder/400/250",
-      location: "Aspen, Colorado",
-      state: "Mountain Retreat"
-    },
-    {
-      id: 3,
-      image: "/api/placeholder/400/250",
-      location: "Miami, Florida",
-      state: "Beach Front"
-    },
-    {
-      id: 4,
-      image: "/api/placeholder/400/250",
-      location: "Tokyo, Japan",
-      state: "Urban Escape"
-    },
-    {
-      id: 5,
-      image: "/api/placeholder/400/250",
-      location: "Paris, France",
-      state: "City Lights"
-    }
-  ]
+  // Photo cards for each tab
+  const photoCardsByTab = {
+    0: [
+      { id: 1, image: IMAGES.WANDER1, location: "Udaipur" },
+      { id: 2, image: IMAGES.WANDER2, location: "Jaipur" },
+      { id: 3, image: IMAGES.WANDER3, location: "Neemrana" },
+      { id: 4, image: IMAGES.WANDER4, location: "Agra" },
+      { id: 5, image: IMAGES.WANDER5, location: "Varanasi" }
+    ],
+    1: [
+      { id: 6, image: IMAGES.WANDER6, location: "Lonaval" },
+      { id: 7, image: IMAGES.WANDER7, location: "Shimla" },
+      { id: 8, image: IMAGES.WANDER8, location: "Ooty" },
+      { id: 9, image: IMAGES.WANDER9, location: "Rishikesh" },
+      { id: 10, image: IMAGES.WANDER10, location: "Nainital" }
+    ],
+    2: [
+      { id: 11, image: IMAGES.WANDER13, location: "Delhi NCR" },
+      { id: 12, image: IMAGES.WANDER11, location: "Bengaluru" },
+      { id: 13, image: IMAGES.WANDER12, location: "Mumbai" },
+      { id: 14, image: IMAGES.WANDER14, location: "Chennai" },
+      { id: 15, image: IMAGES.WANDER15, location: "Kolkata" }
+    ]
+  }
+
+  const photoCards = photoCardsByTab[activeTab]
 
   return (
     <div className="section-container">
-
       <div className="flex justify-center mt-16 ">
         <div className="w-full max-w-4xl text-center">
-          <HeaderTitle title="wander & unwind"  space={false} />
+          <HeaderTitle title="wander & unwind" space={false} />
         </div>
       </div>
-      <p className='flex my-3  justify-center'>From serene property views to buzzing urban getaways, enjoy every side of your escape.</p>
-
-
+      <p className='flex my-3 justify-center'>
+        From serene property views to buzzing urban getaways, enjoy every side of your escape.
+      </p>
 
       {/* Tabs */}
       <div className="flex justify-center mb-8">
@@ -72,8 +67,9 @@ const Wander = () => {
           ))}
         </div>
       </div>
-      {/* Photo Cards - 3 in first row, 2 in second row */}
-      <div className="space-y-6 ">
+
+      {/* Photo Cards */}
+      <div className="space-y-6">
         {/* First row - 3 images */}
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           {photoCards.slice(0, 3).map((card) => (
@@ -86,8 +82,7 @@ const Wander = () => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                   <div className="text-white">
-                    <div className="font-semibold text-lg">{card.location}</div>
-                    <div className="text-sm opacity-90">{card.state}</div>
+                    <h2 className={`font-semibold text-3xl font-serif text-[${Theme.colors.background}]`}>{card.location}</h2>
                   </div>
                 </div>
               </div>
@@ -107,8 +102,7 @@ const Wander = () => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                   <div className="text-white">
-                    <div className="font-semibold text-lg">{card.location}</div>
-                    <div className="text-sm opacity-90">{card.state}</div>
+                    <h2 className={`font-semibold text-3xl font-serif text-[${Theme.colors.background}]`}>{card.location}</h2>
                   </div>
                 </div>
               </div>

@@ -1,12 +1,13 @@
 import React from 'react'
 import BlogCard from '../../components/Blogcard'
 import AvatarBox from '../../components/AvatarBox'
+import IMAGES from '../../Constants/Images'
 
 const Section = () => {
 
     const blogs = [
         {
-            imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            imageUrl: IMAGES.BLOG1,
             title: "Why Is Villa Izara More Than Just A Private Villa In Udaipur?",
             excerpt: "Meta Description: Discover why Villa Izara is more than just a private villa in Udaipur. Click to learn about the personalized services offered at reasonable rates!",
             author: "Sarah Johnson",
@@ -15,7 +16,7 @@ const Section = () => {
             BlogId: 1
         },
         {
-            imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            imageUrl: IMAGES.BLOG2,
             title: "A-Frame Hanging Villa In Udaipur: Experience Luxury Like Never Before",
             excerpt: "Meta Description: Have you ever heard of hanging villas? Udaipur’s best A-Frame Hanging Villa is coming soon to offer you a luxury experience you've never had before.",
             author: "Sarah Johnson",
@@ -24,7 +25,7 @@ const Section = () => {
             BlogId: 2
         },
         {
-            imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+            imageUrl: IMAGES.BLOG3,
             title: "Top Reasons to Choose Izara Hanging Villa in Udaipur",
             excerpt: "Udaipur is often at the top of the list when it comes to having a perfect getaway, as it has a royal charm, lakes, and amazing views.",
             author: "Sarah Johnson",

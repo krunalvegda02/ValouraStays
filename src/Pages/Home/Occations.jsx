@@ -1,17 +1,17 @@
 import React, { useRef, useState } from "react";
 import HeaderTitle from "../../components/HeaderTitle";
 import ScrollCards from "../../components/ScrollCards";
+import IMAGES from "../../Constants/Images";
 
 const occasions = [
-  { id: 1, image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&h=400&fit=crop", title: "Birthday Party" },
-  { id: 2, image: "https://images.unsplash.com/photo-1598899134739-92d4c3e7d7eb?w=600&h=400&fit=crop", title: "Corporate Party" },
-  { id: 3, image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=600&h=400&fit=crop", title: "Wedding Party" },
-  { id: 4, image: "https://images.unsplash.com/photo-1522199710521-72d69614c702?w=600&h=400&fit=crop", title: "Anniversary" },
-  { id: 5, image: "https://images.unsplash.com/photo-1505575967451-3a6ecb0f5f4f?w=600&h=400&fit=crop", title: "Baby Shower" },
-  { id: 6, image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&h=400&fit=crop", title: "Birthday Party" },
-  { id: 7, image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&h=400&fit=crop", title: "Birthday Party" },
-  { id: 8, image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&h=400&fit=crop", title: "Birthday Party" },
-  { id: 9, image: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=600&h=400&fit=crop", title: "Birthday Party" },
+  { id: 1, image: IMAGES.OCCATIONS1, title: "Wellness Retreat" },
+  { id: 2, image: IMAGES.OCCATIONS2, title: "Birthday Party" },
+  { id: 3, image: IMAGES.OCCATIONS3, title: "Club Party" },
+  { id: 4, image: IMAGES.OCCATIONS4, title: "Pool party" },
+  { id: 5, image: IMAGES.OCCATIONS5, title: "Corporate Party" },
+  { id: 6, image: IMAGES.OCCATIONS6, title: "Family vacation" },
+  { id: 7, image: IMAGES.OCCATIONS7, title: "Honenymoon" },
+  { id: 8, image: IMAGES.OCCATIONS8, title: "Wedding Occasion" },
 ];
 
 const Occasion = () => {

@@ -14,7 +14,7 @@ const AvatarBox = ({
             {/* Avatar */}
             <div className="w-40 h-40 rounded-full overflow-hidden mb-5">
                 <img
-                    src={IMAGES.HERO1}
+                    src={IMAGES.TESTIMONIAL1}
                     alt="Avatar"
                     className="w-full h-full object-cover"
                 />

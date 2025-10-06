@@ -9,7 +9,7 @@ import Section4 from './Section4'
 import IMAGES from '../../Constants/Images'
 
 const About = () => {
-  const hero = IMAGES.HERO1;
+  const hero = IMAGES.ABOUTHERO;
 
   return (
     <div>

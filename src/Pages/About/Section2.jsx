@@ -89,7 +89,7 @@ const Section2 = () => {
       <div
         className="relative w-full h-[320px] mx-auto mt-10"
         style={{
-          backgroundImage: `url(${IMAGES.HERO1})`,
+          backgroundImage: `url(${IMAGES.ABOUTS3})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 1,

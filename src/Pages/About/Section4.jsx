@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import BlinkCards from '../../components/BlinkCards'
 import Theme from '../../Constants/Theme';
+import IMAGES from '../../Constants/Images';
 
 const Section4 = () => {
 
-
   const serviceSets = [
     [
-      { id: 1, image: "/api/placeholder/300/200", name: "Breakfast" },
-      { id: 2, image: "/api/placeholder/300/200", name: "Swimming Pool" },
-      { id: 3, image: "/api/placeholder/300/200", name: "Spa & Wellness" },
-      { id: 4, image: "/api/placeholder/300/200", name: "Concierge" }
+      { id: 1, image: IMAGES.SERVICE1, name: "Luxury spa" },
+      { id: 2, image: IMAGES.SERVICE2, name: "Private Poll" },
+      { id: 3, image: IMAGES.SERVICE3, name: "Free WiFi" },
+      { id: 4, image: IMAGES.SERVICE4, name: "Breakfast" }
     ],
     [
-      { id: 5, image: "/api/placeholder/300/200", name: "Gym & Fitness" },
-      { id: 6, image: "/api/placeholder/300/200", name: "Private Chef" },
-      { id: 7, image: "/api/placeholder/300/200", name: "Yoga Sessions" },
-      { id: 8, image: "/api/placeholder/300/200", name: "Airport Transfer" }
+      { id: 5, image: IMAGES.SERVICE5, name: "Coffee Maker" },
+      { id: 6, image: IMAGES.SERVICE6, name: "Bar Area" },
+      { id: 7, image: IMAGES.SERVICE7, name: "Airport Taxi" },
+      { id: 8, image: IMAGES.SERVICE8, name: "Room Service" }
+    ],
+    [
+      { id: 5, image: IMAGES.SERVICE9, name: "Parking Area" },
+      { id: 6, image: IMAGES.SERVICE10, name: "Laundary Service" },
+      { id: 7, image: IMAGES.SERVICE11, name: "Dinner date" },
+      { id: 8, image: IMAGES.SERVICE12, name: "Activity Area" }
     ]
   ];
 

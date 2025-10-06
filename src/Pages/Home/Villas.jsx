@@ -2,49 +2,65 @@ import React from "react";
 import Card from "../../components/Card";
 import Button from "../../components/Button";
 import HeaderTitle from "../../components/HeaderTitle";
+import IMAGES from "../../Constants/Images";
 
 const Villas = () => {
   const villas = [
     {
       id: 1,
-      image: "/api/placeholder/400/300",
+      image: IMAGES.VILLA1,
       title: "Hammer Kothi",
       location: "Udaipur, Rajasthan",
       amenities: "AC Suite / Dining / Kitchen",
       description:
-        "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. In enim justo, rhoncus ut,...",
-      price: "₹ 12,999",
+        `Stay at Villa Izara, where luxury meets nature in the 
+heart of the Aravalli ranges. With spacious interiors, a 
+private pool, and world-class amenities, every moment 
+invites you to relax, celebrate, and make unforgettable 
+memories.`,
+      price: "₹ 50,000",
+      link: "/villasIzara"
     },
     {
       id: 2,
-      image: "/api/placeholder/400/300",
-      title: "Royal Palace",
+      image: IMAGES.VILLA3,
+      title: "Villa Izara",
       location: "Jaipur, Rajasthan",
       amenities: "AC Suite / Pool / Kitchen",
       description:
-        "Luxurious palace with traditional architecture and modern amenities for a royal experience.",
-      price: "₹ 15,999",
+        `Stay at Villa Izara, where luxury meets nature in the 
+heart of the Aravalli ranges. With spacious interiors, a 
+private pool, and world-class amenities, every moment 
+invites you to relax, celebrate, and make unforgettable 
+memories.`,
+      price: "₹ 60,000",
+      link: "/villasIzara"
     },
     {
       id: 3,
-      image: "/api/placeholder/400/300",
-      title: "Lake View Villa",
+      image: IMAGES.VILLA2,
+      title: "Kairos Hills",
       location: "Udaipur, Rajasthan",
       amenities: "AC Suite / Lake View / Dining",
       description:
-        "Beautiful villa overlooking the lake with stunning sunset views and premium comforts.",
-      price: "₹ 11,999",
+        `Stay at Villa Izara, where luxury meets nature in the 
+heart of the Aravalli ranges. With spacious interiors, a 
+private pool, and world-class amenities, every moment 
+invites you to relax, celebrate, and make unforgettable 
+memories.`,
+      price: "₹ 50,000",
+      link: "/villasIzara"
     },
   ];
 
   return (
-    <div className="section-container my-16">
+    <div className="section-container">
 
       {/* Header Section */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-16">
+      <div className="flex flex-col sm:flex-row justify-between items-center ">
 
 
-        <div className="flex justify-center mt-16 items-center ">
+        <div className="flex justify-center  items-center ">
           <div className="w-full max-w-7xl text-center">
             <HeaderTitle title=" Luxury Villas & Heritage Stays" />
           </div>

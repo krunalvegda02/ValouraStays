@@ -5,8 +5,8 @@ import Theme from '../../Constants/Theme'
 import Images from "../../Constants/Images"
 
 const BestResorts = () => {
-  const image1 = Images.ALTER1
-  const image2 = Images.ALTER2
+  const image1 = Images.HOME1
+  const image2 = Images.HOME2
 
   return (
     <div className="section-container ">
@@ -79,7 +79,7 @@ const BestResorts = () => {
               {/* Top Image - Right Top Direction */}
               <div className="absolute top-2 -right-32 w-80 h-96 z-10 border-[15px] border-white">
                 <img
-                  src={image1}
+                  src={image2}
                   alt="Luxury interior"
                   className="w-full h-full object-cover  shadow-xl"
                 />

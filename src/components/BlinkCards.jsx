@@ -6,10 +6,10 @@ const BlinkCards = ({ image, name }) => {
             <img
                 src={image}
                 alt={name}
-                className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-2xl font-bold text-black bg-transparent backdrop-blur-sm px-4 py-2 rounded-lg">
+                <h3 className="text-2xl font-bold text-black bg-white/50 px-6 py-10 ">
                     {name}
                 </h3>
             </div>

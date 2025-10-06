@@ -1,12 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../layout/Navbar";
-
-// Import images directly from assets
-import hero1 from "../assets/hero1.jpeg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.webp";
-import hero4 from "../assets/hero4.jpg";
+import IMAGES from "../Constants/Images";
 import HeaderTitle from "./HeaderTitle";
 import Theme from "../Constants/Theme";
 import DividerWithIcon from "./HorizontalDivider";
@@ -18,7 +13,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   // Use imported images directly
-  const heroImages = [hero1, hero2, hero3, hero4];
+  const heroImages = [IMAGES.HERO2, IMAGES.HERO1, IMAGES.HERO3, IMAGES.HERO4 ];
 
   const handleNavigation = (path) => {
     navigate(path);
