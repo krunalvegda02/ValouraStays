@@ -1,7 +1,7 @@
 // Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/Logo2.png';
+import IMAGES from '../Constants/Images';
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
               {/* Logo */}
               <div className="flex items-center">
                 <img
-                  src={logo}
+                  src={IMAGES.LOGO2}
                   alt="Veloura Stays"
                   className="h-18"
                 />
