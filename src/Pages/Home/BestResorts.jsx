@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import React from 'react'
 import Button from "../../components/Button"
 import HeaderTitle from '../../components/HeaderTitle'
@@ -5,6 +6,7 @@ import Theme from '../../Constants/Theme'
 import Images from "../../Constants/Images"
 
 const BestResorts = () => {
+  const navigate = useNavigate()
   const image1 = Images.HOME1
   const image2 = Images.HOME2
 
@@ -13,11 +15,11 @@ const BestResorts = () => {
       <div className='mb-16'>
         {/* Title Row */}
 
-      <div className="flex justify-center mt-5">
-        <div className="w-full   text-center">
-          <HeaderTitle title='Experience the Luxury of the Best Resorts' />
+        <div className="flex justify-center mt-5">
+          <div className="w-full   text-center">
+            <HeaderTitle title='Experience the Luxury of the Best Resorts' />
+          </div>
         </div>
-      </div>
 
 
         {/* Content Sections in Column */}
@@ -25,17 +27,17 @@ const BestResorts = () => {
           {/* Left Side - Content */}
           <div className="lg:flex-1 md:w-full max-w-3xl">
             {/* Heading */}
-            <h2 className="text-[32px] w-full font-bold text-gray-900">
+            <h2 className={`text-[32px] w-full font-bold text-[${Theme.colors.text}]`}>
               Luxury Living, Surrounded by Nature's Beauty
             </h2>
 
             {/* Subheading */}
-            <h2 className="text-[32px] w-full font-bold text-gray-700 mb-6 ">
+            <h2 className={`text-[32px] w-full font-bold text-[${Theme.colors.text}] mb-6 `}>
               Inspired by Nature, Driven by Elegant Guest Comfort.
             </h2>
 
             {/* Main Content */}
-            <div className="space-y-4 text-gray-600 mb-8">
+            <div className={`space-y-4 text-[${Theme.colors.darkText}] mb-8`}>
               <p className='text-[28px]'>
                 Welcome to Veloura Stays. Your escape away from the
                 hustle. Relax, unwind, and soak in the views.
@@ -50,6 +52,7 @@ const BestResorts = () => {
 
             {/* About Us Button */}
             <Button
+              onClick={() => navigate("about")}
               className='rounded-full w-52'
               variant='secondary'
             >

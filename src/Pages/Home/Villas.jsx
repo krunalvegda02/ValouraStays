@@ -3,8 +3,11 @@ import Card from "../../components/Card";
 import Button from "../../components/Button";
 import HeaderTitle from "../../components/HeaderTitle";
 import IMAGES from "../../Constants/Images";
+import { useNavigate } from "react-router-dom";
 
 const Villas = () => {
+  const navigate = useNavigate()
+
   const villas = [
     {
       id: 1,
@@ -67,6 +70,7 @@ memories.`,
         </div>
 
         <Button
+          onClick={() => navigate('/villas')}
           className="rounded-xl"
           icon={false}
           variant="primary"

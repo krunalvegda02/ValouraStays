@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import HeaderTitle from '../../components/HeaderTitle'
 import IMAGES from '../../Constants/Images'
 import Theme from '../../Constants/Theme'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Wander = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(0)
 
   const tabs = [
@@ -15,7 +17,7 @@ const Wander = () => {
   // Photo cards for each tab
   const photoCardsByTab = {
     0: [
-      { id: 1, image: IMAGES.WANDER1, location: "Udaipur" },
+      { id: 1, image: IMAGES.WANDER1, location: "Udaipur", link: "/destinations/udaipur" },
       { id: 2, image: IMAGES.WANDER2, location: "Jaipur" },
       { id: 3, image: IMAGES.WANDER3, location: "Neemrana" },
       { id: 4, image: IMAGES.WANDER4, location: "Agra" },
@@ -74,7 +76,9 @@ const Wander = () => {
         <div className="flex flex-col md:flex-row gap-6 justify-center">
           {photoCards.slice(0, 3).map((card) => (
             <div key={card.id} className="group cursor-pointer flex-1 max-w-md">
-              <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+              <div
+                onClick={() => navigate(card.link)}
+                className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                 <img
                   src={card.image}
                   alt={card.location}
