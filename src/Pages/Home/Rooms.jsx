@@ -86,15 +86,15 @@ const Rooms = () => {
   }
 
   return (
-    <section className="section-container px-4 sm:px-6 lg:px-8">
+    <section className="section-container">
       {/* Title */}
-      <div className="flex justify-center mt-12 sm:mt-16">
+      <div className="flex justify-center mt-12 sm:mt-8">
         <div className="w-full max-w-4xl text-center">
           <HeaderTitle title="Rooms & Pricing" />
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto bg-[#F7F5F1] relative py-8 sm:py-10 shadow-sm hide-scrollbar">
+      <div className="max-w-7xl mx-auto bg-[#F7F5F1] relative py-8 sm:py- shadow-sm hide-scrollbar">
 
         {/* Scrollable Room Cards */}
         <div

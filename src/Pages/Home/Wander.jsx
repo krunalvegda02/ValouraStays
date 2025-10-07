@@ -100,7 +100,7 @@ const Wander = () => {
         </div>
 
         {/* Second Row */}
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:w-2/3 md:mx-auto mb-12 sm:mb-16">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:w-2/3 md:mx-auto mb-10 sm:mb-8">
           {photoCards.slice(3, 5).map((card) => (
             <div
               key={card.id}
