@@ -6,12 +6,12 @@ const OffersEmail = () => {
     <div className="section-container">
       <div className="flex flex-col items-center text-center py-16 px-4 sm:px-6 lg:px-0">
         {/* Heading */}
-        <h1
-          className="text-2xl sm:text-3xl md:text-5xl font-serif font-light mb-6 max-w-2xl leading-tight"
+        <h2
+          className="text-3xl sm:text-3xl md:text-5xl font-serif font-light mb-6 max-w-2xl leading-tight"
           style={{ color: Theme.colors.text }}
         >
           Get Best Offers On The Hotel
-        </h1>
+        </h2>
 
         {/* Description */}
         <p
