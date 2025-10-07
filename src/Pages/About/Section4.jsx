@@ -4,11 +4,10 @@ import Theme from '../../Constants/Theme';
 import IMAGES from '../../Constants/Images';
 
 const Section4 = () => {
-
   const serviceSets = [
     [
-      { id: 1, image: IMAGES.SERVICE1, name: "Luxury spa" },
-      { id: 2, image: IMAGES.SERVICE2, name: "Private Poll" },
+      { id: 1, image: IMAGES.SERVICE1, name: "Luxury Spa" },
+      { id: 2, image: IMAGES.SERVICE2, name: "Private Pool" },
       { id: 3, image: IMAGES.SERVICE3, name: "Free WiFi" },
       { id: 4, image: IMAGES.SERVICE4, name: "Breakfast" }
     ],
@@ -19,10 +18,10 @@ const Section4 = () => {
       { id: 8, image: IMAGES.SERVICE8, name: "Room Service" }
     ],
     [
-      { id: 5, image: IMAGES.SERVICE9, name: "Parking Area" },
-      { id: 6, image: IMAGES.SERVICE10, name: "Laundary Service" },
-      { id: 7, image: IMAGES.SERVICE11, name: "Dinner date" },
-      { id: 8, image: IMAGES.SERVICE12, name: "Activity Area" }
+      { id: 9, image: IMAGES.SERVICE9, name: "Parking Area" },
+      { id: 10, image: IMAGES.SERVICE10, name: "Laundry Service" },
+      { id: 11, image: IMAGES.SERVICE11, name: "Dinner Date" },
+      { id: 12, image: IMAGES.SERVICE12, name: "Activity Area" }
     ]
   ];
 
@@ -35,40 +34,33 @@ const Section4 = () => {
       setTimeout(() => {
         setActiveSet((prev) => (prev + 1) % serviceSets.length); // switch to next set
         setFade(true); // fade in new set
-      }, 500); // fade duration
-    }, 4000); // time before switching
+      }, 500);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
-
-
   return (
-    <div className="section-container w-full p">
-      <div className="space-y-5 pt-10">
+    <div className="section-container w-full px-4 sm:px-6 md:px-8 py-10 sm:py-16">
+      <div className="space-y-12">
 
         {/* Signature Amenities */}
         <div>
-          <h1 className={`text-4xl md:text-5xl font-serif text-[${Theme.colors.text}]  `}>
+          <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}]`}>
             Our Signature Amenities
-          </h1>
-          <div className={`space-y-6 text-lg text-[${Theme.colors.darkText}] leading-relaxed mt-5`}>
-            <p> <span className={`text-[${Theme.colors.text}] font-semibold`}> Private lounge and decks:</span> Private lounge and decks: A perfect place to enjoy a morning brew, evening cocktails, or fellowship with other guests.</p>
-            <p> <span className={`text-[${Theme.colors.text}] font-semibold`}>
-              Luxe linens and amenities:</span>  Amazing bedding, quality toiletries, and attention to detail comforts to coddle you.</p>
-            <p> <span className={`text-[${Theme.colors.text}] font-semibold`}>
-              Soothing design and lighting: </span> Spaces intentionally created for your senses to thrive and encourage a work, relaxation, or quiet time experience.</p>
-            <p> <span className={`text-[${Theme.colors.text}] font-semibold`}>
-              Superior Pool:
-            </span>  Immerse yourself in our beautiful, clean, and refreshing pool.</p>
+          </h2>
+          <div className={`space-y-4 sm:space-y-5 text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed mt-4`}>
+            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Private lounge and decks:</span> A perfect place to enjoy a morning brew, evening cocktails, or fellowship with other guests.</p>
+            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Luxe linens and amenities:</span> Amazing bedding, quality toiletries, and attention to detail comforts to coddle you.</p>
+            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Soothing design and lighting:</span> Spaces intentionally created for your senses to thrive and encourage work, relaxation, or quiet time experience.</p>
+            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Superior Pool:</span> Immerse yourself in our beautiful, clean, and refreshing pool.</p>
           </div>
         </div>
 
-        {/* Your Component Space */}
-        <div className="py-8  border-gray-200">
+        {/* Service Cards */}
+        <div className="py-8">
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"
-              }`}
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  transition-opacity duration-500 ${fade ? "opacity-100" : "opacity-0"}`}
           >
             {serviceSets[activeSet].map((service) => (
               <div
@@ -84,28 +76,29 @@ const Section4 = () => {
           </div>
         </div>
 
-
-
         {/* Vision & Story */}
-        <div className="space-y-3">
+        <div className="space-y-8">
           <div>
-            <h1 className={`text-4xl md:text-5xl font-serif  text-[${Theme.colors.text}] mb-3   `}>Our Vision</h1>
-            <p className={`text-xl leading-relaxed   text-[${Theme.colors.darkText}] `}>
+            <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-2 sm:mb-3`}>
+              Our Vision
+            </h2>
+            <p className="text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed">
               To build a collection of stays around India, where travelers feel at home but enjoy luxurious comfort. A stay where every
               guest leaves with memories that last a lifetime and experiences that live on.
             </p>
           </div>
 
           <div>
-            <h1 className={`text-4xl md:text-5xl font-serif  text-[${Theme.colors.text}] mb-3`}>Our Story Ahead</h1>
-            <p className={`text-xl  text-[${Theme.colors.darkText}]  leading-relaxed`}>
+            <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-2 sm:mb-3`}>
+              Our Story Ahead
+            </h2>
+            <p className="text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed">
               Veloura Stays is on a mission to change the boutique hospitality space. Every property will have the same DNA, whether
               you are visiting a tranquil retreat or a stunning hilltop property: elegance, comfort, and a personal touch. We hope to create
               a trusted option for the refined traveler who values warmth and sophistication.
             </p>
           </div>
         </div>
-
       </div>
     </div>
   )

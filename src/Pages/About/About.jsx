@@ -17,7 +17,7 @@ const About = () => {
         // height='400px'
         image={hero}
         title="About Us"
-        description="Home/About Us"
+        description="Home / About Us"
       />
 
 
