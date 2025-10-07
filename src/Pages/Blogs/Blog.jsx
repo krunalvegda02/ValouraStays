@@ -20,7 +20,7 @@ const Blog = () => {
     return (
         <>
             {/* Hero Section */}
-            <CommonHero title={blog.title} description={blog.subtitle} />
+            <CommonHero title={blog.title} description={blog.subtitle} image={blog.hero} />
 
             <div className="section-container px-4 sm:px-6 lg:px-20">
                 <div className="pt-10 flex flex-col gap-10">

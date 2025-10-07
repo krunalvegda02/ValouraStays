@@ -5,6 +5,7 @@ export const BlogsData = [
         id: 1,
         title: "Why Is Villa Izara More Than Just A Private Villa In Udaipur?",
         subtitle: " Home/ Blog 1",
+        hero: IMAGES.ABOUTHERO,
 
         images: [
             IMAGES.HERO1,
@@ -90,6 +91,7 @@ Veloura Stays, plan your escape with us to experience the magic of the Emerald H
         id: 2,
         title: "A-Frame Hanging Villa In Udaipur: Experience Luxury Like Never Before",
         subtitle: " Home/ Blog 2",
+        hero: IMAGES.ABOUTHERO,
 
         images: [
             IMAGES.HERO1,
@@ -190,7 +192,7 @@ private villas in Udaipur to claim your Udaipur feast!`
         id: 3,
         title: "Top Reasons to Choose Izara Hanging Villa in Udaipur",
         subtitle: " Home/ Blog 3",
-
+        hero: IMAGES.ABOUTHERO,
         images: [
             IMAGES.HERO1,
             IMAGES.HERO2,
