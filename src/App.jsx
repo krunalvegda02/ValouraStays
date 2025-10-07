@@ -11,6 +11,7 @@ import Thankyou from './Pages/Thankyou/Thankyou';
 import UdaipurPage from './Pages/Udaipur/UdaipurPage';
 import ScrollToTop from './utils/ScrollToTop';  // 👈 importut here
 import './App.css';
+import NotFoundPage from './Pages/NotfoundPage';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="blog/:id" element={<Blog />} />
           <Route path="destinations/udaipur" element={<UdaipurPage />} />
-          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
