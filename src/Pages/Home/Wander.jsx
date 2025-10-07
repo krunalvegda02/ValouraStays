@@ -43,7 +43,7 @@ const Wander = () => {
   return (
     <div className="section-container px-4 sm:px-6 lg:px-12">
       {/* Header Section */}
-      <div className="flex justify-center mt-10 sm:mt-16">
+      <div className="flex justify-center mt-8">
         <div className="w-full max-w-4xl text-center">
           <HeaderTitle title="wander & unwind" space={false} />
         </div>
@@ -55,7 +55,7 @@ const Wander = () => {
 
       {/* Tabs */}
       <div className="flex justify-center mb-6 sm:mb-10 overflow-x-auto scrollbar-hide">
-        <div className="flex space-x-6 sm:space-x-8 border-b px-2 sm:px-0">
+        <div className="flex space-x-6 sm:space-x-8 border-b px-2 sm:px-0 ">
           {tabs.map((tab) => (
             <div
               key={tab.id}
@@ -74,7 +74,7 @@ const Wander = () => {
       {/* Photo Cards */}
       <div className="space-y-6 sm:space-y-8">
         {/* First Row */}
-        <div className="flex flex-col ml-2 sm:ml-0 sm:flex-row flex-wrap gap-5 sm:gap-6 justify-center">
+        <div className="flex flex-col sm:ml-0 sm:flex-row flex-wrap gap-5 sm:gap-6 justify-center">
           {photoCards.slice(0, 3).map((card) => (
             <div
               key={card.id}

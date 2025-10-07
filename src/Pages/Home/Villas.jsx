@@ -54,13 +54,11 @@ memories.`,
   ];
 
   return (
-    <div className="section-container px-4 sm:px-6 lg:px-8">
+    <div className="section-container ">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row justify-between items-center mb-8 sm:mb-12">
-        <div className="flex justify-center items-center text-center mb-4 sm:mb-0 w-full sm:w-auto">
-          <div className="w-full max-w-7xl">
-            <HeaderTitle title="Luxury Villas & Heritage Stays" />
-          </div>
+        <div className="flex justify-center items-center text-center sm:mb-0 w-full sm:w-auto">
+          <HeaderTitle title="Luxury Villas & Heritage Stays" />
         </div>
 
         {/* Explore More Button */}

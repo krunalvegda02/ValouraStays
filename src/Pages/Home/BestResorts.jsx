@@ -11,13 +11,11 @@ const BestResorts = () => {
   const image2 = Images.HOME2
 
   return (
-    <div className="section-container px-4 sm:px-6 lg:px-12">
+    <div className="section-container">
       <div className=''>
         {/* Title */}
         <div className="flex justify-center  md:mb-0">
-          <div className="w-full text-center">
-            <HeaderTitle title='Experience the Luxury of the Best Resorts' />
-          </div>
+          <HeaderTitle title='Experience the Luxury of the Best Resorts' />
         </div>
 
         {/* Main Section */}
