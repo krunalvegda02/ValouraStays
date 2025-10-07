@@ -50,10 +50,10 @@ const Section4 = () => {
             Our Signature Amenities
           </h2>
           <div className={`space-y-4 sm:space-y-5 text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed mt-4`}>
-            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Private lounge and decks:</span> A perfect place to enjoy a morning brew, evening cocktails, or fellowship with other guests.</p>
-            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Luxe linens and amenities:</span> Amazing bedding, quality toiletries, and attention to detail comforts to coddle you.</p>
-            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Soothing design and lighting:</span> Spaces intentionally created for your senses to thrive and encourage work, relaxation, or quiet time experience.</p>
-            <p><span className={`text-[${Theme.colors.text}] font-semibold`}>Superior Pool:</span> Immerse yourself in our beautiful, clean, and refreshing pool.</p>
+            <p><span className={`text-[${Theme.colors.text}] `}>Private lounge and decks:</span> A perfect place to enjoy a morning brew, evening cocktails, or fellowship with other guests.</p>
+            <p><span className={`text-[${Theme.colors.text}] `}>Luxe linens and amenities:</span> Amazing bedding, quality toiletries, and attention to detail comforts to coddle you.</p>
+            <p><span className={`text-[${Theme.colors.text}] `}>Soothing design and lighting:</span> Spaces intentionally created for your senses to thrive and encourage work, relaxation, or quiet time experience.</p>
+            <p><span className={`text-[${Theme.colors.text}] `}>Superior Pool:</span> Immerse yourself in our beautiful, clean, and refreshing pool.</p>
           </div>
         </div>
 

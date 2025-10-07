@@ -127,13 +127,13 @@ memories.`,
                                         </label>
                                         <div className='flex items-center space-x-3'>
                                             <MinusCircle
-                                                size={24}
+                                                size={30}
                                                 className='cursor-pointer text-[#403B21] hover:text-[#332f1a] transition'
                                                 onClick={() => setAdults(prev => Math.max(1, prev - 1))}
                                             />
-                                            <span className='text-base md:text-lg font-medium'>{adults}</span>
+                                            <span className='text-lg md:text-2xl font-medium'>{adults}</span>
                                             <PlusCircle
-                                                size={24}
+                                                size={30}
                                                 className='cursor-pointer text-[#403B21] hover:text-[#332f1a] transition'
                                                 onClick={() => setAdults(prev => prev + 1)}
                                             />
@@ -147,13 +147,13 @@ memories.`,
                                         </label>
                                         <div className='flex items-center space-x-3'>
                                             <MinusCircle
-                                                size={24}
+                                                size={30}
                                                 className='cursor-pointer text-[#403B21] hover:text-[#332f1a] transition'
                                                 onClick={() => setChildren(prev => Math.max(0, prev - 1))}
                                             />
-                                            <span className='text-base md:text-lg font-medium'>{children}</span>
+                                            <span className='text-lg md:text-2xl font-medium'>{children}</span>
                                             <PlusCircle
-                                                size={24}
+                                                size={30}
                                                 className='cursor-pointer text-[#403B21] hover:text-[#332f1a] transition'
                                                 onClick={() => setChildren(prev => prev + 1)}
                                             />
@@ -173,6 +173,7 @@ memories.`,
                                                         checked={villaType[key]}
                                                         onChange={() => handleVillaTypeChange(key)}
                                                         className="w-4 h-4 text-[#403B21] rounded focus:ring-[#403B21]"
+                                                        style={{ accentColor: Theme.colors.lightText }}
                                                     />
                                                     <span className='ml-2' style={{ color: Theme.colors.darkText, fontWeight: '500' }}>
                                                         {key === 'acSuite' ? 'AC Suite' : key === 'withoutAc' ? 'Without AC Suite' : 'Add Breakfast'}
@@ -184,7 +185,7 @@ memories.`,
 
                                     {/* Buttons below content */}
                                     <div className='flex space-x-3 mt-6'>
-                                        <div className='flex-1 bg-[#403B21] text-white text-center py-3 rounded-lg cursor-pointer font-semibold hover:bg-[#332f1a] transition shadow-md'>
+                                        <div className={`flex-1 bg-[${Theme.colors.background}] text-[${Theme.colors.text}] text-center py-3 rounded-lg cursor-pointer font-semibold hover:bg-[#332f1a] hover:text-white transition shadow-md`}>
                                             Filter
                                         </div>
                                         <div

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Button from '../../components/Button'
 import Theme from '../../Constants/Theme'
 import { useNavigate } from 'react-router-dom'
+import HeaderTitle from '../../components/HeaderTitle'
 
 const ContactForm = () => {
     const navigate = useNavigate()
@@ -62,7 +63,11 @@ const ContactForm = () => {
 
     return (
         <div className="section-container px-4 sm:px-6 lg:px-20">
+
+            <HeaderTitle  title='Get In Touch' />
+
             <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-12 my-16">
+
                 {/* Left Section - Contact Details */}
                 <div className="space-y-6 lg:col-span-4">
                     <div className="flex items-start space-x-3 sm:space-x-4">
@@ -112,11 +117,11 @@ const ContactForm = () => {
 
                 {/* Right Section - Contact Form */}
                 <div className="lg:col-span-6 bg-[#F7F5F1] shadow-lg p-6 sm:p-10 rounded-lg">
-                    <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center" style={{ color: Theme.colors.text }}>
+                    {/* <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center" style={{ color: Theme.colors.text }}>
                         Get In Touch
-                    </h2>
+                    </h2> */}
                     <form className="space-y-4 sm:space-y-6 mt-4" onSubmit={handleSubmit} noValidate>
-                        <div className="p-4 sm:p-6 rounded-lg shadow-inner space-y-4">
+                        <div className="p-4 sm:p-6 rounded-lg space-y-4">
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                                 <div>
