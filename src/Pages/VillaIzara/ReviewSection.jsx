@@ -2,7 +2,6 @@ import React from 'react';
 import Theme from '../../Constants/Theme';
 import IMAGES from '../../Constants/Images';
 
-
 export const Star = ({ filled = true, fillColor = 'currentColor', strokeColor = 'currentColor', className = '' }) => (
     <svg
         className={className}
@@ -21,8 +20,6 @@ export const Star = ({ filled = true, fillColor = 'currentColor', strokeColor = 
     </svg>
 );
 
-
-
 const ReviewsSection = () => {
     const reviewsData = [
         { title: 'STAFF', icon: IMAGES.REVIEW4, reviews: '5' },
@@ -33,17 +30,16 @@ const ReviewsSection = () => {
 
     const dividerColor = Theme.colors.darkText;
 
-
     return (
-        <div className="">
+        <div className="px-3 sm:px-4 md:px-0">
             {/* Header */}
             <div className="mb-8">
-                <h1
+                <h2
                     style={{ color: Theme.colors.text }}
-                    className="font-bold text-2xl mb-4"
+                    className="font-bold text-2xl sm:text-2xl md:text-3xl mb-4"
                 >
                     Reviews
-                </h1>
+                </h2>
 
                 <div className="flex items-center">
                     <div className="mr-3">
@@ -51,12 +47,12 @@ const ReviewsSection = () => {
                             filled={true}
                             fillColor={Theme.colors.lightText}
                             strokeColor={Theme.colors.lightText}
-                            className="w-8 h-8"
+                            className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
                         />
                     </div>
                     <div
                         style={{ color: Theme.colors.darkText }}
-                        className="font-medium text-xl"
+                        className="font-medium text-base sm:text-lg md:text-xl"
                     >
                         5 | (232 Reviews)
                     </div>
@@ -68,31 +64,31 @@ const ReviewsSection = () => {
                 className="border-t border-b py-4"
                 style={{ borderColor: dividerColor }}
             >
-                <div className="grid grid-cols-1 md:grid-cols-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                     {reviewsData.map((review, index) => (
                         <div
                             key={index}
-                            className="relative px-6 py-4 text-center flex flex-col items-start justify-center"
+                            className="relative px-4 sm:px-5 py-4 text-center flex flex-col items-start justify-center"
                         >
                             {/* Content */}
                             <p
                                 style={{ color: Theme.colors.darkText }}
-                                className="font-semibold text-xl mb-3"
+                                className="font-semibold text-lg sm:text-xl mb-2 sm:mb-3"
                             >
                                 {review.title}
                             </p>
 
-                            <div className="flex justify-between  w-full">
+                            <div className="flex justify-between w-full items-center">
                                 <p
                                     style={{ color: Theme.colors.darkText }}
-                                    className="font-semibold text-xl"
+                                    className="font-semibold text-lg sm:text-xl"
                                 >
                                     {review.reviews}
                                 </p>
 
                                 {/* Icon Wrapper */}
                                 <div
-                                    className="flex justify-center items-center rounded-full p-2"
+                                    className="flex justify-center items-center rounded-full p-2 sm:p-3"
                                     style={{
                                         border: `2px solid ${dividerColor}`,
                                         color: dividerColor,
@@ -101,7 +97,7 @@ const ReviewsSection = () => {
                                     <img
                                         src={review.icon}
                                         alt={review.title}
-                                        className="w-12 h-12 rounded-full object-contain"
+                                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-contain"
                                         style={{
                                             filter:
                                                 'brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(85%)',
@@ -110,7 +106,7 @@ const ReviewsSection = () => {
                                 </div>
                             </div>
 
-                            {/* Vertical Divider (except last column) */}
+                            {/* Vertical Divider (for desktop only) */}
                             {index !== reviewsData.length - 1 && (
                                 <div
                                     className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 h-20 mt-5 w-[2px]"

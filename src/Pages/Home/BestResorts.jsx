@@ -14,7 +14,7 @@ const BestResorts = () => {
     <div className="section-container px-4 sm:px-6 lg:px-12">
       <div className=''>
         {/* Title */}
-        <div className="flex justify-center mt-5 mb-2 md:mb-0">
+        <div className="flex justify-center  md:mb-0">
           <div className="w-full text-center">
             <HeaderTitle title='Experience the Luxury of the Best Resorts' />
           </div>
@@ -57,7 +57,7 @@ const BestResorts = () => {
             {/* Button */}
             <Button
               onClick={() => navigate("about")}
-              className="rounded-full w-40 sm:w-48 md:w-52 py-2 sm:py-3 text-sm sm:text-base"
+              className="rounded-full w-full sm:w-48 md:w-52 py-2 sm:py-3 text-sm sm:text-base"
               variant="secondary"
             >
               <span className="font-sans-serif">More About Us</span>
@@ -107,7 +107,7 @@ const BestResorts = () => {
           </div>
 
           {/* Right Side - Images */}
-          <div className="relative flex justify-center lg:justify-end w-full lg:w-auto mt-5 lg:mt-0">
+          <div className="relative flex justify-center lg:justify-end w-full lg:w-auto  mt-3 lg:mt-0">
             <div className="relative w-[280px] sm:w-[350px] md:w-[400px] h-[420px] sm:h-[500px] md:h-[580px]">
               {/* Top Image */}
               <div className="absolute top-2 right-0 sm:-right-10 md:-right-24 w-52 sm:w-64 md:w-80 h-64 sm:h-80 md:h-96 z-10 border-[10px] sm:border-[12px] md:border-[15px] border-white">

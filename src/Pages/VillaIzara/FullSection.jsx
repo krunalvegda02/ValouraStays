@@ -25,10 +25,8 @@ const FullSection = () => {
         IMAGES.IZARAHERO4,
     ];
 
-    // 🖼️ Add state for current image index
     const [currentImage, setCurrentImage] = useState(0);
 
-    // 🕒 Auto-scroll every 4 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
@@ -50,90 +48,72 @@ const FullSection = () => {
         {
             question: "Do you offer international shipping?",
             answer:
-                "Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary by location. You can check available countries and rates during checkout.",
-        },
-        {
-            question: "How can I track my order?",
-            answer:
-                "Once your order ships, you'll receive a tracking number via email. You can also track your order by logging into your account and visiting the 'Order History' section.",
-        },
-        {
-            question: "What payment methods do you accept?",
-            answer:
-                "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, Apple Pay, and Google Pay. All payments are processed securely through encrypted channels.",
+                "Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary by location.",
         },
     ];
 
     return (
         <div className="section-container">
-            <div className="flex gap-5 my-16">
-                {/* Left Section (Scrollable Content) */}
-                <div className="w-3/5 overflow-y-auto hide-scrollbar">
+            <div className="flex flex-col lg:flex-row gap-5 my-10 lg:my-16">
+                {/* LEFT SECTION */}
+                <div className="w-full lg:w-3/5 overflow-y-auto hide-scrollbar px-2 sm:px-4">
                     <div>
-                        <h1 className={`text-[${Theme.colors.text}] font-bold`}>
+                        <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>
                             Welcome to Villa Izara
-                        </h1>
+                        </h2>
                         <h2
-                            className={`text-[${Theme.colors.text}] text-3xl mb-3 font-bold`}
+                            className={`text-[${Theme.colors.text}] text-2xl sm:text-3xl  mb-3 font-bold`}
                         >
                             Enjoy Your Dream Vacation In Udaipur
                         </h2>
-                        <p className={`text-[${Theme.colors.darkText}] text-2xl mb-3`}>
-                            Udaipur's first-of-its-kind A-frame hanging villa, situated in the
-                            beautiful Aravalli ranges. Bringing you closer to nature, it's
-                            everything you'd want in your dream getaway.
+                        <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg md:text-xl mb-3`}>
+                            Udaipur's first-of-its-kind A-frame hanging villa, situated in the beautiful Aravalli
+                            ranges. Bringing you closer to nature, it's everything you'd want in your dream getaway.
                         </p>
-                        <p className={`text-[${Theme.colors.darkText}] text-2xl mb-3`}>
-                            Located just behind Labhgarh Resort in Village Sare (near Chirwa),
-                            Emerald Hills blends comfort, luxury, and fun.
+                        <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg md:text-xl mb-3`}>
+                            Located just behind Labhgarh Resort in Village Sare (near Chirwa), Emerald Hills blends
+                            comfort, luxury, and fun.
                         </p>
                     </div>
 
+                    {/* DETAILS */}
                     <div className="mb-6">
-                        <h1 className={`text-[${Theme.colors.text}] font-bold mb-1`}>
+                        <h2 className={`text-[${Theme.colors.text}] font-bold mb-1 text-2xl sm:text-3xl`}>
                             Villa Izara
-                        </h1>
-                        <p
-                            className={`font- text-[${Theme.colors.darkText}] text-xl mb-3`}
-                        >
+                        </h2>
+                        <p className={`text-[${Theme.colors.darkText}] text-sm sm:text-base md:text-lg mb-3`}>
                             Udaipur, Rajasthan 313202
                         </p>
                         <div className="flex items-center">
-                            <div className="mr-3">
-                                <Star
-                                    filled={true}
-                                    fillColor={Theme.colors.lightText}
-                                    strokeColor={Theme.colors.lightText}
-                                    className="w-8 h-8"
-                                />
-                            </div>
-                            <div
+                            <Star
+                                filled={true}
+                                fillColor={Theme.colors.lightText}
+                                strokeColor={Theme.colors.lightText}
+                                className="w-6 h-6 sm:w-8 sm:h-8"
+                            />
+                            <span
                                 style={{ color: Theme.colors.darkText }}
-                                className="font-medium text-xl"
+                                className="font-medium text-sm sm:text-lg ml-2"
                             >
                                 4.8 | (232 Reviews)
-                            </div>
+                            </span>
                         </div>
 
-                        <div className="flex gap-6 mt-4">
+                        <div className="flex flex-wrap gap-4 mt-4">
                             {details.map((item, index) => (
                                 <div key={index} className="flex items-center gap-2">
-                                    <div
-                                        className={`text-[${Theme.colors.lightText}] flex items-center justify-center w-8 h-8`}
-                                    >
-                                        <img
-                                            src={item.icon}
-                                            alt={item.title}
-                                            className={`w-6 h-6 text-[${Theme.colors.lightText}] `}
-                                            style={{
-                                                filter:
-                                                    "invert(87%) sepia(19%) saturate(467%) hue-rotate(1deg) brightness(95%) contrast(90%)",
-                                            }}
-                                        />
-                                    </div>
+                                    <img
+                                        src={item.icon}
+                                        alt={item.title}
+                                        className="w-6 h-6 sm:w-8 sm:h-8"
+                                        style={{
+                                            filter:
+                                                "invert(87%) sepia(19%) saturate(467%) hue-rotate(1deg) brightness(95%) contrast(90%)",
+                                        }}
+                                    />
                                     <span
                                         style={{ color: Theme.colors.darkText }}
-                                        className="text-xl font-semibold"
+                                        className="text-sm sm:text-base md:text-lg font-semibold"
                                     >
                                         {item.title}
                                     </span>
@@ -142,18 +122,15 @@ const FullSection = () => {
                         </div>
                     </div>
 
+                    {/* ABOUT */}
                     <div>
-                        <h1 className={`text-[${Theme.colors.text}] font-bold`}>
+                        <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>
                             About Home
-                        </h1>
-                        <p
-                            className={`text-[${Theme.colors.darkText}] text-xl my-3`}
-                        >
-                            This spacious 5BHK villa offers ample space for group stays, with
-                            a private pool, celebration zone, well-furnished rooms, and a
-                            lounge area overlooking mesmerizing mountain views.
+                        </h2>
+                        <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg my-3`}>
+                            This spacious 5BHK villa offers ample space for group stays, with a private pool,
+                            celebration zone, and well-furnished rooms overlooking mesmerizing mountain views.
                         </p>
-
                         <HouseRules />
                     </div>
 
@@ -167,54 +144,66 @@ const FullSection = () => {
 
                     <FAQSection faqData={faqData} />
 
-                    <div>
-                        <h1 className={`text-[${Theme.colors.text}] font-bold`}>Location</h1>
-                        <p
-                            className="text-xl my-3 flex items-center gap-4"
+                    {/* LOCATION */}
+                    <div className="mt-8 sm:mt-10">
+                        {/* Title */}
+                        <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>
+                            Location
+                        </h2>
+
+                        {/* Address Section */}
+                        <div
+                            className="text-base sm:text-lg flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-3 sm:mt-4 leading-relaxed"
                             style={{ color: Theme.colors.darkText }}
                         >
-                            <span className="text-3xl font-semibold whitespace-nowrap">
+                            {/* Villa Name */}
+                            <span className="text-lg sm:text-2xl font-semibold whitespace-nowrap">
                                 Villa Izara
                             </span>
-                            <span
-                                className="w-[3px] h-12 inline-block mx-3"
-                                style={{ backgroundColor: Theme.colors.lightText }}
-                                aria-hidden="true"
-                            />
-                            <span>
-                                Behind Labhgarh Resort, village Sare, Chirwa, Udaipur, Rajasthan
-                                313202
-                            </span>
-                        </p>
 
-                        <div className="h-[300px] mt-5 rounded-lg overflow-hidden shadow-lg">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.45929128856!2d73.7125!3d24.5854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967f38cdcd011b9%3A0xa8d90a1b16bb7!2sUdaipur%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sin!4v1696240000000!5m2!1sen!2sin"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                loading="lazy"
-                            ></iframe>
+                            {/* Divider for larger screens */}
+                            <span
+                                className="hidden sm:inline-block w-[3px] h-10 rounded-full"
+                                style={{ backgroundColor: Theme.colors.lightText }}
+                            />
+
+                            {/* Address Text */}
+                            <span className="max-w-full sm:max-w-[70%] text-sm sm:text-base leading-snug sm:leading-relaxed">
+                                Behind Labhgarh Resort, village Sare, Chirwa, Udaipur, Rajasthan 313202
+                            </span>
+                        </div>
+
+                        {/* Google Map Section */}
+                        <div className="mt-5 sm:mt-6 md:mt-8 w-full">
+                            <div className="h-[200px] xs:h-[220px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.45929128856!2d73.7125!3d24.5854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3967f38cdcd011b9%3A0xa8d90a1b16bb7!2sUdaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1696240000000!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    title="Villa Izara Location"
+                                ></iframe>
+                            </div>
+
+
                         </div>
                     </div>
+
                 </div>
 
-                {/* Right Section */}
-                <div className="w-2/5 flex flex-col gap-6">
+                {/* RIGHT SECTION */}
+                <div className="w-full lg:w-2/5 flex flex-col gap-6 mt-10 lg:mt-0 px-2 sm:px-4">
                     {/* Auto-scrolling Image Carousel */}
-                    <div className="w-full h-[400px] overflow-hidden relative">
-                        {/* Inner shadow overlay */}
-                        <div className="absolute inset-0 z-10 pointer-events-none shadow-[inset_0_0_60px_rgba(0,0,0,0.1)]"></div>
-
-                        {/* Auto-changing image */}
+                    <div className="w-full h-[250px] sm:h-[350px] md:h-[400px] overflow-hidden relative rounded-xl shadow-md">
                         <img
                             src={images[currentImage]}
                             alt="Room Preview"
                             className="w-full h-full object-cover transition-opacity duration-1000 ease-in-out"
                             key={images[currentImage]}
                         />
-
-                        {/* Dots indicator */}
                         <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2 z-20">
                             {images.map((_, index) => (
                                 <div
@@ -226,26 +215,17 @@ const FullSection = () => {
                         </div>
                     </div>
 
-
-                    {/* Sticky Booking Form */}
-                    <div className="sticky top-20 border border-gray-200 p-6 rounded-2xl bg-white shadow-lg backdrop-blur-sm bg-opacity-95">
+                    {/* Booking Form */}
+                    <div className="sticky top-20 border border-gray-200 p-4 sm:p-6 rounded-2xl bg-white shadow-lg">
                         <div className="flex justify-between items-start mb-4">
                             <div>
                                 <div className="flex items-baseline gap-2">
-                                    <span
-                                        className={`text-3xl font-bold text-[${Theme.colors.text}]`}
-                                    >
+                                    <span className={`text-2xl sm:text-3xl font-bold text-[${Theme.colors.text}]`}>
                                         ₹56,000
                                     </span>
-                                    <span
-                                        className={`text-sm text-[${Theme.colors.darkText}]`}
-                                    >
-                                        /night
-                                    </span>
+                                    <span className={`text-sm text-[${Theme.colors.darkText}]`}>/night</span>
                                 </div>
-                                <p
-                                    className={`text-xs text-[${Theme.colors.darkText}] mt-1`}
-                                >
+                                <p className={`text-xs sm:text-sm text-[${Theme.colors.darkText}] mt-1`}>
                                     Villa Izara • Premium Experience
                                 </p>
                             </div>
@@ -255,32 +235,32 @@ const FullSection = () => {
                         </div>
 
                         <form className="space-y-4">
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
-                                    <label className="block text-xs font-medium text-gray-600 mb-2">
+                                    <label className="block text-xs font-medium text-gray-600 mb-1 sm:mb-2">
                                         ARRIVAL
                                     </label>
                                     <input
                                         type="date"
-                                        className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                                        className="w-full border border-gray-300 rounded-lg px-3 py-2 sm:py-3 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-xs font-medium text-gray-600 mb-2">
+                                    <label className="block text-xs font-medium text-gray-600 mb-1 sm:mb-2">
                                         DEPARTURE
                                     </label>
                                     <input
                                         type="date"
-                                        className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                                        className="w-full border border-gray-300 rounded-lg px-3 py-2 sm:py-3 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all"
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <label className="block text-xs font-medium text-gray-600 mb-2">
+                                <label className="block text-xs font-medium text-gray-600 mb-1 sm:mb-2">
                                     GUESTS
                                 </label>
-                                <select className="w-full border border-gray-300 rounded-lg px-3 py-3 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white">
+                                <select className="w-full border border-gray-300 rounded-lg px-3 py-2 sm:py-3 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white">
                                     <option>1 Guest</option>
                                     <option>2 Guests</option>
                                     <option>3 Guests</option>
@@ -291,16 +271,16 @@ const FullSection = () => {
 
                             <div className="space-y-3 pt-2">
                                 <Button icon={false} type="button">
-                                    <div className="relative flex items-center justify-center gap-3">
-                                        <Clock className="w-6 h-6 animate-pulse" />
-                                        <span className="text-lg tracking-wide">
+                                    <div className="relative flex items-center justify-center gap-2 sm:gap-3">
+                                        <Clock className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
+                                        <span className="text-sm sm:text-lg tracking-wide">
                                             Unlock Best Rates
                                         </span>
                                     </div>
                                 </Button>
 
                                 <Button type="submit" icon={false}>
-                                    <span>Book Now</span>
+                                    <span className="text-sm sm:text-base">Book Now</span>
                                 </Button>
                             </div>
                         </form>

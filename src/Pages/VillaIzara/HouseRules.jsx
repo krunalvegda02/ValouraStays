@@ -10,28 +10,38 @@ const HouseRules = () => {
     ];
 
     return (
-        <div className="mb-10">
-            <h3 className={`text-3xl font-bold text-[${Theme.colors.darkText}] mb-6`}>
+        <div className="mb-10 px-3 sm:px-4">
+            {/* Heading */}
+            <h2
+                className={`font-bold text-2xl sm:text-3xl text-[${Theme.colors.darkText}] mb-6`}
+            >
                 House Rules
-            </h3>
+            </h2>
 
-            <div className="flex flex-col gap-4">
+            {/* Rules List */}
+            <div className="flex flex-col gap-4 sm:gap-5">
                 {rules.map((rule, index) => (
-                    <div key={index} className="flex items-center gap-4">
-                        {/* Rule Icon */}
+                    <div
+                        key={index}
+                        className="flex items-center gap-3 sm:gap-4"
+                    >
+                        {/* Icon */}
                         <div
-                            className={`bg-[#E2CAB3] rounded-full p-2 flex items-center justify-center w-12 h-12`}
+                            className={`bg-[#E2CAB3] rounded-full flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12`}
                         >
                             <img
                                 src={rule.icon}
                                 alt={rule.title}
-                                className="w-6 h-6"
-                                style={{ filter: 'invert(100%)' }} // makes SVG white
+                                className="w-5 h-5 sm:w-6 sm:h-6"
+                                style={{ filter: 'invert(100%)' }}
                             />
                         </div>
 
                         {/* Rule Text */}
-                        <p style={{ color: Theme.colors.darkText }} className="text-xl">
+                        <p
+                            style={{ color: Theme.colors.darkText }}
+                            className="text-base sm:text-lg md:text-xl font-medium"
+                        >
                             {rule.title}
                         </p>
                     </div>

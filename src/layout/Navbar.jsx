@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Phone, Mail, MapPin } from "lucide-react"; // Icons
+import { Phone, Mail, MapPin } from "lucide-react";
 import IMAGES from '../Constants/Images';
 import Theme from '../Constants/Theme';
 import Button from '../components/Button';
@@ -13,15 +13,13 @@ const Navbar = () => {
   const [activePath, setActivePath] = useState('/');
   const navigate = useNavigate();
   const location = useLocation();
-
   const [showDestinations, setShowDestinations] = useState(false);
+  const mobileMenuRef = useRef(null);
 
   // Close destinations dropdown on outside click
   useEffect(() => {
     const closeMenu = (e) => {
-      if (!e.target.closest(".destination-dropdown")) {
-        setShowDestinations(false);
-      }
+      if (!e.target.closest(".destination-dropdown")) setShowDestinations(false);
     };
     document.addEventListener("click", closeMenu);
     return () => document.removeEventListener("click", closeMenu);
@@ -34,31 +32,11 @@ const Navbar = () => {
 
   // Handle scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavigation = (path) => {
-    navigate(path);
-    setIsMenuOpen(false);
-    setShowDestinations(false);
-  };
-
-  const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About Us" },
-    { path: "/villas", label: "Villas" },
-    { path: "/destinations", label: "Destinations" },
-    { path: "/blogs", label: "Blogs" },
-    { path: "/contact", label: "Contact Us" }
-  ];
-
-  const mobileMenuRef = useRef(null);
-
-  // Close mobile menu on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (isMenuOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
@@ -70,9 +48,17 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
 
+  const navItems = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About Us" },
+    { path: "/villas", label: "Villas" },
+    { path: "/destinations", label: "Destinations" },
+    { path: "/blogs", label: "Blogs" },
+    { path: "/contact", label: "Contact Us" }
+  ];
+
   return (
     <div className="relative overflow-x-hidden w-full max-w-[100vw]">
-
       {/* Top Bar */}
       <div
         className={`w-full text-[${Theme.colors.text}] transition-all duration-500 fixed top-0 z-50 ${isScrolled
@@ -84,23 +70,30 @@ const Navbar = () => {
         <div className={`transition-all duration-300 overflow-hidden ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-28 sm:max-h-20 opacity-100'} `}>
           <div className="section-container overflow-x-hidden hide-scrollbar">
             <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-2 sm:gap-0 ">
-              {/* Left: Contact Info */}
-              <div className="flex flex-row sm:flex-row items-center gap-2 sm:gap-4 overflow-x-auto sm:overflow-visible no-scrollbar py-2">
+              <div className="flex flex-row items-center gap-2 sm:gap-4 overflow-x-auto sm:overflow-visible no-scrollbar py-2">
                 {/* Phone */}
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0">
+                <a
+                  href="tel:+919797979075"
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0"
+                >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform text-[#f1e5d1]" />
                   <span className="font-medium text-xs sm:text-sm text-[#f1e5d1]">+91 9797979075</span>
-                </div>
-                {/* Divider */}
+                </a>
+
                 <div className="h-4 w-px bg-white/30 hidden sm:block"></div>
+
                 {/* Email */}
-                <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0">
+                <a
+                  href="mailto:reservation@velourastays.com"
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0"
+                >
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform text-[#f1e5d1]" />
-                  <span className="font-medium text-xs sm:text-sm text-[#f1e5d1]">
-                    <a href="mailto:reservation@velourastays.com" className="hover:underline truncate max-w-[120px] sm:max-w-full  " style={{ color: "#f1e5d1" }}>reservation@velourastays.com</a>
+                  <span className="font-medium text-xs sm:text-sm text-[#f1e5d1] truncate max-w-[140px]">
+                    reservation@velourastays.com
                   </span>
-                </div>
+                </a>
               </div>
+
               {/* Right: Location */}
               <div className="flex items-center justify-center sm:justify-start mt-2 sm:mt-0 space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group text-center">
                 <MapPin className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform text-[#f1e5d1]" />
@@ -124,8 +117,8 @@ const Navbar = () => {
               </Link>
             </div>
 
-            {/* Desktop Nav - Center */}
-            <div className="hidden lg:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
+            {/* Desktop Nav */}
+            <div className="hidden xl:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
               {navItems.map((item) => {
                 if (item.label === "Destinations") {
                   return (
@@ -151,16 +144,16 @@ const Navbar = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </div>
-                      {/* Dropdown for Destinations hover */}
+
                       {showDestinations && (
-                        <div className="absolute left-2/3 transform -translate-x-1/2 w-44 z-50 bg-white rounded shadow-lg">
+                        <div className="absolute left-2/3 transform -translate-x-1/2 w-44 z-50 bg-[#f1e5d1] rounded shadow-lg">
                           {["Udaipur", "Gujarat"].map((dest) => (
                             <Link
                               key={dest}
                               to={`/destinations/${dest.toLowerCase()}`}
                               onClick={() => setShowDestinations(false)}
                               className="block px-4 py-2 text-xl font-serif hover:scale-110 transition-all duration-200 mx-auto w-full"
-                              style={{ color: Theme.colors.background }}
+                              style={{ color: Theme.colors.text }}
                             >
                               {dest}
                             </Link>
@@ -199,7 +192,7 @@ const Navbar = () => {
                 onClick={() => navigate("/villas")}
                 variant={isScrolled ? "secondary" : "outline"}
                 icon={false}
-                className={`${isScrolled ? "" : "border-[#f1e5d1]"} px-4 sm:px-6 py-2 sm:py-3 hidden lg:flex`}
+                className={`${isScrolled ? "" : "border-[#f1e5d1]"} px-4 sm:px-6 py-2 sm:py-3 hidden xl:flex`}
               >
                 <span
                   className={`font-serif font-bold text-sm sm:text-base ${isScrolled ? "text-white" : "text-[#f1e5d1]"}`}
@@ -208,10 +201,10 @@ const Navbar = () => {
                 </span>
               </Button>
 
-              {/* Mobile toggle button */}
+              {/* Mobile toggle */}
               <div
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.background}] backdrop-blur-sm border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
+                className={`xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.background}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
                 aria-label="Toggle menu"
               >
                 <div className="flex flex-col justify-center space-y-1.5">
@@ -222,13 +215,13 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
         </nav>
-        {/* Mobile Menu */}
+
+        {/* Mobile Menu (Right Drawer) */}
         <div
           ref={mobileMenuRef}
           className={`fixed top-0 right-0 h-full w-72 bg-[#F1E5D1] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out
-        ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+          ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}
         `}
         >
           {/* Logo + Close Button */}
@@ -256,7 +249,7 @@ const Navbar = () => {
                         e.stopPropagation();
                         setShowDestinations((prev) => !prev);
                       }}
-                      className={`flex justify-between items-center w-full py-2 px-3 rounded-lg cursor-pointer transition-all ${showDestinations ? 'bg-[#efddcd] ' : ''} hover:bg-[#E2CAB3]/50`}
+                      className={`flex justify-between items-center w-full py-2 px-3 rounded-lg cursor-pointer transition-all ${showDestinations ? 'bg-[#efddcd]' : ''} hover:bg-[#E2CAB3]/50`}
                     >
                       <span>{item.label}</span>
                       <svg
@@ -303,8 +296,8 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="mt-auto p-6 border-t border-[#403B21]/30">
+          {/* CTA Buttons (Phone + Email + Book Now) */}
+          <div className="mt-auto p-6 border-t border-[#403B21]/30 flex flex-col space-y-3">
             <Button
               variant="secondary"
               className="w-full bg-[#403B21] hover:bg-[#6B6666] text-[#F1E5D1] font-semibold py-3 rounded-lg transition-colors"
@@ -322,7 +315,6 @@ const Navbar = () => {
       {/* Spacer for fixed navbar */}
       <div className={`${isScrolled ? 'h-20' : 'h-32'}`}></div>
     </div>
-
   );
 };
 
