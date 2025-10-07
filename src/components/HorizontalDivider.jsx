@@ -7,20 +7,20 @@ const DividerWithIcon = ({ size = 24, text = "" }) => {
       {/* Left Divider */}
       <div
         className="border-t border-1"
-        style={{ borderColor: Theme.colors.text, width: "20%" }}
+        style={{ borderColor: Theme.colors.text, width: "10%" }}
       ></div>
 
       {/* Icon */}
       <span className="mx-2">
         <Snowflake size={size}
           style={{ borderColor: Theme.colors.text }}
-        />   
+        />
       </span>
 
       {/* Right Divider */}
       <div
         className="border-t border-1"
-        style={{ borderColor: Theme.colors.text, width: "20%" }}
+        style={{ borderColor: Theme.colors.text, width: "10%" }}
       ></div>
     </div>
   );

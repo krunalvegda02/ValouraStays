@@ -1,20 +1,18 @@
-import React from 'react'
-import IMAGES from '../../Constants/Images'
-import Button from '../../components/Button';
+import React from 'react';
+import IMAGES from '../../Constants/Images';
 
 const AlternatingContent = () => {
-
   const alter1 = IMAGES.ALTER1;
   const alter2 = IMAGES.ALTER2;
 
   const sections = [
     {
       id: 1,
-      title1: " Sustainable Approach",
+      title1: "Sustainable Approach",
       content1: `Experience a villa that embraces sustainable living without compromise. From smart 
 lighting and recycled materials to natural ventilation and lush green landscaping, every 
 detail is designed to blend eco-consciousness with leisure. Enjoy guilt-free
- indulgence in a space that breathes with nature.`,
+indulgence in a space that breathes with nature.`,
       title2: "Signature Touches",
       content2: `Every corner tells a story. From handcrafted furniture and bespoke designs to interiors
 inspired by local culture, your villa feels like art brought to life. Step outside, and the 
@@ -33,71 +31,57 @@ tranquility, comfort, and timeless charm.`,
       image: alter2,
       cta: "View Facilities"
     }
-  ]
+  ];
 
   return (
-    <div className="py-16 ">
-      <div className=" section-container shadow-2xl bg-[#f1e5d1]">
+    <div className="section-container">
+      <div className="shadow-2xl bg-[#f1e5d1] mx-auto max-w-full">
 
         {/* First Row */}
-        <div className="flex flex-col lg:flex-row items-center justify-between ">
+        <div className="flex flex-col lg:flex-row justify-between mx-0 w-full">
           {/* Content */}
-          <div className="lg:w-1/2 text-center">
-            <h2 className="text-[30px] font-bold text-gray-900 mb-6">
-              {sections[0].title1}
-            </h2>
-            <p className="text-[15px] text-gray-600 mb-8 leading-relaxed px-12">
-              {sections[0].content1}
-            </p>
-            <h2 className="text-[30px] font-bold text-gray-900 mb-6">
-              {sections[0].title2}
-            </h2>
-            <p className="text-[15px] text-gray-600 mb-8 leading-relaxed px-12">
-              {sections[0].content2}
-            </p>
+          <div className="lg:w-1/2 text-center px-6 sm:px-8 lg:px-12 py-6 sm:py-10">
+            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[0].title1}</h2>
+            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[0].content1}</p>
+
+            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[0].title2}</h2>
+            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[0].content2}</p>
           </div>
 
           {/* Image */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2 w-full">
             <img
               src={sections[0].image}
               alt={sections[0].title1}
-              className="w-full h-full object-cover  shadow-xl"
+              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>
 
         {/* Second Row - Reversed */}
-        <div className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex flex-col lg:flex-row justify-between mx-0 w-full">
           {/* Image */}
-          <div className="lg:w-1/2 order-2 lg:order-1">
+          <div className="lg:w-1/2 w-full">
             <img
               src={sections[1].image}
               alt={sections[1].title1}
-              className="w-full h-full object-cover shadow-xl"
+              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 hover:scale-105"
             />
           </div>
 
           {/* Content */}
-          <div className="lg:w-1/2 order-1 lg:order-2 mx-auto w-auto text-center">
-            <h2 className="text-[30px] font-bold text-gray-900 mb-6">
-              {sections[1].title1}
-            </h2>
-            <p className="text-[15px] text-gray-600 mb-8 leading-relaxed px-12">
-              {sections[1].content1}
-            </p>
-            <h2 className="text-[30px] font-bold text-gray-900 mb-6">
-              {sections[1].title2}
-            </h2>
-            <p className="text-[15px] text-gray-600 mb-8 leading-relaxed px-12">
-              {sections[1].content2}
-            </p>
+          <div className="lg:w-1/2 text-center px-6 sm:px-8 lg:px-12 py-6 sm:py-10">
+            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[1].title1}</h2>
+            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[1].content1}</p>
+
+            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[1].title2}</h2>
+            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[1].content2}</p>
           </div>
         </div>
 
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AlternatingContent
+export default AlternatingContent;

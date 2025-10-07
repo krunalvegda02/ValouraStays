@@ -12,70 +12,57 @@ const HomeFooter = () => {
   const features = [
     {
       id: 1,
-      icon: icon3, // SVG file
+      icon: icon3,
       title: "Chef on Wheels",
-      description: "Savor gourmet experiences without leaving your villa.Our Chef on Wheels brings bespoke, delicious meals crafted just for you, making every dining  moment effortless, personal, and unforgettable"
+      description: "Savor gourmet experiences without leaving your villa.Our Chef on Wheels brings bespoke, delicious meals crafted just for you, making every dining moment effortless, personal, and unforgettable"
     },
     {
       id: 2,
-      icon: icon2, // SVG file
+      icon: icon2,
       title: "Breathtaking Locations",
-      description: `Wake up to mesmerizing vistas that captivate the
-senses. Rolling hills, serene landscapes, and 
-stunning natural beauty surround you, making 
-every moment spent here truly unforgettable`
+      description: `Wake up to mesmerizing vistas that captivate the senses. Rolling hills, serene landscapes, and stunning natural beauty surround you, making every moment spent here truly unforgettable`
     },
     {
       id: 3,
-      icon: icon1, // SVG file
-      title: "Private Pools & Luxe Amenitirs",
-      description: `Dive into relaxation with your private pool and enjoy 
-world-class amenities. From spa-like comforts to 
-modern conveniences, every feature is curated for 
-your ultimate comfort and indulgence.`
+      icon: icon1,
+      title: "Private Pools & Luxe Amenities",
+      description: `Dive into relaxation with your private pool and enjoy world-class amenities. From spa-like comforts to modern conveniences, every feature is curated for your ultimate comfort and indulgence.`
     }
   ]
 
-
   return (
-    <div className="section-container">
-      <div className="mt-8 mb-16">
+    <div className="section-container px-4 sm:px-6 lg:px-8">
+      <div className="mt-8 mb-16 max-w-[1200px] mx-auto">
+
         {/* HeaderTitle with constrained width */}
-        <div className="flex justify-center mb-6">
-          <div className="w-full max-w-[200rem]">
-            <HeaderTitle
-              title='A Stay Like Nowhere Else'
-            />
+        <div className="flex justify-center mb-10">
+          <div className="w-full max-w-xl">
+            <HeaderTitle title='A Stay Like Nowhere Else' />
           </div>
         </div>
 
-
-        {/* Three Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-12">
           {features.map((feature) => (
-            <div key={feature.id} className="flex group cursor-pointer ">
+            <div key={feature.id} className="flex flex-col sm:flex-row items-center sm:items-start cursor-pointer group">
 
               {/* Icon Container */}
-              <div className="w-28 h-28 rounded-2xl flex items-center justify-center  ">
-                {(
-                  <img src={feature.icon} alt={feature.title} className="w-32 h-32 mr-5 " />
-                )}
+              <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 mb-6 sm:mb-0 sm:mr-6">
+                <img src={feature.icon} alt={feature.title} className="w-full h-full object-contain" />
               </div>
 
-
               {/* Content */}
-              <div className="flex-1">
-                <h3 className="text-xl font-bold mb-1">
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className={`stroke-2  text-md leading-relaxed text-[${Theme.colors.text}]`}>
+                <p className={`text-sm sm:text-base leading-relaxed text-[${Theme.colors.text}]`}>
                   {feature.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
-
 
       </div>
     </div>
