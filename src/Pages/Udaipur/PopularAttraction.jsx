@@ -14,7 +14,7 @@ const PopularAttraction = () => {
     return (
         <div className='section-container px-4 sm:px-6 lg:px-20'>
             <div className='my-12 sm:my-16'>
-                <h2 className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 font-serif text-center`}>
+                <h2 className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 font-serif `}>
                     Popular Attractions in Udaipur
                 </h2>
 
@@ -25,7 +25,7 @@ const PopularAttraction = () => {
                                 key={index}
                                 className={`p-4 sm:p-6 lg:p-8 text-[${Theme.colors.text}] transition-all duration-300 hover:scale-105 cursor-pointer group`}
                             >
-                                <h2 className='text-xl sm:text-2xl lg:text-3xl font-semibold transition-colors duration-300 text-center'>
+                                <h2 className='text-xl sm:text-2xl lg:text-3xl font-semibold transition-colors duration-300 '>
                                     {attraction}
                                 </h2>
                             </div>
