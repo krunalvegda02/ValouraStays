@@ -66,7 +66,7 @@ const Card = ({ image, title, location, amenities, description, price, link }) =
         {/* Price Tag */}
         <Button
           icon={false}
-          className={`absolute -bottom-3 -right-7 px-4 py-2 sm:px-5 sm:py-3 shadow-lg transform transition duration-300 group-hover:scale-105 group-hover:shadow-xl text-sm sm:text-base`}
+          className={`absolute -bottom-3 -right-7 px-4 py-2 sm:px-5 sm:py-3 shadow-lg  text-sm sm:text-base`}
         >
           <div className="text-lg sm:text-xl whitespace-nowrap">
             <span>{price}</span>/ Night

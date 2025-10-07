@@ -22,33 +22,36 @@ const Blog = () => {
             {/* Hero Section */}
             <CommonHero title={blog.title} description={blog.subtitle} />
 
-            <div className="section-container">
-                <div className="pt-10">
+            <div className="section-container px-4 sm:px-6 lg:px-20">
+                <div className="pt-10 flex flex-col gap-10">
+
                     {/* Blog Header Section */}
-                    <div className="flex gap-6">
-                        <BlogCard
-                            showTitle={false}
-                            imageUrl={blog.imageUrl}
-                            author={blog.author}
-                            date={blog.date}
-                            commentsCount={blog.commentsCount}
-                        />
-                        <div className="w-[30%]">
+                    <div className="flex flex-col md:flex-row gap-6">
+                        <div className="w-full md:w-[70%]">
+                            <BlogCard
+                                showTitle={false}
+                                imageUrl={blog.imageUrl}
+                                author={blog.author}
+                                date={blog.date}
+                                commentsCount={blog.commentsCount}
+                            />
+                        </div>
+                        <div className="w-full md:w-[30%]">
                             <AvatarBox />
                         </div>
                     </div>
 
                     {/* Title */}
-                    <h1 className={`text-4xl font-bold text-[${Theme.colors.text}] mt-8`}>
+                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] mt-6 md:mt-8`}>
                         {blog.title}
-                    </h1>
+                    </h2>
 
                     {/* Title Description */}
-                    <div className="my-4 mb-8 space-y-4">
+                    <div className="my-4 mb-8 space-y-3 sm:space-y-4">
                         {blog.titleDescription?.map((parag, index) => (
                             <p
                                 key={index}
-                                className={`text-2xl text-[${Theme.colors.darkText}] leading-relaxed`}
+                                className={`text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed`}
                             >
                                 {parag}
                             </p>
@@ -57,11 +60,11 @@ const Blog = () => {
 
                     {/* Images */}
                     {blog.images && (
-                        <div className="flex gap-4 w-full mb-8">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full mb-8">
                             {blog.images.map((imgSrc, index) => (
                                 <div
                                     key={index}
-                                    className="flex-1 h-80 overflow-hidden rounded-3xl"
+                                    className="flex-1 h-48 sm:h-64 md:h-80 overflow-hidden rounded-none"
                                 >
                                     <img
                                         src={imgSrc}
@@ -78,25 +81,25 @@ const Blog = () => {
                         <div className="mt-5 space-y-5">
                             {/* Blog Section Title */}
                             <h2
-                                className={`text-3xl font-bold text-[${Theme.colors.text}] mb-4`}
+                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-4`}
                             >
                                 {blog.blogData.title}
                             </h2>
 
                             {/* Points Section */}
-                            <div className="space-y-6">
+                            <div className="space-y-4 sm:space-y-6">
                                 {blog.blogData.points.map((point, index) => (
                                     <div key={index}>
                                         <h3
-                                            className={`text-2xl font-semibold text-[${Theme.colors.text}] mb-2`}
+                                            className={`text-lg sm:text-xl md:text-3xl font-semibold text-[${Theme.colors.text}] mb-2`}
                                         >
                                             {point.title}
                                         </h3>
-                                        <div className="space-y-4">
+                                        <div className="space-y-2 sm:space-y-4">
                                             {point.paragraphs.map((para, i) => (
                                                 <p
                                                     key={i}
-                                                    className={`text-xl text-[${Theme.colors.darkText}]`}
+                                                    className={`text-sm sm:text-base md:text-xl text-[${Theme.colors.darkText}]`}
                                                 >
                                                     {para}
                                                 </p>
@@ -107,13 +110,13 @@ const Blog = () => {
                             </div>
 
                             {/* Ending Paragraphs */}
-                            <div className="mt-10 space-y-2">
+                            <div className="mt-6 sm:mt-10 space-y-1 sm:space-y-2">
                                 {blog.blogData.endingParagraphs.map((para, index) => (
                                     <p
                                         key={index}
-                                        className={`text-xl leading-relaxed text-[${Theme.colors.darkText}] ${index === 0
-                                                ? `font-semibold text-[${Theme.colors.text}]`
-                                                : 'font-normal'
+                                        className={`text-sm sm:text-base md:text-xl leading-relaxed text-[${Theme.colors.darkText}] ${index === 0
+                                            ? `font-semibold text-[${Theme.colors.text}]`
+                                            : 'font-normal'
                                             }`}
                                     >
                                         {para}
@@ -123,7 +126,7 @@ const Blog = () => {
                         </div>
                     )}
 
-                    {/* FAQ Section (optional) */}
+                    {/* FAQ Section */}
                     {blog.faqData && <FAQSection faqData={blog.faqData} />}
 
                     {/* Other Sections */}

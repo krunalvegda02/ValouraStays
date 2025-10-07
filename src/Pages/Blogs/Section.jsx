@@ -36,13 +36,13 @@ const Section = () => {
     ]
 
     return (
-        <div className="section-container my-10">
-            <div className="flex flex-col lg:flex-row gap-6">
+        <div className="section-container ">
+            <div className="flex flex-col lg:flex-row gap-6  mt-10">
 
                 {/* Left Section - Blogs */}
                 <div className="w-full lg:w-7/10 md:w-2/3">
                     {blogs.map((blog, index) => (
-                        <div key={index} className="mb-6">
+                        <div key={index} className="">
                             <BlogCard
                                 imageUrl={blog.imageUrl}
                                 title={blog.title}

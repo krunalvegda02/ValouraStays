@@ -241,7 +241,21 @@ const Navbar = () => {
 
 
             {/* Mobile Menu */}
-            <div
+          
+
+          </nav>
+        </div>
+
+        {/* Spacer for fixed navbar */}
+        <div className={`${isScrolled ? 'h-20' : 'h-32'}`}></div>
+      </div>
+    </>
+  );
+};
+
+export default Navbar;
+
+  <div
               className={`lg:hidden fixed top-[70px] left-0 w-screen h-[calc(100vh-70px)] overflow-y-auto bg-[#F7F5F1] backdrop-blur-xl shadow-xl border-t border-gray-200 rounded-b-2xl transition-all duration-500 ease-in-out ${isMenuOpen ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0'}`}
             >
               <div className="flex flex-col space-y-3 p-6">
@@ -267,20 +281,6 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-
-          </nav>
-        </div>
-
-        {/* Spacer for fixed navbar */}
-        <div className={`${isScrolled ? 'h-20' : 'h-32'}`}></div>
-      </div>
-    </>
-  );
-};
-
-export default Navbar;
-
-
 
 
 

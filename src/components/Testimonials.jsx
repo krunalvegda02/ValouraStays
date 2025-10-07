@@ -57,7 +57,7 @@ const Testimonials = () => {
     }
 
     return (
-        <section className="section-container px-2 sm:px-2 md:px-4 py-8 md:py-12">
+        <section className="section-container px-2 sm:px-2 md:px-4 ">
             <div className="max-w-[980px] mx-auto text-center mb-8 md:mb-12">
                 <HeaderTitle title="Client Testimonials" size="20" />
             </div>
