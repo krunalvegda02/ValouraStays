@@ -53,7 +53,7 @@ const Navbar2 = () => {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden xl:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
+            <div className="hidden 2xl:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2">
               {navItems.map((item) => {
                 if (item.label === "Destinations") {
                   return (
@@ -111,7 +111,7 @@ const Navbar2 = () => {
                 onClick={() => navigate("/villas")}
                 variant="secondary"
                 icon={false}
-                className="px-4 sm:px-6 py-2 sm:py-3 hidden xl:flex"
+                className="px-4 sm:px-6 py-2 sm:py-3 hidden 2xl:flex"
               >
                 <span className="font-serif font-bold text-sm sm:text-base text-[#F1E5D1]">
                   Book Your Villa!
@@ -121,7 +121,7 @@ const Navbar2 = () => {
               {/* Mobile Menu Button */}
               <div
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.background}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
+                className={`2xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.background}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
               >
                 <div className="flex flex-col justify-center space-y-1.5">
                   <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? "rotate-45 translate-y-1.5 w-6" : "w-6"}`}></span>
