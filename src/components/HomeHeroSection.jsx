@@ -68,8 +68,8 @@ const HeroSection = () => {
             <div
               key={index}
               className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-out ${index === currentImageIndex
-                  ? 'opacity-100 scale-100'
-                  : 'opacity-0 scale-105'
+                ? 'opacity-100 scale-100'
+                : 'opacity-0 scale-105'
                 }`}
               style={{
                 backgroundImage: `url(${image})`

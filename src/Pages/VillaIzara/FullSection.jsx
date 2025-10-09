@@ -36,19 +36,28 @@ const FullSection = () => {
 
     const faqData = [
         {
-            question: "What is your return policy?",
+            question: "How many guests can the Izara villa accommodate?",
             answer:
-                "Our return policy allows you to return items within 30 days of purchase. Items must be in original condition with tags attached. Refunds will be processed within 5-7 business days.",
+                `The villa has 5 bedrooms and can comfortably accommodate both small families and larger groups, with spacious bedrooms, living areas, and outdoor spaces designed for relaxation.`
         },
         {
-            question: "How long does shipping take?",
+            question: "What amenities are included?",
             answer:
-                "Standard shipping takes 3-5 business days. Express shipping is available for 1-2 business days. International shipping may take 7-14 business days depending on the destination.",
+                `Guests enjoy modern amenities such as air-conditioned rooms, a private pool, Wi-Fi, a fully equipped kitchen, elegant interiors, a place for small events, and garden space.`
         },
         {
-            question: "Do you offer international shipping?",
+            question: "Can I host a private event at the Izara villa?",
             answer:
-                "Yes, we ship to over 50 countries worldwide. Shipping costs and delivery times vary by location.",
+                "Yes, Izara  villas  are  perfect for intimate gatherings, celebrations, or small events. Prior notice and approval are required.",
+        },
+        {
+            question: "What attractions are nearby?",
+            answer:
+                "Guests can visit the majestic City Palace, serene Lake Pichola, Jagdish Temple, vibrant local markets, and cultural landmarks, all just a short drive away.",
+        }, {
+            question: "How do I make a booking for Izara?",
+            answer:
+                "You can book directly through our official website or use other sources like MakeMyTrip, Goibibo, and Agoda for assistance.",
         },
     ];
 

@@ -13,7 +13,7 @@ const HouseRules = () => {
         <div className="mb-10 px-3 sm:px-4">
             {/* Heading */}
             <h2
-                className={`font-bold text-2xl sm:text-3xl text-[${Theme.colors.darkText}] mb-6`}
+                className={`font-bold text-2xl sm:text-3xl text-[${Theme.colors.text}] mb-6`}
             >
                 House Rules
             </h2>

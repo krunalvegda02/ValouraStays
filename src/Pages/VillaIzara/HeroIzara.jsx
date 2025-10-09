@@ -51,7 +51,7 @@ const HeroIzara = () => {
      
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-[500px] flex items-center justify-center overflow-hidden"
       >
         {/* Background Images */}
         <div className="inset-0 z-0">

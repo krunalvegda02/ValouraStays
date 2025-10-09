@@ -37,7 +37,7 @@ const Footer = () => {
               <img src={IMAGES.LOGO2} alt="Veloura Stays" className="h-14 sm:h-16 md:h-18" />
             </div>
 
-            <p className="text-[#403B21]/80 leading-relaxed mb-8 text-sm sm:text-base md:text-lg font-light text-center sm:text-left">
+            <p className="text-[#403B21]/80 leading-relaxed mb-8 text-base sm:text-lg  font-light text-center sm:text-left">
               Veloura Stays is a premier chain of luxury resorts and villas in Udaipur,
               featuring private pools, modern comforts, scenic views, and spacious retreats,
               designed to offer unforgettable experiences where relaxation, elegance, and
@@ -45,7 +45,6 @@ const Footer = () => {
             </p>
 
 
-            {/* Social Links */}
             {/* Social Links */}
             <div className="text-center sm:text-left">
               <h3 className="text-base sm:text-lg font-semibold mb-4 font-serif">Follow Our Journey</h3>
