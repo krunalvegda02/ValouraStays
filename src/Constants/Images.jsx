@@ -124,7 +124,6 @@ import izarahero1 from "../assets/villaIzara/izarahero1.jpg"
 import izarahero2 from "../assets/villaIzara/izarahero2.jpg"
 import izarahero3 from "../assets/villaIzara/izarahero3.jpg"
 import izarahero4 from "../assets/villaIzara/izarahero4.jpg"
-import izarahero5 from "../assets/villaIzara/izarahero5.jpg"
 import izarahero6 from "../assets/villaIzara/izarahero6.jpg"
 
 import contactushero from "../assets/contactushero.jpg"
