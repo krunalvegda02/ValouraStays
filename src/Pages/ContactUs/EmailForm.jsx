@@ -122,7 +122,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Right Section - Contact Form */}
-                <div className="lg:col-span-6  bg-[#F7F5F1]  shadow-lg p-6 sm:p-10 rounded-lg">
+                <div className="lg:col-span-6  bg-[#F7F5F1]  shadow-lg p-6 sm:p-10 ">
                     <form className="space-y-6 mt-4" onSubmit={handleSubmit} noValidate>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">

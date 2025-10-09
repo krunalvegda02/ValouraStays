@@ -36,7 +36,7 @@ const Section = () => {
 
     return (
         <section className="section-container ">
-            <div className="flex flex-wrap -mx-3 mt-6 sm:mt-12 mb-6" >
+            <div className="flex flex-wrap -mx-3 mt-6 sm:mt-12 mb-6 " >
                 {blogs.map((blog) => (
                     <BlogCard2
                         key={blog.blogId}

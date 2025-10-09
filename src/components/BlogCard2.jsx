@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Calendar, MessageCircle, User } from "lucide-react";
 
-const BlogCardPremium = ({ ...props }) => {
+const BlogCard2 = ({ ...props }) => {
     const navigate = useNavigate();
 
     const handleReadMore = () => {
@@ -9,7 +9,7 @@ const BlogCardPremium = ({ ...props }) => {
     };
 
     return (
-        <div className="w-full sm:w-1/2 lg:w-1/3 px-3 ">
+        <div className="w-full sm:w-1/2 lg:w-1/3 px-3 mb-3 lg:mb-0">
             <div className=" shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col h-full">
                 {/* Image */}
                 <div className="h-64 overflow-hidden relative">
@@ -64,4 +64,4 @@ const BlogCardPremium = ({ ...props }) => {
     );
 };
 
-export default BlogCardPremium;
+export default BlogCard2;
