@@ -13,7 +13,7 @@ const FAQSection = ({ faqData }) => {
             <div className="">
                 <div className="space-y-4">
                     {/* Section Title */}
-                    <h2 className={`text-xl sm:text-lg md:text-xl font-bold text-[${Theme.colors.text}] pb-2 `}>
+                    <h2 className={`text-xl sm:text-lg md:text-2xl font-bold text-[${Theme.colors.text}] pb-2 `}>
                         Frequently Asked Questions
                     </h2>
 

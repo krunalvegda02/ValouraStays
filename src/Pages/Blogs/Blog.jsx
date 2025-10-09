@@ -22,8 +22,8 @@ const Blog = () => {
             {/* Hero Section */}
             <CommonHero title={blog.title} description={blog.subtitle} image={blog.hero} />
 
-            <div className="section-container px-4 sm:px-6 lg:px-20">
-                <div className="pt-10 flex flex-col gap-10">
+            <div className="section-container ">
+                <div className="pt-12 flex flex-col ">
 
                     {/* Blog Header Section */}
                     <div className="flex flex-col md:flex-row gap-6">
@@ -42,12 +42,12 @@ const Blog = () => {
                     </div>
 
                     {/* Title */}
-                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] mt-6 md:mt-8`}>
+                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] `}>
                         {blog.title}
                     </h2>
 
                     {/* Title Description */}
-                    <div className="my-4 mb-8 space-y-3 sm:space-y-4">
+                    <div className=" my-4 space-y-3 sm:space-y-1">
                         {blog.titleDescription?.map((parag, index) => (
                             <p
                                 key={index}
@@ -60,7 +60,7 @@ const Blog = () => {
 
                     {/* Images */}
                     {blog.images && (
-                        <div className="flex flex-col sm:flex-row gap-4 w-full mb-8">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full mb-4">
                             {blog.images.map((imgSrc, index) => (
                                 <div
                                     key={index}
@@ -78,16 +78,16 @@ const Blog = () => {
 
                     {/* Blog Content */}
                     {blog.blogData && (
-                        <div className="mt-5 space-y-5">
+                        <div className="mt-3 space-y-5">
                             {/* Blog Section Title */}
                             <h2
-                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-4`}
+                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-5`}
                             >
                                 {blog.blogData.title}
                             </h2>
 
                             {/* Points Section */}
-                            <div className="space-y-4 sm:space-y-6">
+                            <div className="space-y-2 sm:space-y-3">
                                 {blog.blogData.points.map((point, index) => (
                                     <div key={index}>
                                         <h3
@@ -95,7 +95,7 @@ const Blog = () => {
                                         >
                                             {point.title}
                                         </h3>
-                                        <div className="space-y-2 sm:space-y-4">
+                                        <div className="space-y-1">
                                             {point.paragraphs.map((para, i) => (
                                                 <p
                                                     key={i}
@@ -110,7 +110,7 @@ const Blog = () => {
                             </div>
 
                             {/* Ending Paragraphs */}
-                            <div className="mt-6 sm:mt-10 space-y-1 sm:space-y-2">
+                            <div className="mt-2 space-y-1 mb-6 ">
                                 {blog.blogData.endingParagraphs.map((para, index) => (
                                     <p
                                         key={index}
@@ -125,15 +125,20 @@ const Blog = () => {
                             </div>
                         </div>
                     )}
-
-                    {/* FAQ Section */}
-                    {blog.faqData && <FAQSection faqData={blog.faqData} />}
-
-                    {/* Other Sections */}
-                    <Platforms />
-                    <SendMessage />
                 </div>
             </div>
+            {/* FAQ Section */}
+            <div className=''>
+                {blog.faqData && <FAQSection faqData={blog.faqData} />}
+            </div>
+
+            {/* Other Sections */}
+            <Platforms />
+            <div className='mb-12'>
+                <SendMessage />
+            </div>
+
+
         </>
     );
 };

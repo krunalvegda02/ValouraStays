@@ -8,22 +8,20 @@ import FacebookIcon from '../../assets/social/facebook.svg?react';
 import PinterestIcon from '../../assets/social/pinterest.svg?react';
 import InstagramIcon from '../../assets/social/Instagram.svg?react';
 
-
-
 const Thankyou = () => {
   // ✅ Social links
   const socialLinks = [
     {
       href: "https://www.facebook.com/people/Veloura-Stays/61581131180973/",
-      icon: <FacebookIcon className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14" />,
+      icon: <FacebookIcon className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9" />,
     },
     {
       href: "https://www.pinterest.com/velourastays/",
-      icon: <PinterestIcon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14" />,
+      icon: <PinterestIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9" />,
     },
     {
       href: "https://www.instagram.com/velourastays/",
-      icon: <InstagramIcon className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14" />,
+      icon: <InstagramIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9" />,
     },
   ];
 
@@ -34,7 +32,7 @@ const Thankyou = () => {
         image={IMAGES.THANKYOUHERO}
         title={
           <div
-            className="text-4xl sm:text-5xl md:text-6xl"
+            className="text-3xl sm:text-4xl md:text-5xl"
             style={{
               fontFamily: "'MonteCarlo', cursive",
               color: Theme.colors.background,
@@ -47,28 +45,28 @@ const Thankyou = () => {
       />
 
       {/* ✅ Main Section */}
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 sm:gap-10 md:gap-16 px-4 sm:px-8 py-12 sm:py-16 md:py-20">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-8 md:gap-12 px-4 sm:px-6 py-10 sm:py-12 md:py-16">
 
         {/* 🌐 Social Media Box */}
         <div
-          className="w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] shadow-xl flex flex-col justify-center items-center text-center border border-gray-200 bg-white"
+          className="w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] shadow-lg flex flex-col justify-center items-center text-center border border-gray-200 "
           style={{ backgroundColor: Theme.colors.background }}
         >
           <p
-            className="text-lg sm:text-xl md:text-2xl font-semibold mb-6"
+            className="text-base sm:text-lg md:text-xl font-semibold mb-4"
             style={{ color: Theme.colors.text }}
           >
             Connect with Us
           </p>
 
-          <div className="flex gap-4 sm:gap-6 justify-center">
+          <div className="flex gap-3 sm:gap-4 justify-center">
             {socialLinks.map((social, index) => (
               <a
                 key={index}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 sm:p-3 rounded-full bg-white border border-gray-300 transition-all duration-300 hover:scale-110 hover:shadow-lg flex items-center justify-center"
+                className="p-2 rounded-full bg-white border border-gray-300 transition-all duration-300 hover:scale-110 hover:shadow-md flex items-center justify-center"
               >
                 {social.icon}
               </a>
@@ -78,11 +76,11 @@ const Thankyou = () => {
 
         {/* 🌎 Website Button Box */}
         <div
-          className="w-[300px] h-[300px] sm:w-[340px] sm:h-[340px] md:w-[380px] md:h-[380px] shadow-xl flex flex-col justify-center items-center text-center border border-gray-200 bg-white"
+          className="w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] shadow-lg flex flex-col justify-center items-center text-center border border-gray-200 "
           style={{ backgroundColor: Theme.colors.background }}
         >
           <p
-            className="text-lg sm:text-xl md:text-2xl font-semibold mb-6"
+            className="text-base sm:text-lg md:text-xl font-semibold mb-4"
             style={{ color: Theme.colors.text }}
           >
             Visit Website
@@ -91,11 +89,11 @@ const Thankyou = () => {
           <Button
             icon={false}
             variant="secondary"
-            className="flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 text-white font-semibold text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl group"
+            className="flex items-center gap-2 px-5 py-2 sm:px-6 sm:py-3 text-white font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-105 hover:shadow-md group"
             onClick={() => window.open('https://valoura-stays-z7gb.vercel.app/', '_blank')}
           >
             <ExternalLink
-              size={24}
+              size={18}
               className="group-hover:rotate-45 transition-transform"
             />
             Visit Our Website

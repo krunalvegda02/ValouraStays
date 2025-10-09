@@ -62,7 +62,7 @@ const ContactForm = () => {
             return;
         }
         setErrors({});
-        navigate('/thankyou');
+        navigate('/Thankyou');
     };
 
     const isSubmitDisabled =
