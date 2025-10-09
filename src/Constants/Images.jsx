@@ -131,6 +131,12 @@ import contactushero from "../assets/contactushero.jpg"
 import udaipurHero2 from "../assets/VillasPage/UdaipurHero2.jpg"
 import Thankyouhero from "../assets/Thankyouhero.jpg"
 
+
+import facebook from "../assets/social/facebook.svg"
+import instagram from "../assets/social/instagram.svg"
+import pinterest from "../assets/social/pinterest.svg"
+
+
 const IMAGES = {
     ROOM1: room1,
     ROOM2: room2,
@@ -255,8 +261,11 @@ const IMAGES = {
     CONTACTUSHERO: contactushero,
 
     UDAIPURHERO2: udaipurHero2,
-    THANKYOUHERO: Thankyouhero
+    THANKYOUHERO: Thankyouhero,
 
+    FACEBOOK: facebook,
+    INSTAGRAM: instagram,
+    PINTEREST: pinterest
 };
 
 export default IMAGES;
