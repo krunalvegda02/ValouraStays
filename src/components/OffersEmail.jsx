@@ -4,7 +4,7 @@ import Theme from '../Constants/Theme'
 const OffersEmail = () => {
     return (
         <div className="section-container">
-            <div className="flex flex-col items-center text-center py-16 px-4 sm:px-6 lg:px-0">
+            <div className="flex flex-col items-center text-center   px-4 sm:px-6 lg:px-0">
                 {/* Heading */}
                 <h2
                     className="text-3xl sm:text-3xl md:text-5xl font-serif font-light mb-6 max-w-2xl leading-tight"
@@ -37,15 +37,14 @@ const OffersEmail = () => {
 
                         {/* Button */}
                         <button
-                            className={`mt-4 sm:mt-0 sm:ml-4 font-semibold text-white rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 w-full sm:max-w-[300px] min-w-[200px]`}
+                            className={`mt-4 sm:mt-0 sm:ml-4 font-semibold  rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 w-full sm:max-w-[300px] min-w-[200px]`}
                             style={{
                                 backgroundColor: Theme.colors.background,
                                 minWidth: '200px',
                             }}
-                            onMouseEnter={e => e.currentTarget.style.backgroundColor = Theme.colors.text}
-                            onMouseLeave={e => e.currentTarget.style.backgroundColor = Theme.colors.background}
+                            onMouseEnter={e => e.currentTarget.style.backgroundColor = Theme.colors.background}
                         >
-                            <p className="text-white text-xl sm:text-xl tracking-wide font-semibold">SUBSCRIBE NOW</p>
+                            <p className={`text-md sm:text-xl tracking-wide font-semibold`}>SUBSCRIBE NOW</p>
                         </button>
                     </div>
                 </div>

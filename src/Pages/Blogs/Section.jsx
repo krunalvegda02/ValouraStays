@@ -1,10 +1,9 @@
-import React from 'react'
-import BlogCard from '../../components/Blogcard'
-import AvatarBox from '../../components/AvatarBox'
-import IMAGES from '../../Constants/Images'
+import React from 'react';
+import BlogCard from '../../components/Blogcard';
+import IMAGES from '../../Constants/Images';
+import BlogCard2 from '../../components/BlogCard2';
 
 const Section = () => {
-
     const blogs = [
         {
             imageUrl: IMAGES.BLOG1,
@@ -13,7 +12,7 @@ const Section = () => {
             author: "Sarah Johnson",
             commentsCount: 80,
             date: "25 Sep 2022",
-            BlogId: 1
+            blogId: 1
         },
         {
             imageUrl: IMAGES.BLOG2,
@@ -22,7 +21,7 @@ const Section = () => {
             author: "Sarah Johnson",
             commentsCount: 50,
             date: "23 Sep 2022",
-            BlogId: 2
+            blogId: 2
         },
         {
             imageUrl: IMAGES.BLOG3,
@@ -31,41 +30,28 @@ const Section = () => {
             author: "Sarah Johnson",
             commentsCount: 30,
             date: "21 Sep 2022",
-            BlogId: 3
+            blogId: 3
         }
-    ]
+    ];
 
     return (
-        <div className="section-container ">
-            <div className="flex flex-col lg:flex-row gap-6  mt-10">
-
-                {/* Left Section - Blogs */}
-                <div className="w-full lg:w-7/10 md:w-2/3">
-                    {blogs.map((blog, index) => (
-                        <div key={index} className="">
-                            <BlogCard
-                                imageUrl={blog.imageUrl}
-                                title={blog.title}
-                                excerpt={blog.excerpt}
-                                author={blog.author}
-                                commentsCount={blog.commentsCount}
-                                date={blog.date}
-                                blogId={blog.BlogId}
-                            />
-                        </div>
-                    ))}
-                </div>
-
-                {/* Right Section - Sidebar */}
-                <div className="w-full lg:w-3/10 md:w-1/3">
-                    <div className="lg:sticky lg:top-20">
-                        <AvatarBox />
-                    </div>
-                </div>
-
+        <section className="section-container ">
+            <div className="flex flex-wrap -mx-3 mt-16">
+                {blogs.map((blog) => (
+                    <BlogCard2
+                        key={blog.blogId}
+                        imageUrl={blog.imageUrl}
+                        title={blog.title}
+                        excerpt={blog.excerpt}
+                        author={blog.author}
+                        commentsCount={blog.commentsCount}
+                        date={blog.date}
+                        blogId={blog.blogId}
+                    />
+                ))}
             </div>
-        </div>
-    )
-}
+        </section>
+    );
+};
 
-export default Section
+export default Section;

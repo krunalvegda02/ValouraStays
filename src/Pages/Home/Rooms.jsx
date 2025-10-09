@@ -3,6 +3,7 @@ import HeaderTitle from '../../components/HeaderTitle'
 import IMAGES from '../../Constants/Images'
 import Theme from '../../Constants/Theme'
 import Button from '../../components/Button'
+import { debounce } from "lodash"; // optional if you already use lodash
 
 const Rooms = () => {
   const rooms = [
@@ -85,6 +86,18 @@ const Rooms = () => {
     scrollToIndex(nearestIndex)
   }
 
+
+  const handleScroll = useRef(
+    debounce(() => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+      const cardWidth = container.querySelector(".room-card").offsetWidth + 24;
+      const newIndex = Math.round(container.scrollLeft / cardWidth);
+      setCurrentIndex(newIndex);
+    }, 50)
+  ).current;
+
+
   return (
     <section className="section-container">
       {/* Title */}
@@ -104,7 +117,9 @@ const Rooms = () => {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
           onMouseMove={handleMouseMove}
+          onScroll={handleScroll}
         >
+
           {rooms.map((room) => (
             <div
               key={room.id}
