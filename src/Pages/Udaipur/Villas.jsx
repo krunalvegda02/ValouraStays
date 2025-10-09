@@ -68,7 +68,7 @@ memories.`,
                             {/* Text Section */}
                             <div className="md:w-3/5 text-center md:text-left space-y-3 md:space-y-4">
                                 <p
-                                    className={`text-xl sm:text-2xl md:text-3xl text-[${Theme.colors.darkText}]`}
+                                    className={`text-sm sm:text-2xl md:text-3xl text-[${Theme.colors.darkText}]`}
                                 >
                                     {index === 0 &&
                                         "And here’s the thing — where you stay makes a huge difference. Imagine waking up to those stunning views, having space for everyone to relax, and winding down by the pool or in a quiet gazebo. That’s exactly what we’ve built with Veloura Stays."

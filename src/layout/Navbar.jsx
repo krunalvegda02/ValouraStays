@@ -122,7 +122,7 @@ const Navbar = () => {
               </Button>
 
               {/* Mobile toggle */}
-              <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.background}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`} aria-label="Toggle menu">
+              <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.lightText}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`} aria-label="Toggle menu">
                 <div className="flex flex-col justify-center space-y-1.5">
                   <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? 'rotate-45 translate-y-1.5 w-6' : 'w-6'}`}></span>
                   <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? 'opacity-0' : 'w-6'}`}></span>
