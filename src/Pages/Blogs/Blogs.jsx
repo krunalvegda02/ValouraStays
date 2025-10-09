@@ -19,7 +19,10 @@ const Blogs = () => {
             <Section />
             <Testimonials />
             <Platforms />
-            <SendMessage />
+            <div className='mb-6 sm:mb-12'>
+                <SendMessage />
+
+            </div>
         </div>
     )
 }

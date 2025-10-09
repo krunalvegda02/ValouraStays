@@ -41,15 +41,15 @@ const Wander = () => {
   const photoCards = photoCardsByTab[activeTab]
 
   return (
-    <div className="section-container px-4 sm:px-6 lg:px-12">
+    <div className="section-container ">
       {/* Header Section */}
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center my-3">
         <div className="w-full max-w-4xl text-center">
           <HeaderTitle title="wander & unwind" space={false} />
         </div>
       </div>
 
-      <p className="flex my-3 justify-center text-sm sm:text-base md:text-lg text-gray-600 text-center max-w-2xl mx-auto px-2">
+      <p className="flex mb-3 justify-center text-sm sm:text-base md:text-lg text-gray-600 text-center max-w-2xl mx-auto px-2">
         From serene property views to buzzing urban getaways, enjoy every side of your escape.
       </p>
 
@@ -100,7 +100,7 @@ const Wander = () => {
         </div>
 
         {/* Second Row */}
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:w-2/3 md:mx-auto mb-10 sm:mb-8">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:w-2/3 md:mx-auto ">
           {photoCards.slice(3, 5).map((card) => (
             <div
               key={card.id}

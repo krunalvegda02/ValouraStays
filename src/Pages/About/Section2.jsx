@@ -16,7 +16,7 @@ const Section2 = () => {
   ];
 
   return (
-    <div className="pb-16">
+    <>
       <div className="section-container">
         {/* First Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -77,7 +77,7 @@ const Section2 = () => {
 
       {/* Stats Section */}
       <div
-        className="relative w-full h-[280px] sm:h-[300px] md:h-[320px] mx-auto mt-10"
+        className="relative w-full h-[280px] sm:h-[300px] md:h-[320px] mx-auto my-8"
         style={{
           backgroundImage: `url(${IMAGES.ABOUTS3})`,
           backgroundSize: "cover",
@@ -114,7 +114,7 @@ const Section2 = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

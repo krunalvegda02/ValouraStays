@@ -20,19 +20,18 @@ const UdaipurPage = () => {
             <PopularAttraction />
             <BottomCard />
             <OffersEmail />
-          <div className="section-container px-4 sm:px-8 lg:px-20">
-    <h2
-        className={`font-serif text-[${Theme.colors.darkText}] 
-        text-xl sm:text-2xl md:text-3xl lg:text-4xl 
+            <div className="section-container ">
+                <h2
+                    className={`font-serif text-[${Theme.colors.darkText}] 
+        text-xl sm:text-2xl md:text-3xl lg:text-3xl 
         text-center leading-relaxed sm:leading-snug md:leading-normal 
-        mb-6 sm:mb-8 md:mb-10 max-w-5xl mx-auto`}
-    >
-        On your next trip to Udaipur, don’t just plan the sights — you deserve an
-        experience that stays with you. Let <span className="font-semibold text-[${Theme.colors.text}]">Veloura Stays </span> 
-        turn every moment into a memory you’ll cherish.
-    </h2>
-</div>
-
+        sm:mb-8 md:mb-10  mx-auto mb-12`}
+                >
+                    On your next trip to Udaipur, don’t just plan the sights — you deserve an
+                    experience that stays with you. Let <span className={`font-semibold text-[${Theme.colors.text}]`}>Veloura Stays </span>
+                    turn every moment into a memory you’ll cherish.
+                </h2>
+            </div>
         </div>
     )
 }

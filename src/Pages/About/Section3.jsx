@@ -38,11 +38,11 @@ const Section3 = () => {
 
   return (
     <div className="section-container w-full px-4 sm:px-6 md:px-8 py-10 sm:py-16">
-      <div className="mx-auto space-y-12">
+      <div className="mx-auto space-y-6">
 
         {/* First Content Block */}
         <div>
-          <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-4 sm:mb-6`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-4  `}>
             The Origin of Veloura Era
           </h2>
           <p className="text-base sm:text-lg md:text-2xl text-gray-600 leading-relaxed">
@@ -55,7 +55,7 @@ const Section3 = () => {
 
         {/* Second Content Block */}
         <div>
-          <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-4 sm:mb-6`}>
+          <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-4 `}>
             Why Our Retreats Stand Out?
           </h2>
           <p className="text-base sm:text-lg md:text-2xl text-gray-600 leading-relaxed">
@@ -69,7 +69,7 @@ const Section3 = () => {
         {/* Scrollable Cards */}
         <div
           ref={sliderRef}
-          className="flex gap-4 sm:gap-6 overflow-x-auto overflow-y-hidden hide-scrollbar cursor-grab transition-all duration-300 pb-4"
+          className="flex gap-4 sm:gap-6 overflow-x-auto overflow-y-hidden hide-scrollbar cursor-grab transition-all duration-300 pb-6"
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseLeaveOrUp}
           onMouseLeave={handleMouseLeaveOrUp}

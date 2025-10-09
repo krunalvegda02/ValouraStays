@@ -13,16 +13,16 @@ const PopularAttraction = () => {
     ];
 
     return (
-        <div className="section-container px-4 sm:px-6 lg:px-20">
-            <div className="my-12 sm:my-16">
+        <div className="section-container ">
+            <div className="mt-10 mb-6 sm:my-8">
                 <h2
-                    className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl lg:text-6xl font-bold mb-8 sm:mb-12 font-serif text-center`}
+                    className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-10 font-serif text-center`}
                 >
                     Popular Attractions in Udaipur
                 </h2>
 
                 {/* 🌿 Mobile View (Premium earthy style) */}
-                <div className="block sm:hidden border border-[#E2CAB3]/70 p-5 rounded-2xl shadow-xl backdrop-blur-lg  relative overflow-hidden">
+                <div className="block sm:hidden  p-3 shadow-xl backdrop-blur-lg relative overflow-hidden">
 
                     {/* ✨ Animated soft background gradient shimmer */}
                     <div className="absolute inset-0 opacity-80 animate-gradient-x"></div>
@@ -31,13 +31,13 @@ const PopularAttraction = () => {
                         {attractions.map((item, index) => (
                             <div
                                 key={index}
-                                className="flex items-center space-x-4 p-4 bg-[#F1E5D1]/70 backdrop-blur-md rounded-xl border border-[#E2CAB3]/60 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-500 cursor-pointer group relative overflow-hidden"
+                                className="flex items-center space-x-4 p-4 bg-[#F1E5D1]/70 backdrop-blur-md border border-[#E2CAB3]/60 shadow-sm hover:shadow-lg hover:scale-[1.02] transition-all duration-500 cursor-pointer group relative overflow-hidden"
                             >
                                 {/* ✨ Glow border highlight */}
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[#E2CAB3]/50 to-[#F1E5D1]/40 rounded-xl"></div>
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[#E2CAB3]/50 to-[#F1E5D1]/40"></div>
 
                                 {/* Icon container with subtle inner light */}
-                                <div className="relative w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-inner group-hover:shadow-md group-hover:scale-110 transition-all duration-500">
+                                <div className="relative w-12 h-12 bg-white flex items-center justify-center shadow-inner group-hover:shadow-md group-hover:scale-110 transition-all duration-500">
                                     <div className="animate-pulse-slow">{item.icon}</div>
                                 </div>
 
@@ -67,7 +67,7 @@ const PopularAttraction = () => {
                 </div>
 
                 <p
-                    className={`text-[${Theme.colors.darkText}] my-4 sm:my-7 text-base sm:text-lg lg:text-2xl text-center leading-relaxed`}
+                    className={`text-[${Theme.colors.darkText}] mt-6 sm:mt-8 text-base sm:text-lg lg:text-2xl text-center leading-relaxed`}
                 >
                     Our villas are made for comfort and connection — big families, close
                     friends, or even just a peaceful retreat for yourself. Plus, you're

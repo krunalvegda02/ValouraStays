@@ -14,12 +14,12 @@ const BestResorts = () => {
     <div className="section-container">
       <div className=''>
         {/* Title */}
-        <div className="flex justify-center  md:mb-0">
-          <HeaderTitle title='Experience the Luxury of the Best Resorts' />
+        <div className="flex justify-center  mt-6 sm:mt-12">
+          <HeaderTitle space={false} title='Experience the Luxury of the Best Resorts' />
         </div>
 
         {/* Main Section */}
-        <div className="flex flex-col lg:flex-row items-center  w-full">
+        <div className="flex flex-col lg:flex-row items-center mt-3 sm:mt-0  w-full">
           {/* Left Content */}
           <div className="lg:flex-1 md:w-full max-w-3xl">
             {/* Headings */}
@@ -106,7 +106,7 @@ const BestResorts = () => {
 
           {/* Right Side - Images */}
           <div className="relative flex justify-center lg:justify-end w-full lg:w-auto  mt-3 lg:mt-0">
-            <div className="relative w-[280px] sm:w-[350px] md:w-[400px] h-[420px] sm:h-[500px] md:h-[580px]">
+            <div className="relative w-[350px] sm:w-[350px] md:w-[400px] h-[420px] sm:h-[500px] md:h-[580px] mx-0 ">
               {/* Top Image */}
               <div className="absolute top-2 right-0 sm:-right-10 md:-right-24 w-52 sm:w-64 md:w-80 h-64 sm:h-80 md:h-96 z-10 border-[10px] sm:border-[12px] md:border-[15px] border-white">
                 <img

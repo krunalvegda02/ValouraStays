@@ -57,8 +57,8 @@ const Testimonials = () => {
     }
 
     return (
-        <section className="section-container px-2 sm:px-2 md:px-4 ">
-            <div className="max-w-[980px] mx-auto text-center mb-8 md:mb-12">
+        <section className="section-container ">
+            <div className="max-w-[980px] mx-auto text-center  ">
                 <HeaderTitle title="Client Testimonials" size="20" />
             </div>
 
@@ -124,7 +124,7 @@ const Testimonials = () => {
                         onClick={nextTestimonial}
                         onKeyDown={handleKey(nextTestimonial)}
                         className={`text-[#403B21] bg-[${Theme.colors.background}] bg-opacity-70 backdrop-blur rounded-full p-2 transition-all duration-300 cursor-pointer focus:outline-none pointer-events-auto`}
-                      
+
                         role="button"
                         tabIndex={0}
                         aria-label="Next testimonial"

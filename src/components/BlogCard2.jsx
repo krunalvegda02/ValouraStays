@@ -9,8 +9,8 @@ const BlogCardPremium = ({ ...props }) => {
     };
 
     return (
-        <div className="w-full sm:w-1/2 lg:w-1/3 px-3 mb-8">
-            <div className="theme shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col h-full">
+        <div className="w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div className=" shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer flex flex-col h-full">
                 {/* Image */}
                 <div className="h-64 overflow-hidden relative">
                     <img

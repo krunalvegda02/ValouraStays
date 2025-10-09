@@ -4,10 +4,10 @@ import Theme from '../Constants/Theme'
 const OffersEmail = () => {
     return (
         <div className="section-container">
-            <div className="flex flex-col items-center text-center  my-8 sm:my-16 px-4 sm:px-6 lg:px-0">
+            <div className="flex flex-col items-center text-center  my-8  px-4 sm:px-6 lg:px-0">
                 {/* Heading */}
                 <h2
-                    className="text-3xl sm:text-3xl md:text-5xl font-serif font-light mb-6 max-w-2xl leading-tight"
+                    className="text-3xl sm:text-3xl md:text-5xl font-serif font-light mb-2 max-w-2xl leading-tight"
                     style={{ color: Theme.colors.text }}
                 >
                     Get Best Offers On The Hotel
@@ -15,7 +15,7 @@ const OffersEmail = () => {
 
                 {/* Description */}
                 <p
-                    className="mb-10 sm:mb-12 text-base sm:text-lg md:text-xl max-w-5xl leading-relaxed"
+                    className="mb-6 text-base sm:text-lg md:text-xl max-w-5xl leading-relaxed"
                     style={{ color: Theme.colors.darkText }}
                 >
                     With the subscription, enjoy your favourite Hotels without having to think about it

@@ -43,7 +43,7 @@ const Services = () => {
     <div className="section-container">
       <div>
         {/* Header Title */}
-        <div className="text-center mb-8 max-w-2xl mx-auto">
+        <div className="text-center my-8 max-w-2xl mx-auto">
           <HeaderTitle title="Our Services" size="20" />
         </div>
 

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import HeaderTitle from "../../components/HeaderTitle";
 import IMAGES from "../../Constants/Images";
+import Theme from "../../Constants/Theme";
 
 const occasions = [
   { id: 1, image: IMAGES.OCCATIONS1, title: "Wellness Retreat" },
@@ -36,11 +37,11 @@ const Occasion = () => {
   };
 
   return (
-    <section className="section-container px-4 sm:px-6 lg:px-8">
+    <section className="section-container">
       {/* Header */}
-      <div className="max-w-7xl mx-auto text-center mt-12 sm:mt-16">
-        <HeaderTitle title="Villas For Every Occasion" />
-        <p className="text-gray-600  text-sm sm:text-base lg:text-lg px-4 sm:px-0">
+      <div className="max-w-7xl mx-auto text-center mt-8">
+        <HeaderTitle title="Villas For Every Occasion" space={false} />
+        <p className={`text-[${Theme.colors.darkText}]  text-sm sm:text-base lg:text-lg px-4 sm:px-0 mt-3`}>
           Whether it’s a private celebration or a serene getaway, our villas are designed to make every moment memorable.
         </p>
       </div>
@@ -48,7 +49,7 @@ const Occasion = () => {
       {/* Carousel */}
       <div
         ref={sliderRef}
-        className="flex gap-4 sm:gap-6 mt-10 overflow-x-auto overflow-y-hidden hide-scrollbar cursor-grab transition-all duration-300 snap-x snap-mandatory scroll-smooth pb-4"
+        className="flex gap-4 sm:gap-6 my-8 overflow-x-auto overflow-y-hidden hide-scrollbar cursor-grab transition-all duration-300 snap-x snap-mandatory scroll-smooth pb-4"
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseLeaveOrUp}
         onMouseLeave={handleMouseLeaveOrUp}

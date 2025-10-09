@@ -5,12 +5,12 @@ import IMAGES from '../../Constants/Images'
 const Section1 = () => {
   return (
     <div className="section-container">
-      <div className="flex flex-col lg:flex-row w-full items-center gap-10 0 lg:gap-8 py-16">
+      <div className="flex flex-col lg:flex-row w-full items-center gap-10 0 lg:gap-8 my-6 mt-12">
 
         {/* Left Section - 40% */}
         <div className="w-full lg:w-5/12 flex flex-col items-center lg:items-start px-4 sm:px-6 lg:px-0 ">
           <div
-            className="relative overflow-hidden rounded-xl mb-8 w-full max-w-[419px] sm:max-w-full"
+            className="relative overflow-hidden rounded-xl mb-5 w-full max-w-[419px] sm:max-w-full"
             style={{
               height: '370px',
               maxWidth: '100%',
@@ -51,7 +51,7 @@ const Section1 = () => {
             </span>
 
             <p
-              className={` text-xl text-[${Theme.colors.text}] pb-3`}
+              className={` text-xl text-[${Theme.colors.text}] py-3`}
               style={{
                 fontFamily: 'Oxygen, sans-serif',
                 fontWeight: 700,
@@ -72,7 +72,7 @@ const Section1 = () => {
             </p>
 
             <p
-              className="mb-5 text-[#6B6666] text-xl"
+              className=" text-[#6B6666] text-xl"
               style={{
                 fontFamily: 'Oxygen, sans-serif',
                 fontWeight: 400,
@@ -83,7 +83,7 @@ const Section1 = () => {
           </div>
 
           <div
-            className="w-full flex justify-center mt-8 relative overflow-hidden rounded-xl"
+            className="w-full flex justify-center mt-5 relative overflow-hidden rounded-xl"
             style={{
               width: '750px',
               height: '279px',

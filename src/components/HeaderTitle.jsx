@@ -10,9 +10,8 @@ const HeaderTitle = ({
 }) => {
   return (
     <div
-      className={`text-center w-full ${
-        space ? "my-6 sm:my-10 md:my-12" : "my-0"
-      } ${className}`}
+      className={`text-center w-full ${space ? "my-4 sm:my-8" : "my-0"
+        } ${className}`}
     >
       <h2
         className={`
@@ -26,7 +25,7 @@ const HeaderTitle = ({
       </h2>
 
       {/* <div className="flex justify-center mt-3 sm:mt-4"> */}
-        <HorizontalDivider size={size} />
+      <HorizontalDivider size={size} />
       {/* </div> */}
     </div>
   );

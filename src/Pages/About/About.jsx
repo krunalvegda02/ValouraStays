@@ -26,7 +26,9 @@ const About = () => {
       <Section3 />
       <Section4 />
       <Testimonials />
-      <Platforms />
+      <div className='mb-12'>
+        <Platforms />
+      </div>
     </div>
   )
 }

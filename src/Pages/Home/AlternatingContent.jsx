@@ -53,7 +53,7 @@ tranquility, comfort, and timeless charm.`,
             <img
               src={sections[0].image}
               alt={sections[0].title1}
-              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 hover:scale-105"
+              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 "
             />
           </div>
         </div>
@@ -65,7 +65,7 @@ tranquility, comfort, and timeless charm.`,
             <img
               src={sections[1].image}
               alt={sections[1].title1}
-              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 hover:scale-105"
+              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 "
             />
           </div>
 

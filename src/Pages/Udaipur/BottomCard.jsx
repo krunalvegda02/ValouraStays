@@ -24,7 +24,7 @@ const BottomCard = () => {
   }
 
   return (
-    <div className='section-container px-4 sm:px-6 lg:px-20'>
+    <div className='section-container '>
       <div className='relative w-full h-[250px] sm:h-[350px] lg:h-[400px] overflow-hidden shadow-2xl'>
 
         {/* Background Image */}

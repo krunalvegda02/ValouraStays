@@ -31,11 +31,11 @@ const HomeFooter = () => {
   ]
 
   return (
-    <div className="section-container px-4 sm:px-6 lg:px-8">
-      <div className="mt-8 mb-16 max-w-[1200px] mx-auto">
+    <div className="section-container ">
+      <div className=" mb-12 max-w-[1200px] mx-auto">
 
         {/* HeaderTitle with constrained width */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center ">
           <div className="w-full max-w-xl">
             <HeaderTitle title='A Stay Like Nowhere Else' />
           </div>
