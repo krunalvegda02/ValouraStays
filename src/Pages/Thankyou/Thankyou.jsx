@@ -4,10 +4,9 @@ import Theme from '../../Constants/Theme';
 import { ExternalLink } from 'lucide-react';
 import Button from '../../components/Button';
 import IMAGES from '../../Constants/Images';
-import FacebookIcon from '../assets/social/facebook.svg?react';
-import PinterestIcon from '../assets/social/pinterest.svg?react';
-import InstagramIcon from '../assets/social/instagram.svg?react';
-
+import FacebookIcon from '../../social/facebook.svg?react';
+import PinterestIcon from '../../assets/social/pinterest.svg?react';
+import InstagramIcon from '../../assets/social/instagram.svg?react';
 
 
 
