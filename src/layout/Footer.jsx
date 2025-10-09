@@ -2,9 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IMAGES from '../Constants/Images';
-import FacebookIcon from '/src/assets/social/facebook.svg?react';
-import PinterestIcon from '/src/assets/social/pinterest.svg?react';
-import InstagramIcon from '/src/assets/social/instagram.svg?react';
+import FacebookIcon from '../assets/social/facebook.svg?react';
+import PinterestIcon from '../assets/social/pinterest.svg?react';
+import InstagramIcon from '../assets/social/instagram.svg?react';
 
 
 
