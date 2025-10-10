@@ -17,64 +17,87 @@ const Section2 = () => {
 
   return (
     <>
-      <div className="section-container">
-        {/* First Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {aboutImages1.map((item, index) => (
-            <div key={index} className="group text-center relative">
-              {/* Bottom Border */}
-              <div className="absolute bottom-0 left-4 right-4 h-[1px] bg-[#9A9A9A]/50"></div>
-              {/* Right Border */}
-              {index < aboutImages1.length - 1 && (
-                <div className="absolute top-4 bottom-4 right-0 w-[1px] bg-[#9A9A9A]/50 hidden sm:block"></div>
-              )}
+ <div className="section-container">
+  {/* Mobile View - 2 columns grid (hidden on large screens) */}
+  <div className="block lg:hidden">
+    <div className="grid grid-cols-2 gap-4">
+      {[...aboutImages1, ...aboutImages2].map((item, index) => (
+        <div key={index} className="group text-center relative">
+          {/* Bottom Border for all except last row */}
+          {(index < [...aboutImages1, ...aboutImages2].length - 2) && (
+            <div className="absolute bottom-0 left-2 right-2 h-[1px] bg-[#9A9A9A]/30"></div>
+          )}
+          {/* Right Border for first column */}
+          {index % 2 === 0 && (
+            <div className="absolute top-2 bottom-2 right-0 w-[1px] bg-[#9A9A9A]/30"></div>
+          )}
 
-              {/* Card Container */}
-              <div className="flex flex-col items-center justify-center p-6 sm:p-8 transition-all duration-300 group-hover:bg-gray-50">
-                <div className="relative mb-4 sm:mb-6 flex items-center justify-center w-20 sm:w-24 h-20 sm:h-24">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <h3 className={`text-lg sm:text-xl font-semibold text-[${Theme.colors.darkText}] transition-colors duration-300`}>
-                  {item.title}
-                </h3>
-              </div>
+          <div className="flex flex-col items-center justify-center p-4 transition-all duration-300 group-hover:bg-gray-50">
+            <div className="relative mb-3 flex items-center justify-center w-16 h-16">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="object-contain transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
-          ))}
+            <h3 className="text-sm font-semibold text-[#6B6666] transition-colors duration-300">
+              {item.title}
+            </h3>
+          </div>
         </div>
+      ))}
+    </div>
+  </div>
 
-        {/* Second Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {aboutImages2.map((item, index) => (
-            <div key={index} className="group text-center relative">
-              {/* Bottom Border */}
-              <div className="sm:hidden absolute bottom-0 left-4 right-4 h-[1px] bg-[#9A9A9A]/50"></div>
-              {/* Right Border */}
-              {index < aboutImages1.length - 1 && (
-                <div className="absolute top-4 bottom-4 right-0 w-[1px] bg-[#9A9A9A]/50 hidden sm:block"></div>
-              )}
-
-              {/* Card Container */}
-              <div className="flex flex-col items-center justify-center p-6 sm:p-8 transition-all duration-300 group-hover:bg-gray-50">
-                <div className="relative mb-4 sm:mb-6 flex items-center justify-center w-20 sm:w-24 h-20 sm:h-24">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="object-contain transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <h3 className={`text-lg sm:text-xl font-semibold text-[${Theme.colors.darkText}] transition-colors duration-300`}>
-                  {item.title}
-                </h3>
-              </div>
+  {/* Desktop View - Original 3 columns (hidden on mobile) */}
+  <div className="hidden lg:block">
+    {/* Your original desktop code here */}
+    <div className="grid grid-cols-3 gap-4">
+      {aboutImages1.map((item, index) => (
+        <div key={index} className="group text-center relative">
+          <div className="absolute bottom-0 left-4 right-4 h-[1px] bg-[#9A9A9A]/50"></div>
+          {index < aboutImages1.length - 1 && (
+            <div className="absolute top-4 bottom-4 right-0 w-[1px] bg-[#9A9A9A]/50"></div>
+          )}
+          <div className="flex flex-col items-center justify-center p-8 transition-all duration-300 group-hover:bg-gray-50">
+            <div className="relative mb-6 flex items-center justify-center w-24 h-24">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="object-contain transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
-          ))}
+            <h3 className="text-xl font-semibold text-[#6B6666] transition-colors duration-300">
+              {item.title}
+            </h3>
+          </div>
         </div>
-      </div>
-
+      ))}
+    </div>
+    {/* Second row for desktop */}
+    <div className="grid grid-cols-3 gap-4 mt-4">
+      {aboutImages2.map((item, index) => (
+        <div key={index} className="group text-center relative">
+          {index < aboutImages2.length - 1 && (
+            <div className="absolute top-4 bottom-4 right-0 w-[1px] bg-[#9A9A9A]/50"></div>
+          )}
+          <div className="flex flex-col items-center justify-center p-8 transition-all duration-300 group-hover:bg-gray-50">
+            <div className="relative mb-6 flex items-center justify-center w-24 h-24">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="object-contain transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-[#6B6666] transition-colors duration-300">
+              {item.title}
+            </h3>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
       {/* Stats Section */}
       <div
         className="relative w-full h-[280px] sm:h-[300px] md:h-[320px] mx-auto my-8"
