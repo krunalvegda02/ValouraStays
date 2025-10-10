@@ -225,8 +225,6 @@ button:focus-visible {
 
 
 /* // 404 page */
-
-/* Add these styles to your global CSS file */
 @keyframes float {
 
   0%,
@@ -253,6 +251,15 @@ button:focus-visible {
 
 
 
+/* Sticky behaviour */
+/* Add this to your global CSS for smooth transitions */
+.lg\:sticky {
+  position: sticky;
+}
+
+.lg\:self-start {
+  align-self: flex-start;
+}
 
 
 

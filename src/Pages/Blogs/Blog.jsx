@@ -8,6 +8,7 @@ import Platforms from '../../components/Platforms';
 import SendMessage from '../../components/SendMessage';
 import Theme from '../../Constants/Theme';
 import { BlogsData } from './BlogsData';
+import BlogComments from './BlogComment';
 
 const Blog = () => {
     const { id } = useParams();
@@ -26,10 +27,10 @@ const Blog = () => {
                 <div className="pt-12 flex flex-col ">
 
                     {/* Blog Header Section */}
-                    <div className="flex flex-col md:flex-row gap-6">
-                        <div className="w-full md:w-[70%]">
+                    {/* <div className="flex flex-col md:flex-row gap-6">
+                        <div className="w-full  items-center">
                             <BlogCard
-                                showTitle={false}
+                                showTitle={false}   
                                 imageUrl={blog.imageUrl}
                                 author={blog.author}
                                 date={blog.date}
@@ -39,10 +40,10 @@ const Blog = () => {
                         <div className="w-full md:w-[30%]">
                             <AvatarBox />
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Title */}
-                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] `}>
+                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] text-center`}>
                         {blog.title}
                     </h2>
 
@@ -81,7 +82,7 @@ const Blog = () => {
                         <div className="mt-3 space-y-5">
                             {/* Blog Section Title */}
                             <h2
-                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-5`}
+                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-5 text-center`}
                             >
                                 {blog.blogData.title}
                             </h2>
@@ -115,7 +116,7 @@ const Blog = () => {
                                     <p
                                         key={index}
                                         className={`text-sm sm:text-base md:text-xl leading-relaxed text-[${Theme.colors.darkText}] ${index === 0
-                                            ? `font-semibold text-[${Theme.colors.text}]`
+                                            ? `font-semibold text-[${Theme.colors.text}] text-center`
                                             : 'font-normal'
                                             }`}
                                     >
@@ -127,6 +128,9 @@ const Blog = () => {
                     )}
                 </div>
             </div>
+
+            <BlogComments />
+
             {/* FAQ Section */}
             <div className=''>
                 {blog.faqData && <FAQSection faqData={blog.faqData} />}

@@ -16,7 +16,7 @@ const Button = ({
   const variants = {
     primary: {
       base: `bg-[${Theme.colors.background}] text-[${Theme.colors.text}] border border-transparent`,
-      hover: `hover:bg-[${Theme.colors.text}] hover:text-white hover:border-[${Theme.colors.lightText}]`
+      hover: `hover:bg-[${Theme.colors.text}] hover:text-[${Theme.colors.text}] hover:border-[${Theme.colors.lightText}]`
     },
     secondary: {
       base: `bg-[${Theme.colors.text}] text-white border border-transparent`,
@@ -24,7 +24,7 @@ const Button = ({
     },
     outline: {
       base: `bg-transparent text-[${Theme.colors.text}] border border-white`,
-      hover: `hover:bg-[${Theme.colors.text}] hover:text-white hover:border-[${Theme.colors.text}]`
+      hover: `hover:bg-[${Theme.colors.text}] hover:text-[${Theme.colors.lightText}] hover:border-[${Theme.colors.text}]`
     }
   }
 

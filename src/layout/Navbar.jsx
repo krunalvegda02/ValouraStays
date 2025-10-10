@@ -52,18 +52,29 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-[${Theme.colors.background}] backdrop-blur-sm shadow-lg py-2` : 'bg-transparent py-4'}`}>
         {/* Top contact bar */}
-        <div className={`transition-all duration-300 overflow-hidden ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-28 sm:max-h-20 opacity-100'}`}>
+        <div
+          className={`transition-all duration-300 overflow-hidden ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-28 sm:max-h-20 opacity-100'
+            } hidden sm:block`}
+        >
           <div className="section-container overflow-x-hidden hide-scrollbar">
             <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-2 sm:gap-0">
               <div className="flex flex-row items-center gap-2 sm:gap-4 overflow-x-auto sm:overflow-visible no-scrollbar py-2">
-                <a href="tel:+919797979075" className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0">
+                <a
+                  href="tel:+919797979075"
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0"
+                >
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform text-[#f1e5d1]" />
                   <span className="font-medium text-xs sm:text-sm text-[#f1e5d1]">+91 9797979075</span>
                 </a>
+
                 <div className="h-4 w-px bg-white/30 hidden sm:block"></div>
-                <a href="mailto:reservation@velourastays.com" className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0">
+
+                <a
+                  href="mailto:reservation@velourastays.com"
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 group flex-shrink-0"
+                >
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4 group-hover:scale-110 transition-transform text-[#f1e5d1]" />
-                  <span className="font-medium text-xs sm:text-sm text-[#f1e5d1] truncate max-w-[140px]">
+                  <span className="font-medium text-xs sm:text-sm text-[#f1e5d1] truncate max-w-[240px]">
                     reservation@velourastays.com
                   </span>
                 </a>
@@ -76,6 +87,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
 
         {/* Main Nav */}
         <nav className="section-container">
@@ -117,12 +129,45 @@ const Navbar = () => {
 
             {/* CTA + mobile toggle */}
             <div className="flex items-center space-x-2 sm:space-x-4 z-50">
-              <Button onClick={() => navigate("/villas")} variant={isScrolled ? "secondary" : "outline"} icon={false} className={`${isScrolled ? "" : "border-[#f1e5d1]"} px-4 sm:px-6 py-2 sm:py-3 hidden xl:flex`}>
-                <span className={`font-serif font-bold text-sm sm:text-base ${isScrolled ? "text-white" : "text-[#f1e5d1]"}`}>Book Your Villa!</span>
+              {/* Desktop CTA */}
+              <Button
+                onClick={() => navigate("/villas")}
+                variant={isScrolled ? "secondary" : "outline"}
+                icon={false}
+                className={`${isScrolled ? "" : "border-[#f1e5d1]"} px-4 sm:px-6 py-2 sm:py-3 hidden xl:flex`}
+              >
+                <span className={`font-serif font-bold text-sm sm:text-base ${isScrolled ? "text-white" : "text-[#f1e5d1]"}`}>
+                  Book Your Villa!
+                </span>
               </Button>
 
-              {/* Mobile toggle */}
-              <div onClick={() => setIsMenuOpen(!isMenuOpen)} className={`xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.lightText}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`} aria-label="Toggle menu">
+              <a
+                href="tel:+919797979075"
+                className={`xl:hidden flex items-center gap-1 sm:gap-2 
+    ${isScrolled
+                    ? `bg-white/10 border border-[${Theme.colors.text}] hover:bg-white/20`
+                    : `bg-[#f1e5d1]/20 border border-[#f1e5d1]/40 hover:bg-[#f1e5d1]/30`
+                  } 
+    backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all duration-300`}
+              >
+                <Phone
+                  className={`w-4 h-4 transition-colors duration-300 ${isScrolled ? `text-[${Theme.colors.text}]` : `text-[${Theme.colors.lightText}]`
+                    }`}
+                />
+                <span
+                  className={`text-xs sm:text-sm font-medium transition-colors duration-300 ${isScrolled ? `text-[${Theme.colors.text}]` : `text-[${Theme.colors.lightText}]`
+                    }`}
+                >
+                  Call Us
+                </span>
+              </a>
+
+              {/* Mobile menu toggle */}
+              <div
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={`xl:hidden p-2 sm:p-3 rounded-lg bg-[${Theme.colors.lightText}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
+                aria-label="Toggle menu"
+              >
                 <div className="flex flex-col justify-center space-y-1.5">
                   <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? 'rotate-45 translate-y-1.5 w-6' : 'w-6'}`}></span>
                   <span className={`block h-0.5 bg-current transition-all ${isMenuOpen ? 'opacity-0' : 'w-6'}`}></span>
@@ -130,6 +175,7 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </nav>
       </div>

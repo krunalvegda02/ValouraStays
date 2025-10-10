@@ -64,11 +64,11 @@ const BestResorts = () => {
             {/* Stats */}
             <div className="flex flex-wrap justify-center sm:justify-start gap-6 sm:gap-10 mt-6 sm:mt-8">
               <div className="text-center sm:text-left">
-                <h1
-                  className={`text-2xl sm:text-xl font-semibold font-sans text-[${Theme.colors.text}]`}
+                <h3
+                  className={`text-2xl sm:text-4xl font-semibold font-sans text-[${Theme.colors.text}]`}
                 >
                   49+
-                </h1>
+                </h3>
                 <div
                   className={`text-[${Theme.colors.text}] font-sans-serif text-sm sm:text-base`}
                 >
@@ -77,11 +77,11 @@ const BestResorts = () => {
               </div>
 
               <div className="text-center sm:text-left">
-                <h1
-                  className={`text-2xl sm:text-xl font-semibold font-sans text-[${Theme.colors.text}]`}
+                <h3
+                  className={`text-2xl sm:text-4xl font-semibold font-sans text-[${Theme.colors.text}]`}
                 >
                   144+
-                </h1>
+                </h3>
                 <div
                   className={`text-[${Theme.colors.text}] font-sans-serif text-sm sm:text-base`}
                 >
@@ -90,11 +90,11 @@ const BestResorts = () => {
               </div>
 
               <div className="text-center sm:text-left">
-                <h1
-                  className={`text-2xl sm:text-lg font-semibold font-sans text-[${Theme.colors.text}]`}
+                <h3
+                  className={`text-2xl sm:text-4xl font-semibold font-sans text-[${Theme.colors.text}]`}
                 >
                   1200+
-                </h1>
+                </h3>
                 <div
                   className={`text-[${Theme.colors.text}] font-sans-serif text-sm sm:text-base`}
                 >

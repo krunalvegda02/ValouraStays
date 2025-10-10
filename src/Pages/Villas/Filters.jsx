@@ -26,7 +26,7 @@ memories.`,
             id: 2,
             image: IMAGES.VILLA3,
             title: "Villa Izara",
-            location: "Jaipur, Rajasthan",
+            location: "Udaipur, Rajasthan",
             amenities: "AC Suite / Pool / Kitchen",
             description:
                 `Stay at Villa Izara, where luxury meets nature in the 

@@ -115,7 +115,7 @@ const HeroIzara = () => {
             {/* Title */}
             <div className="pt-8 sm:pt-10 md:pt-12">
               <span
-                className="text-5xl sm:text-6xl md:text-7xl font-serif font-bold"
+                className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold"
                 style={{ color: Theme.colors.background }}
               >
                 Villa Izara

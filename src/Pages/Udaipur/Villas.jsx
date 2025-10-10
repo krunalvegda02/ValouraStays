@@ -64,7 +64,7 @@ memories.`,
                         return (
                             <div
                                 key={villa.id}
-                                className={`flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} items-center justify-between gap-6 md:gap-10`}
+                                className={`flex flex-col md:flex-row ${!isReversed ? 'md:flex-row-reverse' : ''} items-center justify-between gap-6 md:gap-10`}
                             >
                                 {/* Text Section */}
                                 <div className="md:w-3/5 text-center md:text-left space-y-3 md:space-y-4">

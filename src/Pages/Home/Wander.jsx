@@ -45,7 +45,7 @@ const Wander = () => {
       {/* Header Section */}
       <div className="flex justify-center my-3">
         <div className="w-full max-w-4xl text-center">
-          <HeaderTitle title="wander & unwind" space={false} />
+          <HeaderTitle title="Wander & Unwind" space={false} />
         </div>
       </div>
 

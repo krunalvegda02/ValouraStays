@@ -53,7 +53,7 @@ tranquility, comfort, and timeless charm.`,
             <img
               src={sections[0].image}
               alt={sections[0].title1}
-              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 "
+              className="w-full h-64 sm:h-80 md:h-[450px] lg:h-full object-cover shadow-xl block transition-transform duration-500 mb-3 lg:mb-0 "
             />
           </div>
         </div>

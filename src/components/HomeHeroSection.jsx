@@ -148,7 +148,7 @@ const HeroSection = () => {
 
             <div className="pt-8 sm:pt-10 md:pt-12">
               <span
-                className="text-5xl sm:text-6xl md:text-7xl font-serif font-bold"
+                className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold"
                 style={{ color: Theme.colors.background }}
               >
                 Villas & Resorts
@@ -187,14 +187,14 @@ const HeroSection = () => {
               style={{ color: Theme.colors.background }}
               className="text-lg sm:text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/90 font-light tracking-wide px-4"
             >
+              Think luxury villas, serene views, and comfort wrapped in elegance.
               Book your dreamy getaway, your private slice of paradise.
             </p>
-            <p
+            {/* <p
               style={{ color: Theme.colors.background }}
               className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 md:mb-14 max-w-4xl mx-auto leading-relaxed text-white/90 font-light tracking-wide px-4"
             >
-              Think luxury villas, serene views, and comfort wrapped in elegance.
-            </p>
+            </p> */}
           </div>
 
           {/* Mobile Navigation Buttons - Below Content */}
