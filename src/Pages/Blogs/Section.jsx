@@ -8,7 +8,8 @@ const Section = () => {
         {
             imageUrl: IMAGES.BLOG1,
             title: "Why Is Villa Izara More Than Just A Private Villa In Udaipur?",
-            excerpt: "Meta Description: Discover why Villa Izara is more than just a private villa in Udaipur. Click to learn about the personalized services offered at reasonable rates!",
+
+            excerpt: "Villa Izara is not among the other private villas in Udaipur, offering luxurious stays and personalized comfort. Capturing the heart of every traveler, it provides a royal and lavish essence of Udaipur’s rugged plains.",
             author: "Sarah Johnson",
             commentsCount: 80,
             date: "25 Sep 2022",
@@ -17,7 +18,7 @@ const Section = () => {
         {
             imageUrl: IMAGES.BLOG2,
             title: "A-Frame Hanging Villa In Udaipur: Experience Luxury Like Never Before",
-            excerpt: "Meta Description: Have you ever heard of hanging villas? Udaipur’s best A-Frame Hanging Villa is coming soon to offer you a luxury experience you've never had before.",
+            excerpt: "The majestic hills of Udaipur welcome a new kind of luxury, with stunning villas taking over the streets. Among all these, the Frame Hanging Villa in Udaipur, Villa Izara by Veloura Stays, is capturing attention.",
             author: "Sarah Johnson",
             commentsCount: 50,
             date: "23 Sep 2022",
