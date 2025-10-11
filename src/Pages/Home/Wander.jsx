@@ -54,15 +54,17 @@ const Wander = () => {
       </p>
 
       {/* Tabs */}
-      <div className="flex justify-center mb-6 sm:mb-10 overflow-x-auto scrollbar-hide">
-        <div className="flex space-x-6 sm:space-x-8 border-b px-2 sm:px-0 ">
+      <div className="flex justify-center mb-6 sm:mb-10">
+        <div className="flex flex-wrap justify-center sm:border-b px-2 sm:px-0 gap-x-3 sm:gap-x-6 md:gap-x-8">
           {tabs.map((tab) => (
             <div
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-3 sm:pb-4 px-1 font-medium text-base sm:text-lg md:text-xl whitespace-nowrap transition-colors duration-200 cursor-pointer ${activeTab === tab.id
-                ? 'text-gray-900 border-b-2 border-gray-900 font-semibold'
-                : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300'
+              className={`pb-3 sm:pb-4 px-1 font-medium text-base sm:text-lg md:text-xl 
+                    inline-block text-center transition-colors duration-200 cursor-pointer
+                    ${activeTab === tab.id
+                  ? 'text-gray-900 border-b-2 border-gray-900 font-semibold'
+                  : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300'
                 }`}
             >
               {tab.label}
@@ -74,7 +76,7 @@ const Wander = () => {
       {/* Photo Cards */}
       <div className="space-y-6 sm:space-y-8">
         {/* First Row */}
-        <div className="flex flex-col sm:ml-0 sm:flex-row flex-wrap gap-5 sm:gap-6 justify-center">
+        <div className="flex flex-col items-center sm:flex-row flex-wrap gap-5 sm:gap-6 justify-center ">
           {photoCards.slice(0, 3).map((card) => (
             <div
               key={card.id}
@@ -100,11 +102,11 @@ const Wander = () => {
         </div>
 
         {/* Second Row */}
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center md:w-2/3 md:mx-auto ">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center mx-auto w-full items-center">
           {photoCards.slice(3, 5).map((card) => (
             <div
               key={card.id}
-              className="group cursor-pointer flex-1 max-w-sm sm:max-w-md"
+              className="group cursor-pointer w-full sm:w-auto max-w-sm sm:max-w-md"
               onClick={() => card.link && navigate(card.link)}
             >
               <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
@@ -124,6 +126,7 @@ const Wander = () => {
             </div>
           ))}
         </div>
+
       </div>
     </div>
   )

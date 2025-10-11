@@ -57,121 +57,83 @@ const Testimonials = () => {
     }
 
     return (
-        <section className="section-container ">
-            <div className="max-w-[980px] mx-auto text-center  ">
+        <section className="section-container">
+            <div className="max-w-[980px] mx-auto text-center">
                 <HeaderTitle title="Client Testimonials" size="20" />
             </div>
 
             {/* Testimonial Card */}
             <div className="
-                bg-[#F7F5F1] 
-                h-[310px] sm:h-[360px] 
-                shadow-sm p-4 xs:p-6 sm:p-8 md:p-5
-                relative overflow-hidden border border-gray-100 
-                max-w-full sm:max-w-[90vw] md:max-w-[700px] lg:max-w-full mx-auto
-                rounded-none sm:rounded-lg
-            ">
-                {/* Decorative Elements */}
+    bg-[#F7F5F1] 
+    shadow-sm p-4 xs:p-6 sm:p-8 md:px-10 md:py-4
+    relative overflow-hidden border border-gray-100 
+    max-w-full sm:max-w-[90vw] md:max-w-[700px] lg:max-w-full mx-auto
+    rounded-none sm:rounded-lg
+  ">
+                {/* Decorative Circles */}
                 <div className="absolute top-0 left-0 w-20 h-20 xs:w-24 xs:h-24 md:w-32 md:h-32 bg-gradient-to-br from-blue-100/50 to-transparent rounded-full -translate-x-10 -translate-y-10 md:-translate-x-16 md:-translate-y-16"></div>
                 <div className="absolute bottom-0 right-0 w-20 h-20 xs:w-24 xs:h-24 md:w-32 md:h-32 bg-gradient-to-tl from-amber-100/50 to-transparent rounded-full translate-x-10 translate-y-10 md:translate-x-16 md:translate-y-16"></div>
 
-                {/* Navigation Buttons */}
-                {/* Desktop: show as before, Mobile: show smaller/fixed at bottom */}
+                {/* Navigation Buttons - Desktop */}
                 <div
                     onClick={prevTestimonial}
-                    onKeyDown={handleKey(prevTestimonial)}
-                    className="
-                        text-[#403B21] absolute z-20 rounded-full p-2 xs:p-3 transition-all duration-300 items-center justify-center cursor-pointer
-                        left-2 top-1/2 -translate-y-1/2 
-                        hidden sm:flex
-                        focus:outline-none
-                    "
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Previous testimonial"
+                    className="hidden sm:flex absolute z-20 left-2 top-1/2 -translate-y-1/2 text-[#403B21] rounded-full p-2 xs:p-3 cursor-pointer transition-transform duration-300 hover:scale-110"
                 >
-                    <ChevronLeft size={60} />
+                    <ChevronLeft size={40} />
                 </div>
                 <div
                     onClick={nextTestimonial}
-                    onKeyDown={handleKey(nextTestimonial)}
-                    className="
-                        text-[#403B21] absolute z-20 rounded-full p-2 xs:p-3 transition-all duration-300 items-center justify-center cursor-pointer
-                        right-2 top-1/2 -translate-y-1/2
-                        hidden sm:flex
-                        focus:outline-none
-                    "
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Next testimonial"
+                    className="hidden sm:flex absolute z-20 right-2 top-1/2 -translate-y-1/2 text-[#403B21] rounded-full p-2 xs:p-3 cursor-pointer transition-transform duration-300 hover:scale-110"
                 >
-                    <ChevronRight size={60} />
+                    <ChevronRight size={40} />
                 </div>
 
-                {/* Mobile navigation buttons */}
-                <div className="flex sm:hidden justify-between items-center absolute bottom-6 left-0 w-full px-4 z-20 pointer-events-none">
+                {/* Mobile Navigation Buttons */}
+                <div className="flex sm:hidden justify-between items-center absolute bottom-4 left-0 w-full px-4 z-20">
                     <div
                         onClick={prevTestimonial}
-                        onKeyDown={handleKey(prevTestimonial)}
-                        className={`text-[#403B21] bg-[${Theme.colors.background}] bg-opacity-70 backdrop-blur rounded-full p-2 transition-all duration-300 cursor-pointer focus:outline-none pointer-events-auto`}
-                        role="button"
-                        tabIndex={0}
-                        aria-label="Previous testimonial"
+                        className="text-[#403B21] bg-white/70 backdrop-blur rounded-full p-2 cursor-pointer"
                     >
-                        <ChevronLeft size={23} />
+                        <ChevronLeft size={20} />
                     </div>
                     <div
                         onClick={nextTestimonial}
-                        onKeyDown={handleKey(nextTestimonial)}
-                        className={`text-[#403B21] bg-[${Theme.colors.background}] bg-opacity-70 backdrop-blur rounded-full p-2 transition-all duration-300 cursor-pointer focus:outline-none pointer-events-auto`}
-
-                        role="button"
-                        tabIndex={0}
-                        aria-label="Next testimonial"
+                        className="text-[#403B21] bg-white/70 backdrop-blur rounded-full p-2 cursor-pointer"
                     >
-                        <ChevronRight size={23} />
+                        <ChevronRight size={20} />
                     </div>
                 </div>
 
                 {/* Testimonial Content */}
-                <div className="flex flex-col h-full justify-between relative z-10 ">
-                    {/* Review Section */}
-                    <div className="flex-1 flex flex-col px-2 xs:px-3 sm:px-12 md:px-20">
-                        <div className="flex justify-center  sm:mb-1 ">
-                            <div className="relative">
-                                <img
-                                    src={testimonials[currentTestimonial].avatar}
-                                    alt={testimonials[currentTestimonial].name}
-                                    className="
-                                        w-19 h-19 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-32 md:h-32
-                                        rounded-full object-cover border-4 border-white shadow-lg transition-transform duration-300 hover:scale-105
-                                    "
-                                />
-                            </div>
-                        </div>
-
-                        <div className="px-3 xs:px-4 sm:px-12 py-4 text-center rounded-lg mx-2">
-                            <span className={`
-                                text-base xs:text-lg sm:text-xl lg:text-2xl text-[${Theme.colors.text}]
-                                italic leading-relaxed font-light font-serif
-                                block line-clamp-5 overflow-hidden
-                            `}>
-                                "{testimonials[currentTestimonial].review}"
-                            </span>
-                        </div>
+                <div className="flex flex-col items-center relative z-10">
+                    {/* Avatar */}
+                    <div className="mb-4 sm:mb-6 flex justify-center">
+                        <img
+                            src={testimonials[currentTestimonial].avatar}
+                            alt={testimonials[currentTestimonial].name}
+                            className="
+            w-20 h-20 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32
+            rounded-full object-cover border-4 border-white shadow-lg transition-transform duration-300
+          "
+                        />
                     </div>
-                    {/* Name and Role at Bottom */}
-                    <div className="text-center pb-3 xs:pb-5 px-2 xs:px-4 border-t border-gray-200/50 pt-3 sm:pt-2 xs:pt-4 mx-2 xs:mx-4">
-                        <h3 className="text-base xs:text-lg sm:text-xl font-semibold mb-1 truncate px-2 xs:px-4">
-                            {testimonials[currentTestimonial].name}
-                        </h3>
-                        <span className="text-[#E2CAB3] text-sm xs:text-base sm:text-xl font-serif uppercase tracking-wide font-medium truncate block px-2 xs:px-4">
+
+                    {/* Review */}
+                    <p className={`text-center text-sm xs:text-base sm:text-lg md:text-xl text-[${Theme.colors.text}] italic font-light leading-relaxed px-4 sm:px-12 mb-4 sm:mb-6`}>
+                        "{testimonials[currentTestimonial].review}"
+                    </p>
+
+                    {/* Name and Role */}
+                    <div className="text-center px-4 sm:px-12 border-t border-gray-200/50 pt-3 sm:pt-4 mx-2 xs:mx-4">
+                        <h3 className="text-base sm:text-lg md:text-xl font-semibold truncate mb-1 px-2 xs:px-4">{testimonials[currentTestimonial].name}</h3>
+                        <span className="text-[#E2CAB3] text-sm sm:text-base md:text-lg font-serif uppercase tracking-wide font-medium">
                             {testimonials[currentTestimonial].role}
                         </span>
                     </div>
                 </div>
             </div>
         </section>
+
     )
 }
 

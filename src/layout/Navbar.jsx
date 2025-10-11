@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <div className="relative w-full max-w-[100vw] overflow-x-hidden">
       {/* Desktop Navbar */}
-      <div className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-[${Theme.colors.background}] backdrop-blur-sm shadow-lg py-2` : 'bg-transparent py-4'}`}>
+      <div className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-[${Theme.colors.background}] backdrop-blur-sm shadow-lg sm:py-2` : 'bg-transparent pt-2'}`}>
         {/* Top contact bar */}
         <div
           className={`transition-all duration-300 overflow-hidden ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-28 sm:max-h-20 opacity-100'
@@ -91,7 +91,7 @@ const Navbar = () => {
 
         {/* Main Nav */}
         <nav className="section-container">
-          <div className="flex justify-between items-center mt-4">
+          <div className="flex justify-between items-center  py-2 sm:py-0">
             <div className="flex items-center z-50">
               <Link to="/" className="flex items-center group">
                 <img src={isScrolled ? logo2 : logo} alt="Velloura Stays" className={`transition-all duration-500 ${isScrolled ? 'h-10' : 'h-12'}`} />
@@ -193,7 +193,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile links */}
-        <nav className="flex flex-col mt-4 px-6 space-y-2 font-serif text-lg text-[#403B21]">
+        <nav className="flex flex-col mt-4 px-6 space-y-2 font-serif text-lg text-[#403B21] my-auto">
           {navItems.map((item) => (
             <div key={item.path} className="flex flex-col">
               {item.label === "Destinations" ? (

@@ -42,7 +42,7 @@ const HomeFooter = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-12 gap-x-6">
           {features.map((feature) => (
             <div key={feature.id} className="flex flex-col sm:flex-row items-center sm:items-start cursor-pointer group">
 

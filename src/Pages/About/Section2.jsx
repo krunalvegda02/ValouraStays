@@ -113,25 +113,25 @@ const Section2 = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center w-full">
             {/* Stat 1 */}
             <div className="flex flex-col items-center border-b sm:border-b-0 sm:border-r border-white/40 pb-4 sm:pb-0">
-              <h1 className="text-3xl sm:text-5xl font-bold">300+</h1>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">300+</h3>
               <p className="mt-1 sm:mt-2 text-sm sm:text-xl">Rooms & Suites</p>
             </div>
 
             {/* Stat 2 */}
             <div className="flex flex-col items-center border-b sm:border-b-0 sm:border-r border-white/40 pb-4 sm:pb-0">
-              <h1 className="text-3xl sm:text-5xl font-bold">145+</h1>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">145+</h3>
               <p className="mt-1 sm:mt-2 text-sm sm:text-xl">Professional Staff</p>
             </div>
 
             {/* Stat 3 */}
             <div className="flex flex-col items-center border-b sm:border-b-0 sm:border-r border-white/40 pb-4 sm:pb-0">
-              <h1 className="text-3xl sm:text-5xl font-bold">25+</h1>
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">25+</h3>
               <p className="mt-1 sm:mt-2 text-sm sm:text-xl">Destinations</p>
             </div>
 
             {/* Stat 4 */}
-            <div className="flex flex-col items-center border-b sm:border-b-0 sm:border-r border-white/40 pb-4 sm:pb-0">
-              <h1 className="text-3xl sm:text-5xl font-bold">1200+</h1>
+            <div className="flex flex-col items-center border-b sm:border-b-0  border-white/40 pb-4 sm:pb-0">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">1200+</h3>
               <p className="mt-1 sm:mt-2 text-sm sm:text-xl">Happy Customers</p>
             </div>
           </div>

@@ -14,7 +14,7 @@ const PopularAttraction = () => {
 
   return (
     <div className="section-container">
-      <div className="sm:my-12">
+      <div className="mt-8 mb-5 sm:my-12">
         {/* Section Title */}
         <h2
           className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-10 font-serif text-center`}
@@ -49,9 +49,9 @@ const PopularAttraction = () => {
         <p
           className={`text-[${Theme.colors.darkText}] mt-6 sm:mt-8 text-base sm:text-md md:text-lg text-center leading-relaxed`}
         >
-          Our villas are made for comfort and connection — big families, close friends, or even just a peaceful retreat for yourself. 
-          Plus, you're right in the middle of it all. Want to see the famous lakes Fatehsagar, Pichola, Badi, and Udaisagar are right there. 
-          Love history and architecture? City Palace, Bagore Ki Haveli, and Sajjangarh are a must. Prefer quiet corners? The ghats like Gangaur and Ambrai are perfect for that. 
+          Our villas are made for comfort and connection — big families, close friends, or even just a peaceful retreat for yourself.
+          Plus, you're right in the middle of it all. Want to see the famous lakes Fatehsagar, Pichola, Badi, and Udaisagar are right there.
+          Love history and architecture? City Palace, Bagore Ki Haveli, and Sajjangarh are a must. Prefer quiet corners? The ghats like Gangaur and Ambrai are perfect for that.
           You can even make a quick trip to Shreenathji or Jagdish Temple if you're in the mood for something spiritual.
         </p>
       </div>

@@ -38,7 +38,7 @@ const Footer = () => {
                 />
               </div>
 
-              <p className="text-[#403B21]  leading-relaxed text-base sm:text-lg font-light text-center sm:text-left">
+              <p className="text-[#403B21]  leading-relaxed text-base sm:text-lg font-light text-center  sm:text-left">
                 Veloura Stays is a premier chain of luxury resorts and villas in
                 Udaipur, featuring private pools, modern comforts, scenic views,
                 and spacious retreats designed to offer unforgettable experiences

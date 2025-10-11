@@ -55,17 +55,17 @@ const BestResorts = () => {
             {/* Button */}
             <Button
               onClick={() => navigate("about")}
-              className="rounded-full w-full sm:w-48 md:w-52 py-2 sm:py-3 text-sm sm:text-base"
+              className="rounded-full w-full    md:w-52 py-2 sm:py-3 text-sm sm:text-base"
               variant="secondary"
             >
               <span className="font-sans-serif">More About Us</span>
             </Button>
 
             {/* Stats */}
-            <div className="flex flex-wrap justify-center sm:justify-start gap-6 sm:gap-10 mt-6 sm:mt-8">
+            <div className="flex flex-wrap justify-center md:justify-start gap-6 sm:gap-10 mt-6 sm:mt-8">
               <div className="text-center sm:text-left">
                 <h3
-                  className={`text-2xl sm:text-4xl font-semibold font-sans text-[${Theme.colors.text}]`}
+                  className={`text-3xl md:text-5xl  font-semibold font-sans text-[${Theme.colors.text}]`}
                 >
                   49+
                 </h3>
@@ -78,7 +78,7 @@ const BestResorts = () => {
 
               <div className="text-center sm:text-left">
                 <h3
-                  className={`text-2xl sm:text-4xl font-semibold font-sans text-[${Theme.colors.text}]`}
+                  className={`text-3xl  sm:text-3xl md:text-5xl font-semibold font-sans text-[${Theme.colors.text}]`}
                 >
                   144+
                 </h3>
@@ -91,7 +91,7 @@ const BestResorts = () => {
 
               <div className="text-center sm:text-left">
                 <h3
-                  className={`text-2xl sm:text-4xl font-semibold font-sans text-[${Theme.colors.text}]`}
+                  className={`text-3xl sm:text-3xl md:text-5xl font-semibold font-sans text-[${Theme.colors.text}]`}
                 >
                   1200+
                 </h3>

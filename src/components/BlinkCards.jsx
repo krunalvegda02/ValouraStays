@@ -9,7 +9,7 @@ const BlinkCards = ({ image, name }) => {
                 className="w-full h-72 object-cover group-hover:scale-110 transition duration-500"
             />
             <div className="absolute inset-0 flex items-center justify-center">
-                <h3 className="text-2xl font-bold text-black bg-white/50 px-6 py-10 ">
+                <h3 className="text-2xl font-bold text-black bg-white/70 px-6 py-10 ">
                     {name}
                 </h3>
             </div>
