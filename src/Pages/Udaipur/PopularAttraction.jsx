@@ -17,7 +17,7 @@ const PopularAttraction = () => {
       <div className="mt-8 mb-5 sm:my-12">
         {/* Section Title */}
         <h2
-          className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl lg:text-5xl font-bold mb-6 sm:mb-10 font-serif text-center`}
+          className={`text-[${Theme.colors.text}] text-2xl sm:text-4xl  font-bold mb-6 sm:mb-10 font-serif text-center`}
         >
           Popular Attractions in Udaipur
         </h2>

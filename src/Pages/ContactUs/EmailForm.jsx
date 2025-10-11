@@ -76,11 +76,11 @@ const ContactForm = () => {
             <HeaderTitle title="Get In Touch" />
 
             {/* Flex container for equal height sections */}
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 my-8 mb-16 ">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 my-8 mb-16">
 
                 {/* Left Section - Contact Details */}
-                <div className="lg:w-2/5 flex flex-col bg-[#F7F5F1] p-8 sm:p-[4.75rem] shadow-2xl rounded-2xl h-full border border-[#403B21]/10">
-                    <div className="flex-1 flex flex-col justify-center space-y-8">
+                <div className="lg:w-2/5 flex flex-col bg-[#F7F5F1] p-6 sm:p-8 lg:p-12 shadow-2xl rounded-2xl lg:h-[600px] border border-[#403B21]/10">
+                    <div className="flex-1 flex flex-col justify-center space-y-6 lg:space-y-8">
                         {[
                             {
                                 icon: <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-[#403B21]" />,
@@ -105,14 +105,14 @@ const ContactForm = () => {
                             }
                         ].map((item, idx) => (
                             <div key={idx} className="flex items-start space-x-4 group hover:transform hover:translate-x-1 transition-all duration-300">
-                                <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg border border-[#403B21]/10 group-hover:shadow-xl transition-all duration-300">
+                                <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg border border-[#403B21]/10 group-hover:shadow-xl transition-all duration-300">
                                     {item.icon}
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-base sm:text-lg  md:text-xl font-semibold mb-2 tracking-wide" style={{ color: Theme.colors.text }}>
+                                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 tracking-wide" style={{ color: Theme.colors.text }}>
                                         {item.title}
                                     </h3>
-                                    <p className="text-base sm:text-md md:text-lg leading-relaxed font-medium" style={{ color: Theme.colors.darkText }}>
+                                    <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-medium" style={{ color: Theme.colors.darkText }}>
                                         {item.content}
                                     </p>
                                 </div>
@@ -122,7 +122,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Right Section - Contact Form */}
-                <div className="lg:w-3/5 bg-[#F7F5F1] shadow-2xl rounded-2xl p-5 sm:p-5 h-full flex flex-col border border-[#403B21]/10">
+                <div className="lg:w-3/5 bg-[#F7F5F1] shadow-2xl rounded-2xl p-6 sm:p-8 lg:p-12 lg:h-[600px] flex flex-col border border-[#403B21]/10">
                     <div className="flex-1 flex flex-col justify-center">
                         <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -172,7 +172,7 @@ const ContactForm = () => {
                                 <Button
                                     icon={false}
                                     variant="secondary"
-                                    className="w-full sm:w-2/3 lg:w-1/2 px-8 py-4 text-base sm:text-md md:text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                    className="w-full sm:w-2/3 lg:w-1/2 px-8 py-4 text-base sm:text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
                                     disabled={isSubmitDisabled}
                                     onClick={handleSubmit}
                                 >
@@ -199,7 +199,7 @@ const InputField = ({ name, value, onChange, error, placeholder, maxLength }) =>
             maxLength={maxLength}
             placeholder={placeholder}
             className={`w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border-2 bg-white/80 backdrop-blur-sm transition-all duration-300 
-                placeholder-gray-500 text-base sm:text-md md:text-lg font-medium
+                placeholder-gray-500 text-base sm:text-lg font-medium
                 focus:outline-none focus:ring-2 focus:ring-[#403B21]/20 focus:border-[#403B21]
                 hover:border-[#403B21]/50 ${error ? 'border-red-500 focus:border-red-500' : 'border-[#403B21]/30'}`}
         />
@@ -218,7 +218,7 @@ const TextAreaField = ({ name, value, onChange, error, placeholder }) => (
             rows={4}
             placeholder={placeholder}
             className={`w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border-2 bg-white/80 backdrop-blur-sm transition-all duration-300 
-                placeholder-gray-500 text-base sm:text-md md:text-lg font-medium resize-none
+                placeholder-gray-500 text-base sm:text-lg font-medium resize-none
                 focus:outline-none focus:ring-2 focus:ring-[#403B21]/20 focus:border-[#403B21]
                 hover:border-[#403B21]/50 ${error ? 'border-red-500 focus:border-red-500' : 'border-[#403B21]/30'}`}
         ></textarea>
