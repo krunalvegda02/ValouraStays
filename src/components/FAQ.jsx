@@ -48,7 +48,7 @@ const FAQSection = ({ faqData }) => {
                             <div
                                 className={`px-4 sm:px-6 overflow-hidden transition-all duration-300 ${openIndex === index ? 'max-h-96 py-3 sm:py-4' : 'max-h-0 py-0'}`}
                             >
-                                <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
+                                <p className={`text-[${Theme.colors.text}] text-base sm:text-md md:text-lgleading-relaxed`}>
                                     {faq.answer}
                                 </p>
                             </div>

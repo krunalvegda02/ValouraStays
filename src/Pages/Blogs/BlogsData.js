@@ -3,6 +3,11 @@ import IMAGES from "../../Constants/Images"
 export const BlogsData = [
     {
         id: 1,
+
+        metaTitle: "Why Is Villa Izara More Than Just A Private Villa In Udaipur?",
+        metaDescription: "Discover why Villa Izara is more than just a private villa in Udaipur. Click to learn about the personalized services offered at reasonable rates!",
+
+
         title: "Why Is Villa Izara More Than Just A Private Villa In Udaipur?",
         subtitle: " Home/ Blog 1",
         hero: IMAGES.ABOUTHERO,
@@ -13,8 +18,7 @@ export const BlogsData = [
             IMAGES.HERO3
         ],
 
-        titleDescription: [` Meta Description: Discover why Villa Izara is more than just a private villa in Udaipur.  Click to learn
-about the personalized services offered at reasonable rates!`,
+        titleDescription: [
             ` Villa Izara is not among the other private villas in Udaipur, offering luxurious stays and personalized
 comfort. Capturing the heart of every traveler, it provides a royal and lavish essence of Udaipur’s 
 rugged plains.`,
@@ -93,6 +97,9 @@ Veloura Stays, plan your escape with us to experience the magic of the Emerald H
         subtitle: " Home/ Blog 2",
         hero: IMAGES.ABOUTHERO,
 
+        metaTitle: "A-Frame Hanging Villa In Udaipur: Experience Luxury Like Never Before",
+        metaDescription: "Discover why Villa Izara is more than just a private villa in Udaipur.  Click to learn about the personalized services offered at reasonable rates!",
+
         images: [
             IMAGES.HERO1,
             IMAGES.HERO2,
@@ -100,8 +107,6 @@ Veloura Stays, plan your escape with us to experience the magic of the Emerald H
         ],
 
         titleDescription: [
-            ` Meta Description: Discover why Villa Izara is more than just a private villa in Udaipur.  Click to learn
-about the personalized services offered at reasonable rates!`,
             ` The majestic hills of Udaipur welcome a new kind of luxury, with stunning villas taking over the streets.
 Among all these, the Frame Hanging Villa in Udaipur, Villa Izara by Veloura Stays, is capturing attention.`,
             `With the blend of breathtaking modern architecture and unparalleled privacy, a revolution in 

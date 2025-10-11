@@ -23,7 +23,7 @@ const UdaipurPage = () => {
             <div className="section-container ">
                 <h2
                     className={`font-serif text-[${Theme.colors.darkText}] 
-        text-xl sm:text-2xl md:text-3xl lg:text-3xl 
+       text-base sm:text-md md:text-lg
         text-center leading-relaxed sm:leading-snug md:leading-normal 
         sm:mb-8 md:mb-10  mx-auto mb-12`}
                 >

@@ -41,7 +41,7 @@ const Occasion = () => {
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mt-8">
         <HeaderTitle title="Villas For Every Occasion" space={false} />
-        <p className={`text-[${Theme.colors.darkText}]  text-sm sm:text-base lg:text-lg px-4 sm:px-0 mt-3`}>
+        <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg md:text-xl px-4 sm:px-0 mt-3`}>
           Whether it’s a private celebration or a serene getaway, our villas are designed to make every moment memorable.
         </p>
       </div>

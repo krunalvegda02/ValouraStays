@@ -1,5 +1,6 @@
 import React from 'react';
 import IMAGES from '../../Constants/Images';
+import Theme from '../../Constants/Theme';
 
 const AlternatingContent = () => {
   const alter1 = IMAGES.ALTER1;
@@ -41,11 +42,11 @@ tranquility, comfort, and timeless charm.`,
         <div className="flex flex-col lg:flex-row justify-between mx-0 w-full">
           {/* Content */}
           <div className="lg:w-1/2 text-center px-6 sm:px-8 lg:px-12 py-6 sm:py-10">
-            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[0].title1}</h2>
-            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[0].content1}</p>
+            <h2 className={`text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-[${Theme.colors.text}] mb-4 sm:mb-6`}>{sections[0].title1}</h2>
+            <p className={`text-base sm:text-lg md:text-xl text-[${Theme.colors.darkText}] mb-8 leading-relaxed`}>{sections[0].content1}</p>
 
-            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[0].title2}</h2>
-            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[0].content2}</p>
+            <h2 className={`text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-[${Theme.colors.text}] mb-4 sm:mb-6`}>{sections[0].title2}</h2>
+            <p className={`text-base sm:text-lg md:text-xl text-[${Theme.colors.darkText}] mb-8 leading-relaxed`}>{sections[0].content2}</p>
           </div>
 
           {/* Image */}
@@ -71,11 +72,11 @@ tranquility, comfort, and timeless charm.`,
 
           {/* Content */}
           <div className="lg:w-1/2 text-center px-6 sm:px-8 lg:px-12 py-6 sm:py-10">
-            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[1].title1}</h2>
-            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[1].content1}</p>
+            <h2 className={`text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-[${Theme.colors.text}] mb-4 sm:mb-6`}>{sections[1].title1}</h2>
+            <p className={`text-base sm:text-lg md:text-xl text-[${Theme.colors.darkText}] mb-8 leading-relaxed`}>{sections[1].content1}</p>
 
-            <h2 className="text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-gray-900 mb-4 sm:mb-6">{sections[1].title2}</h2>
-            <p className="text-[14px] sm:text-[15px] text-gray-600 mb-8 leading-relaxed">{sections[1].content2}</p>
+            <h2 className={`text-[22px] sm:text-[26px] lg:text-[30px] font-bold text-[${Theme.colors.text}] mb-4 sm:mb-6`}>{sections[1].title2}</h2>
+            <p className={`text-base sm:text-lg md:text-xl text-[${Theme.colors.darkText}] mb-8 leading-relaxed`}>{sections[1].content2}</p>
           </div>
         </div>
 

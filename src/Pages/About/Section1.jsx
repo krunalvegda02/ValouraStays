@@ -38,7 +38,7 @@ const Section1 = () => {
             Luxury Crafted With Care
           </p>
 
-          <p className={`text-md lg:text-xl text-[${Theme.colors.text}] leading-relaxed text-center lg:text-left max-w-md `}>
+          <p className={`text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed text-center lg:text-left max-w-md `}>
             Here, every detail is crafted to make you feel at ease, an ambience that mirrors the comfort of home, yet wrapped in the elegance of a boutique luxury escape
           </p>
         </div>
@@ -46,12 +46,12 @@ const Section1 = () => {
         {/* Right Section - 60% */}
         <div className="w-full lg:w-7/12 flex flex-col items-center px-4 sm:px-6 lg:px-0">
           <div className="w-full max-w-4xl">
-            <span className={`text-2xl md:text-4xl font-serif font-bold text-[${Theme.colors.text}]`}>
+            <span className={`text-2xl md:text-3xl font-serif font-bold text-[${Theme.colors.text}]`}>
               The Veloura Story
             </span>
 
             <p
-              className={` text-xl text-[${Theme.colors.text}] py-3`}
+              className={` text-base sm:text-md md:text-lg  text-[${Theme.colors.text}] py-3`}
               style={{
                 fontFamily: 'Oxygen, sans-serif',
                 fontWeight: 700,
@@ -62,7 +62,7 @@ const Section1 = () => {
             </p>
 
             <p
-              className="mb-5 text-[#6B6666] text-xl"
+              className="mb-5 text-[#6B6666] text-base sm:text-md md:text-lg "
               style={{
                 fontFamily: 'Oxygen, sans-serif',
                 fontWeight: 400,
@@ -72,7 +72,7 @@ const Section1 = () => {
             </p>
 
             <p
-              className=" text-[#6B6666] text-xl"
+              className=" text-[#6B6666] text-base sm:text-md md:text-lg "
               style={{
                 fontFamily: 'Oxygen, sans-serif',
                 fontWeight: 400,

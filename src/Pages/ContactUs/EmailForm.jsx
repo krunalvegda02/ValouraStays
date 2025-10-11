@@ -79,7 +79,7 @@ const ContactForm = () => {
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 my-8 mb-16 ">
 
                 {/* Left Section - Contact Details */}
-                <div className="lg:w-2/5 flex flex-col bg-[#F7F5F1] p-8 sm:p-[5.7rem] shadow-2xl rounded-2xl h-full border border-[#403B21]/10">
+                <div className="lg:w-2/5 flex flex-col bg-[#F7F5F1] p-8 sm:p-[4.75rem] shadow-2xl rounded-2xl h-full border border-[#403B21]/10">
                     <div className="flex-1 flex flex-col justify-center space-y-8">
                         {[
                             {
@@ -109,10 +109,10 @@ const ContactForm = () => {
                                     {item.icon}
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-lg sm:text-xl font-semibold mb-2 tracking-wide" style={{ color: Theme.colors.text }}>
+                                    <h3 className="text-base sm:text-lg  md:text-xl font-semibold mb-2 tracking-wide" style={{ color: Theme.colors.text }}>
                                         {item.title}
                                     </h3>
-                                    <p className="text-sm sm:text-base leading-relaxed font-medium" style={{ color: Theme.colors.darkText }}>
+                                    <p className="text-base sm:text-md md:text-lg leading-relaxed font-medium" style={{ color: Theme.colors.darkText }}>
                                         {item.content}
                                     </p>
                                 </div>
@@ -122,7 +122,7 @@ const ContactForm = () => {
                 </div>
 
                 {/* Right Section - Contact Form */}
-                <div className="lg:w-3/5 bg-[#F7F5F1] shadow-2xl rounded-2xl p-8 sm:p-9 h-full flex flex-col border border-[#403B21]/10">
+                <div className="lg:w-3/5 bg-[#F7F5F1] shadow-2xl rounded-2xl p-5 sm:p-5 h-full flex flex-col border border-[#403B21]/10">
                     <div className="flex-1 flex flex-col justify-center">
                         <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -168,11 +168,11 @@ const ContactForm = () => {
                                 placeholder="Your Comment"
                             />
 
-                            <div className="flex justify-center pt-6">
+                            <div className="flex justify-center pt-4">
                                 <Button
                                     icon={false}
                                     variant="secondary"
-                                    className="w-full sm:w-2/3 lg:w-1/2 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                    className="w-full sm:w-2/3 lg:w-1/2 px-8 py-4 text-base sm:text-md md:text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
                                     disabled={isSubmitDisabled}
                                     onClick={handleSubmit}
                                 >
@@ -199,7 +199,7 @@ const InputField = ({ name, value, onChange, error, placeholder, maxLength }) =>
             maxLength={maxLength}
             placeholder={placeholder}
             className={`w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border-2 bg-white/80 backdrop-blur-sm transition-all duration-300 
-                placeholder-gray-500 text-sm sm:text-base font-medium
+                placeholder-gray-500 text-base sm:text-md md:text-lg font-medium
                 focus:outline-none focus:ring-2 focus:ring-[#403B21]/20 focus:border-[#403B21]
                 hover:border-[#403B21]/50 ${error ? 'border-red-500 focus:border-red-500' : 'border-[#403B21]/30'}`}
         />
@@ -218,7 +218,7 @@ const TextAreaField = ({ name, value, onChange, error, placeholder }) => (
             rows={4}
             placeholder={placeholder}
             className={`w-full px-4 sm:px-5 py-3 sm:py-4 rounded-xl border-2 bg-white/80 backdrop-blur-sm transition-all duration-300 
-                placeholder-gray-500 text-sm sm:text-base font-medium resize-none
+                placeholder-gray-500 text-base sm:text-md md:text-lg font-medium resize-none
                 focus:outline-none focus:ring-2 focus:ring-[#403B21]/20 focus:border-[#403B21]
                 hover:border-[#403B21]/50 ${error ? 'border-red-500 focus:border-red-500' : 'border-[#403B21]/30'}`}
         ></textarea>

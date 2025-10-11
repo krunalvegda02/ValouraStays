@@ -49,7 +49,7 @@ const Section4 = () => {
           <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}]`}>
             Our Signature Amenities
           </h2>
-          <div className={`space-y-2 sm:space-y-1 text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed mt-4`}>
+          <div className={`space-y-2 sm:space-y-1 text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed mt-4`}>
             <p><span className={`text-[${Theme.colors.text}] `}>Private lounge and decks:</span> A perfect place to enjoy a morning brew, evening cocktails, or fellowship with other guests.</p>
             <p><span className={`text-[${Theme.colors.text}] `}>Luxe linens and amenities:</span> Amazing bedding, quality toiletries, and attention to detail comforts to coddle you.</p>
             <p><span className={`text-[${Theme.colors.text}] `}>Soothing design and lighting:</span> Spaces intentionally created for your senses to thrive and encourage work, relaxation, or quiet time experience.</p>
@@ -82,7 +82,7 @@ const Section4 = () => {
             <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-1 `}>
               Our Vision
             </h2>
-            <p className="text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed">
+            <p className="text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed">
               To build a collection of stays around India, where travelers feel at home but enjoy luxurious comfort. A stay where every
               guest leaves with memories that last a lifetime and experiences that live on.
             </p>
@@ -92,7 +92,7 @@ const Section4 = () => {
             <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-1`}>
               Our Story Ahead
             </h2>
-            <p className="text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed">
+            <p className="text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed">
               Veloura Stays is on a mission to change the boutique hospitality space. Every property will have the same DNA, whether
               you are visiting a tranquil retreat or a stunning hilltop property: elegance, comfort, and a personal touch. We hope to create
               a trusted option for the refined traveler who values warmth and sophistication.

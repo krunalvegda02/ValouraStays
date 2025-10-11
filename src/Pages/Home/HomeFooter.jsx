@@ -32,7 +32,7 @@ const HomeFooter = () => {
 
   return (
     <div className="section-container ">
-      <div className=" mb-12 max-w-[1200px] mx-auto">
+      <div className=" mb-12 ">
 
         {/* HeaderTitle with constrained width */}
         <div className="flex justify-center ">
@@ -42,21 +42,21 @@ const HomeFooter = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-6">
           {features.map((feature) => (
             <div key={feature.id} className="flex flex-col sm:flex-row items-center sm:items-start cursor-pointer group">
 
               {/* Icon Container */}
-              <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 mb-6 sm:mb-0 sm:mr-6">
+              <div className="flex-shrink-0 w-22 h-22 sm:w-25 sm:h-24 mb-6 sm:mb-0 sm:mr-6">
                 <img src={feature.icon} alt={feature.title} className="w-full h-full object-contain" />
               </div>
 
               {/* Content */}
               <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className={`text-sm sm:text-base leading-relaxed text-[${Theme.colors.text}]`}>
+                <p className={`text-base sm:text-md md:text-lg leading-relaxed text-[${Theme.colors.text}]`}>
                   {feature.description}
                 </p>
               </div>

@@ -9,6 +9,9 @@ import SendMessage from '../../components/SendMessage';
 import Theme from '../../Constants/Theme';
 import { BlogsData } from './BlogsData';
 import BlogComments from './BlogComment';
+import { Title, Meta } from "react-head";
+
+
 
 const Blog = () => {
     const { id } = useParams();
@@ -20,6 +23,19 @@ const Blog = () => {
 
     return (
         <>
+
+            {/* ✅ Dynamic Meta Tags */}
+            <Title>{blog.metaTitle || blog.title}</Title>
+            <Meta name="description" content={blog.metaDescription || blog.subtitle} />
+
+            {/* Optional — Social Sharing SEO Tags */}
+            <Meta property="og:title" content={blog.metaTitle || blog.title} />
+            <Meta property="og:description" content={blog.metaDescription || blog.subtitle} />
+            <Meta property="og:image" content={blog.hero} />
+            <Meta property="og:type" content="article" />
+
+
+
             {/* Hero Section */}
             <CommonHero title={blog.title} description={blog.subtitle} image={blog.hero} />
 
@@ -43,7 +59,7 @@ const Blog = () => {
                     </div> */}
 
                     {/* Title */}
-                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] text-center`}>
+                    <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-[${Theme.colors.text}] `}>
                         {blog.title}
                     </h2>
 
@@ -52,7 +68,7 @@ const Blog = () => {
                         {blog.titleDescription?.map((parag, index) => (
                             <p
                                 key={index}
-                                className={`text-base sm:text-lg md:text-2xl text-[${Theme.colors.darkText}] leading-relaxed`}
+                                className={`text-base sm:text-md md:text-lg text-[${Theme.colors.darkText}] leading-relaxed`}
                             >
                                 {parag}
                             </p>
@@ -82,7 +98,7 @@ const Blog = () => {
                         <div className="mt-3 space-y-5">
                             {/* Blog Section Title */}
                             <h2
-                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-5 text-center`}
+                                className={`text-xl sm:text-2xl md:text-4xl font-bold text-[${Theme.colors.text}] mb-5 `}
                             >
                                 {blog.blogData.title}
                             </h2>
@@ -100,7 +116,7 @@ const Blog = () => {
                                             {point.paragraphs.map((para, i) => (
                                                 <p
                                                     key={i}
-                                                    className={`text-sm sm:text-base md:text-xl text-[${Theme.colors.darkText}]`}
+                                                    className={`text-base sm:text-md md:text-lg text-[${Theme.colors.darkText}]`}
                                                 >
                                                     {para}
                                                 </p>
@@ -115,8 +131,8 @@ const Blog = () => {
                                 {blog.blogData.endingParagraphs.map((para, index) => (
                                     <p
                                         key={index}
-                                        className={`text-sm sm:text-base md:text-xl leading-relaxed text-[${Theme.colors.darkText}] ${index === 0
-                                            ? `font-semibold text-[${Theme.colors.text}] text-center`
+                                        className={`text-base sm:text-md md:text-lg leading-relaxed text-[${Theme.colors.darkText}] ${index === 0
+                                            ? `font-semibold text-[${Theme.colors.text}] `
                                             : 'font-normal'
                                             }`}
                                     >

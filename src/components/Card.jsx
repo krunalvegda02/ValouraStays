@@ -44,7 +44,7 @@ const Card = ({ image, title, location, amenities, description, price, link }) =
             <h3 className={`text-lg sm:text-xl md:text-2xl font-bold text-[${Theme.colors.text}]`}>
               {title}
             </h3>
-            <div className={`flex items-center text-[${Theme.colors.text}] text-xs sm:text-sm`}>
+            <div className={`flex items-center text-[${Theme.colors.darkText}] text-xs sm:text-sm`}>
               <MapPin size={14} className="mr-1 sm:mr-2" />
               <span>{location}</span>
             </div>
@@ -59,7 +59,7 @@ const Card = ({ image, title, location, amenities, description, price, link }) =
           </div>
 
           {/* Description */}
-          <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed mb-5 line-clamp-3">
+          <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg  leading-relaxed mb-5 line-clamp-3`}>
             {description}
           </p>
         </div>

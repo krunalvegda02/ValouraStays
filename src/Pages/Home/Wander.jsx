@@ -49,7 +49,7 @@ const Wander = () => {
         </div>
       </div>
 
-      <p className="flex mb-3 justify-center text-sm sm:text-base md:text-lg text-gray-600 text-center max-w-2xl mx-auto px-2">
+      <p className={`flex mb-3 justify-center text-base sm:text-lg md:text-xl text-[${Theme.colors.darkText}] text-center max-w-2xl mx-auto px-2`}>
         From serene property views to buzzing urban getaways, enjoy every side of your escape.
       </p>
 
@@ -60,9 +60,9 @@ const Wander = () => {
             <div
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-3 sm:pb-4 px-1 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap transition-colors duration-200 cursor-pointer ${activeTab === tab.id
-                  ? 'text-gray-900 border-b-2 border-gray-900 font-semibold'
-                  : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300'
+              className={`pb-3 sm:pb-4 px-1 font-medium text-base sm:text-lg md:text-xl whitespace-nowrap transition-colors duration-200 cursor-pointer ${activeTab === tab.id
+                ? 'text-gray-900 border-b-2 border-gray-900 font-semibold'
+                : 'text-gray-500 hover:text-gray-700 border-b-2 border-transparent hover:border-gray-300'
                 }`}
             >
               {tab.label}

@@ -184,9 +184,6 @@ const Footer = () => {
 
               {/* Social Links Below Contact */}
               <div className="mt-8 text-start sm:text-left">
-                <h3 className="text-base sm:text-lg font-semibold mb-4 font-serif">
-                  Follow Our Journey
-                </h3>
                 <div className="flex justify-start items-center gap-4 md:gap-6">
                   {socialLinks.map((item, i) => (
                     <a

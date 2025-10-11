@@ -81,7 +81,7 @@ const BlogComments = () => {
                                     Share Your Experience
                                 </h2>
                             </div>
-                            <p className="text-sm sm:text-base lg:text-base leading-relaxed" style={{ color: Theme.colors.darkText }}>
+                            <p className="text-base sm:text-md md:text-lg leading-relaxed" style={{ color: Theme.colors.darkText }}>
                                 Tell us about your memorable stay at Villa Izara and help other travelers discover this paradise
                             </p>
                         </div>
@@ -134,7 +134,7 @@ const BlogComments = () => {
                         <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight" style={{ color: Theme.colors.text }}>
                             Guest Experiences
                         </h2>
-                        <div className="px-3 py-1 text-sm sm:text-base font-semibold shadow-sm border rounded-2xl"
+                        <div className="px-3 py-1 text-base sm:text-md md:text-lgfont-semibold shadow-sm border rounded-2xl"
                             style={{ backgroundColor: Theme.colors.lightText, color: Theme.colors.text, borderColor: Theme.colors.darkText }}>
                             {comments.length} Stories
                         </div>
@@ -146,7 +146,7 @@ const BlogComments = () => {
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-2">
                                     <img src={comment.avatar} alt={comment.name} className="w-12 h-12 sm:w-14 sm:h-14 object-cover border-2 rounded-full" style={{ borderColor: Theme.colors.lightText }} />
                                     <div className="flex-1 min-w-0">
-                                        <h5 className="font-semibold text-sm sm:text-base lg:text-lg" style={{ color: Theme.colors.text }}>
+                                        <h5 className="font-semibold text-base sm:text-md md:text-lg" style={{ color: Theme.colors.text }}>
                                             {comment.name}
                                         </h5>
                                         <span className="text-xs sm:text-sm font-medium" style={{ color: Theme.colors.darkText }}>
@@ -154,7 +154,7 @@ const BlogComments = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <p className="text-sm sm:text-base lg:text-lg leading-relaxed" style={{ color: Theme.colors.darkText }}>
+                                <p className="text-base sm:text-md md:text-lg leading-relaxed" style={{ color: Theme.colors.darkText }}>
                                     {comment.comment}
                                 </p>
                             </div>
@@ -162,7 +162,7 @@ const BlogComments = () => {
                     </div>
 
                     <div className="text-center mt-6 sm:mt-8">
-                        <span className="text-sm sm:text-base font-semibold cursor-pointer" style={{ color: Theme.colors.darkText }}>
+                        <span className="text-base sm:text-md md:text-lg font-semibold cursor-pointer" style={{ color: Theme.colors.darkText }}>
                             Click To Load More...
                         </span>
                     </div>
