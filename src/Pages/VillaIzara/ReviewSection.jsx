@@ -64,29 +64,30 @@ const ReviewsSection = () => {
                 className="border-t border-b py-4"
                 style={{ borderColor: dividerColor }}
             >
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+                <div className="flex flex-row items-stretch ">
                     {reviewsData.map((review, index) => (
                         <div
                             key={index}
-                            className="relative px-4 sm:px-5 py-4 text-center flex flex-col items-start justify-center"
+                            className="flex-1 relative px-4 sm:px-auto py-1 text-center flex flex-col justify-between w-full "
                         >
-                            {/* Content */}
-                            <p
-                                style={{ color: Theme.colors.darkText }}
-                                className="font-semibold text-lg sm:text-xl mb-2 sm:mb-3"
-                            >
-                                {review.title}
-                            </p>
-
-                            <div className="flex justify-between w-full items-center">
+                            {/* Content - Title and Reviews on top for mobile */}
+                            <div className="text-left mb-3 md:mb-0 md:text-left">
                                 <p
                                     style={{ color: Theme.colors.darkText }}
-                                    className="font-semibold text-lg sm:text-xl"
+                                    className="font-semibold text-base sm:text-lg md:text-xl mb-2"
+                                >
+                                    {review.title}
+                                </p>
+                                <p
+                                    style={{ color: Theme.colors.darkText }}
+                                    className="font-semibold text-lg sm:text-xl md:text-2xl"
                                 >
                                     {review.reviews}
                                 </p>
+                            </div>
 
-                                {/* Icon Wrapper */}
+                            {/* Icon Wrapper - Positioned at bottom for mobile */}
+                            <div className="flex justify-left md:justify-end">
                                 <div
                                     className="flex justify-center items-center rounded-full p-2 sm:p-3"
                                     style={{
@@ -97,7 +98,7 @@ const ReviewsSection = () => {
                                     <img
                                         src={review.icon}
                                         alt={review.title}
-                                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-contain"
+                                        className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full object-contain"
                                         style={{
                                             filter:
                                                 'brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(85%)',
@@ -106,11 +107,11 @@ const ReviewsSection = () => {
                                 </div>
                             </div>
 
-                            {/* Vertical Divider (for desktop only) */}
+                            {/* Vertical Divider between items */}
                             {index !== reviewsData.length - 1 && (
                                 <div
-                                    className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 h-20 mt-5 w-[2px]"
-                                    style={{ backgroundColor: dividerColor }}
+                                    className="absolute top-1/2 right-0 transform -translate-y-1/2 h-26 w-[1px]"
+                                    style={{ backgroundColor: dividerColor + '60' }}
                                 ></div>
                             )}
                         </div>

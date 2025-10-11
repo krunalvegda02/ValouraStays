@@ -17,7 +17,7 @@ const Features = () => {
             {/* Header Section */}
             <div>
                 {/* Heading */}
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 tracking-tight"
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight"
                     style={{ color: Theme.colors.text }}>
                     Features & Amenities
                 </h2>

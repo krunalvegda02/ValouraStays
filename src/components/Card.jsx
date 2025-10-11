@@ -59,7 +59,7 @@ const Card = ({ image, title, location, amenities, description, price, link }) =
           </div>
 
           {/* Description */}
-          <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg  leading-relaxed mb-5 line-clamp-3`}>
+          <p className={`text-[${Theme.colors.darkText}] text-base sm:text-sm md:text-md  leading-relaxed mb-5 line-clamp-3`}>
             {description}
           </p>
         </div>

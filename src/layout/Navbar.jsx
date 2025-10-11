@@ -111,7 +111,7 @@ const Navbar = () => {
                     </div>
                     {showDestinations && (
                       <div className="absolute left-2/3 transform -translate-x-1/2 w-44 z-50 bg-[#f1e5d1] rounded shadow-lg">
-                        {["Udaipur", "Gujarat"].map((dest) => (
+                        {["Udaipur"].map((dest) => (
                           <Link key={dest} to={`/destinations/${dest.toLowerCase()}`} onClick={() => setShowDestinations(false)} className="block px-4 py-2 text-xl font-serif hover:scale-110 transition-all duration-200 mx-auto w-full" style={{ color: Theme.colors.text }}>
                             {dest}
                           </Link>
@@ -206,7 +206,7 @@ const Navbar = () => {
                   </div>
                   {showDestinations && (
                     <ul className="pl-6 mt-2 flex flex-col space-y-2">
-                      {['Udaipur', 'Gujarat'].map(dest => (
+                      {['Udaipur'].map(dest => (
                         <li key={dest}>
                           <Link to={`/destinations/${dest.toLowerCase()}`} onClick={() => { setIsMenuOpen(false); setShowDestinations(false); }} className="block py-1 text-[#403B21] hover:text-[#E2CAB3] transition-colors font-medium">{dest}</Link>
                         </li>

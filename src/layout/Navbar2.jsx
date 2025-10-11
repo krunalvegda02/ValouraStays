@@ -75,7 +75,7 @@ const Navbar2 = () => {
 
                       {showDestinations && (
                         <div className="absolute left-1/2 transform -translate-x-1/2 w-44 z-50 bg-[#F1E5D1] rounded shadow-lg destination-submenu">
-                          {["Udaipur", "Gujarat"].map((dest) => (
+                          {["Udaipur"].map((dest) => (
                             <Link
                               key={dest}
                               to={`/destinations/${dest.toLowerCase()}`}
@@ -170,7 +170,7 @@ const Navbar2 = () => {
                     </div>
                     {showDestinations && (
                       <ul className="pl-6 mt-2 flex flex-col space-y-2">
-                        {["Udaipur", "Gujarat"].map((dest) => (
+                        {["Udaipur"].map((dest) => (
                           <li key={dest}>
                             <Link
                               to={`/destinations/${dest.toLowerCase()}`}
