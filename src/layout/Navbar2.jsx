@@ -60,7 +60,7 @@ const Navbar2 = () => {
                     <div key={item.path} className="relative destination-dropdown">
                       <div
                         onClick={() => setShowDestinations(prev => !prev)}
-                        className={`px-6 py-3 cursor-pointer rounded-full font-medium flex items-center space-x-2 transition-all duration-300 text-[${Theme.colors.text}]`}
+                        className={`px-1 py-3 cursor-pointer rounded-full font-medium flex items-center space-x-2 transition-all duration-300 text-[${Theme.colors.text}]`}
                       >
                         <span className="font-serif text-xl">{item.label}</span>
                         <svg

@@ -23,7 +23,7 @@ const Features = () => {
                 </h2>
 
                 {/* Subtext */}
-                <p className="text-base sm:text-lg md:text-xl  leading-relaxed mb-3 "
+                <p className="text-base sm:text-md md:text-lg leading-relaxed mb-3 "
                     style={{ color: Theme.colors.darkText }}>
                     Experience luxury living with our carefully curated amenities designed for your comfort and convenience
                 </p>

@@ -65,16 +65,14 @@ const FullSection = () => {
                     <div className="space-y-8">
                         {/* Villa Info */}
                         <div>
-                            <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>
-                                Welcome to Villa Izara
-                            </h2>
-                            <h2 className={`text-[${Theme.colors.text}] text-2xl sm:text-3xl mb-3 font-bold`}>
+                            <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl mb-3`}>
+                                Welcome to Villa Izara,
                                 Enjoy Your Dream Vacation In Udaipur
                             </h2>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg md:text-xl mb-3`}>
+                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg mb-3`}>
                                 Udaipur's first-of-its-kind A-frame hanging villa, situated in the beautiful Aravalli ranges. Bringing you closer to nature, it's everything you'd want in your dream getaway.
                             </p>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg md:text-xl mb-3`}>
+                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg mb-3`}>
                                 Located just behind Labhgarh Resort in Village Sare (near Chirwa), Emerald Hills blends comfort, luxury, and fun.
                             </p>
                         </div>
@@ -82,7 +80,7 @@ const FullSection = () => {
                         {/* Details Section */}
                         <div className="mb-6">
                             <h2 className={`text-[${Theme.colors.text}] font-bold mb-1 text-2xl sm:text-3xl`}>Villa Izara</h2>
-                            <p className={`text-[${Theme.colors.darkText}] text-sm sm:text-base md:text-lg mb-3`}>Udaipur, Rajasthan 313202</p>
+                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg mb-3`}>Udaipur, Rajasthan 313202</p>
                             <div className="flex items-center">
                                 <Star
                                     filled={true}
@@ -118,7 +116,7 @@ const FullSection = () => {
                         {/* About Home */}
                         <div>
                             <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>About Home</h2>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-lg my-3`}>
+                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg my-3`}>
                                 This spacious 5BHK villa offers ample space for group stays, with a private pool, celebration zone, and well-furnished rooms overlooking mesmerizing mountain views.
                             </p>
                             <HouseRules />
@@ -135,10 +133,10 @@ const FullSection = () => {
                         {/* Location */}
                         <div className="mt-8 sm:mt-10">
                             <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>Location</h2>
-                            <div className="text-base sm:text-lg flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-3 sm:mt-4 leading-relaxed" style={{ color: Theme.colors.darkText }}>
+                            <div className="text-base sm:text-md md:text-lg flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-3 sm:mt-4 leading-relaxed" style={{ color: Theme.colors.darkText }}>
                                 <span className="text-lg sm:text-2xl font-semibold whitespace-nowrap">Villa Izara</span>
                                 <span className="hidden sm:inline-block w-[3px] h-10 rounded-full" style={{ backgroundColor: Theme.colors.lightText }} />
-                                <span className="max-w-full sm:max-w-[70%] text-sm sm:text-base leading-snug sm:leading-relaxed">
+                                <span className="max-w-full sm:max-w-[70%] text-base sm:text-md md:text-lgleading-snug sm:leading-relaxed">
                                     Behind Labhgarh Resort, village Sare, Chirwa, Udaipur, Rajasthan 313202
                                 </span>
                             </div>
@@ -189,9 +187,9 @@ const FullSection = () => {
                                     <span className={`text-2xl sm:text-3xl font-bold text-[${Theme.colors.text}]`}>
                                         ₹56,000
                                     </span>
-                                    <span className={`text-sm text-[${Theme.colors.darkText}]`}>/night</span>
+                                    <span className={`text-base sm:text-md md:text-lg text-[${Theme.colors.darkText}]`}>/night</span>
                                 </div>
-                                <p className={`text-xs sm:text-sm text-[${Theme.colors.darkText}] mt-1`}>Villa Izara • Premium Experience</p>
+                                <p className={`text-base sm:text-md md:text-lg text-[${Theme.colors.darkText}] mt-1`}>Villa Izara • Premium Experience</p>
                             </div>
                             <span className="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full font-medium">
                                 ⭐ 4.8/5
