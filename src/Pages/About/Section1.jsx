@@ -10,7 +10,7 @@ const Section1 = () => {
         {/* Left Section - 40% */}
         <div className="w-full lg:w-5/12 flex flex-col items-center lg:items-start px-4 sm:px-6 lg:px-0 ">
           <div
-            className="relative overflow-hidden rounded-xl mb-3 w-full max-w-[419px] sm:max-w-full"
+            className="relative overflow-hidden rounded-xl mb-1 w-full max-w-[419px] sm:max-w-full"
             style={{
               height: '370px',
               maxWidth: '100%',
@@ -28,7 +28,7 @@ const Section1 = () => {
           </div>
 
           <p
-            className={` text-xl text-[${Theme.colors.text}] pb-1 `}
+            className={` text-xl text-[${Theme.colors.text}]  `}
             style={{
               fontFamily: 'Oxygen, sans-serif',
               fontWeight: 700,
