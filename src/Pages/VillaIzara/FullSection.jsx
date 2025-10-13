@@ -69,10 +69,10 @@ const FullSection = () => {
                                 Welcome to Villa Izara,
                                 Enjoy Your Dream Vacation In Udaipur
                             </h2>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg mb-3`}>
+                            <p className={`text-[${Theme.colors.darkText}] text-sm sm:text-md md:text-lg mb-3`}>
                                 Udaipur's first-of-its-kind A-frame hanging villa, situated in the beautiful Aravalli ranges. Bringing you closer to nature, it's everything you'd want in your dream getaway.
                             </p>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg mb-3`}>
+                            <p className={`text-[${Theme.colors.darkText}] text-sm sm:text-md md:text-lg mb-3`}>
                                 Located just behind Labhgarh Resort in Village Sare (near Chirwa), Emerald Hills blends comfort, luxury, and fun.
                             </p>
                         </div>
@@ -80,7 +80,7 @@ const FullSection = () => {
                         {/* Details Section */}
                         <div className="mb-6">
                             <h2 className={`text-[${Theme.colors.text}] font-bold mb-1 text-2xl sm:text-3xl`}>Villa Izara</h2>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg mb-3`}>Udaipur, Rajasthan 313202</p>
+                            <p className={`text-[${Theme.colors.darkText}] text-sm sm:text-md md:text-lg mb-3`}>Udaipur, Rajasthan 313202</p>
                             <div className="flex items-center">
                                 <Star
                                     filled={true}
@@ -105,7 +105,7 @@ const FullSection = () => {
                                                     "invert(87%) sepia(19%) saturate(467%) hue-rotate(1deg) brightness(95%) contrast(90%)",
                                             }}
                                         />
-                                        <span style={{ color: Theme.colors.darkText }} className="text-sm sm:text-base md:text-lg font-semibold">
+                                        <span style={{ color: Theme.colors.darkText }} className="text-sm sm:text-sm md:text-lg font-semibold">
                                             {item.title}
                                         </span>
                                     </div>
@@ -116,7 +116,7 @@ const FullSection = () => {
                         {/* About Home */}
                         <div>
                             <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>About Home</h2>
-                            <p className={`text-[${Theme.colors.darkText}] text-base sm:text-md md:text-lg my-3`}>
+                            <p className={`text-[${Theme.colors.darkText}] text-sm sm:text-md md:text-lg my-3`}>
                                 This spacious 5BHK villa offers ample space for group stays, with a private pool, celebration zone, and well-furnished rooms overlooking mesmerizing mountain views.
                             </p>
                             <HouseRules />
@@ -133,10 +133,10 @@ const FullSection = () => {
                         {/* Location */}
                         <div className="mt-8 sm:mt-10">
                             <h2 className={`text-[${Theme.colors.text}] font-bold text-2xl sm:text-3xl`}>Location</h2>
-                            <div className="text-base sm:text-md md:text-lg flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-3 sm:mt-4 leading-relaxed" style={{ color: Theme.colors.darkText }}>
+                            <div className="text-sm sm:text-md md:text-lg flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 mt-3 sm:mt-4 leading-relaxed" style={{ color: Theme.colors.darkText }}>
                                 <span className="text-lg sm:text-2xl font-semibold whitespace-nowrap">Villa Izara</span>
                                 <span className="hidden sm:inline-block w-[3px] h-10 rounded-full" style={{ backgroundColor: Theme.colors.lightText }} />
-                                <span className="max-w-full sm:max-w-[70%] text-base sm:text-md md:text-lgleading-snug sm:leading-relaxed">
+                                <span className="max-w-full sm:max-w-[70%] text-sm sm:text-md md:text-lgleading-snug sm:leading-relaxed">
                                     Behind Labhgarh Resort, village Sare, Chirwa, Udaipur, Rajasthan 313202
                                 </span>
                             </div>
@@ -183,13 +183,13 @@ const FullSection = () => {
                     <div className="border border-gray-200 p-4 sm:p-6 rounded-2xl bg-white shadow-lg lg:sticky lg:top-4">
                         <div className="flex justify-between items-start mb-4">
                             <div>
-                                <div className="flex items-baseline gap-2">
+                                <div className="flex items-smline gap-2">
                                     <span className={`text-2xl sm:text-3xl font-bold text-[${Theme.colors.text}]`}>
                                         ₹56,000
                                     </span>
-                                    <span className={`text-base sm:text-md md:text-lg text-[${Theme.colors.darkText}]`}>/night</span>
+                                    <span className={`text-sm sm:text-md md:text-lg text-[${Theme.colors.darkText}]`}>/night</span>
                                 </div>
-                                <p className={`text-base sm:text-md md:text-lg text-[${Theme.colors.darkText}] mt-1`}>Villa Izara • Premium Experience</p>
+                                <p className={`text-sm sm:text-md md:text-lg text-[${Theme.colors.darkText}] mt-1`}>Villa Izara • Premium Experience</p>
                             </div>
                             <span className="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full font-medium">
                                 ⭐ 4.8/5
@@ -228,7 +228,7 @@ const FullSection = () => {
                                 </Button>
 
                                 <Button type="submit" icon={false}>
-                                    <span className="text-sm sm:text-base">Book Now</span>
+                                    <span className="text-sm sm:text-sm">Book Now</span>
                                 </Button>
                             </div>
                         </form>

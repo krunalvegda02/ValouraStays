@@ -15,7 +15,7 @@ const OffersEmail = () => {
 
                 {/* Description */}
                 <p
-                    className="mb-6 text-base sm:text-md md:text-lg max-w-5xl leading-relaxed"
+                    className="mb-6 text-sm sm:text-2xl  max-w-5xl leading-relaxed"
                     style={{ color: Theme.colors.darkText }}
                 >
                     With the subscription, enjoy your favourite Hotels without having to think about it
