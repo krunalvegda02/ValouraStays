@@ -76,7 +76,7 @@ const Wander = () => {
       {/* Photo Cards */}
       <div className="space-y-6 sm:space-y-8">
         {/* First Row */}
-        <div className="flex flex-col items-center sm:flex-row flex-wrap gap-5 sm:gap-6 justify-center ">
+        <div className="flex flex-col items-center sm:flex-row  gap-5 sm:gap-6 justify-center ">
           {photoCards.slice(0, 3).map((card) => (
             <div
               key={card.id}
@@ -102,11 +102,11 @@ const Wander = () => {
         </div>
 
         {/* Second Row */}
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center mx-auto w-full items-center">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 justify-center mx-auto w-full items-center ">
           {photoCards.slice(3, 5).map((card) => (
             <div
               key={card.id}
-              className="group cursor-pointer w-full sm:w-auto max-w-sm sm:max-w-md"
+              className=" group cursor-pointer w-full sm:w-auto max-w-sm sm:max-w-md"
               onClick={() => card.link && navigate(card.link)}
             >
               <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">

@@ -109,7 +109,7 @@ const ContactForm = () => {
                                     {item.icon}
                                 </div>
                                 <div className="flex-1">
-                                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 tracking-wide" style={{ color: Theme.colors.text }}>
+                                    <h3 className="text-sm sm:text-base lg:text-lg font-semibold mb-2 tracking-wide" style={{ color: Theme.colors.text }}>
                                         {item.title}
                                     </h3>
                                     <p className="text-sm sm:text-base lg:text-lg leading-relaxed font-medium" style={{ color: Theme.colors.darkText }}>
