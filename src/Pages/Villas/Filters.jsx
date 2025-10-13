@@ -15,9 +15,9 @@ const Filters = () => {
             amenities: "AC Suite / Dining / Kitchen",
             description:
                 `Stay at Villa Izara, where luxury meets nature in the 
-heart of the Aravalli ranges. With spacious interiors, a 
-private pool, and world-class amenities, every moment 
-invites you to relax, celebrate, and make unforgettable 
+    heart of the Aravalli ranges. With spacious interiors, a 
+    private pool, and world-class amenities, every moment 
+    invites you to relax, celebrate, and make unforgettable 
 memories.`,
             price: "₹ 50,000",
             link: "/villasIzara"
@@ -193,7 +193,7 @@ memories.`,
                                                         className='w-4 h-4 rounded focus:ring'
                                                         style={{ accentColor: Theme.colors.text }}
                                                     />
-                                                    <span className='ml-2 font-medium' style={{ color: Theme.colors.darkText }}>
+                                                    <span className='ml-2  text-base sm:text-lg md:text-xl' style={{ color: Theme.colors.darkText }}>
                                                         {key === 'acSuite' ? 'AC Suite' : key === 'withoutAc' ? 'Without AC Suite' : 'Add Breakfast'}
                                                     </span>
                                                 </label>
