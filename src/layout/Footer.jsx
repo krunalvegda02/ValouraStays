@@ -175,7 +175,7 @@ const Footer = () => {
                         {item.text}
                       </a>
                     ) : (
-                      <span className="font-semibold">{item.text}</span>
+                      <span className="font-semibold text-[#403B21]">{item.text}</span>
                     )}
                   </div>
                 ))}
