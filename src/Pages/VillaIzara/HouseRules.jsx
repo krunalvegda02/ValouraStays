@@ -40,7 +40,7 @@ const HouseRules = () => {
                         {/* Rule Text */}
                         <p
                             style={{ color: Theme.colors.darkText }}
-                            className="text-sm sm:text-lg md:text-xl font-medium"
+                            className="text-base sm:text-lg md:text-xl font-medium"
                         >
                             {rule.title}
                         </p>

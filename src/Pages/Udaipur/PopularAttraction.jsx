@@ -47,7 +47,7 @@ const PopularAttraction = () => {
 
         {/* Description */}
         <p
-          className={`text-[${Theme.colors.darkText}] mt-6 sm:mt-8 text-sm sm:text-2xl md:text-3xl  text-center leading-relaxed`}
+          className={`text-[${Theme.colors.darkText}] mt-6 sm:mt-8 text-base sm:text-lg md:text-xl   text-center leading-relaxed`}
         >
           Our villas are made for comfort and connection — big families, close friends, or even just a peaceful retreat for yourself.
           Plus, you're right in the middle of it all. Want to see the famous lakes Fatehsagar, Pichola, Badi, and Udaisagar are right there.

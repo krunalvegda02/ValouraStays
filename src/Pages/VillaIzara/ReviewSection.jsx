@@ -52,7 +52,7 @@ const ReviewsSection = () => {
                     </div>
                     <div
                         style={{ color: Theme.colors.darkText }}
-                        className="font-medium text-sm sm:text-lg md:text-xl"
+                        className="font-medium text-base sm:text-lg md:text-xl"
                     >
                         5 | (232 Reviews)
                     </div>
@@ -74,7 +74,7 @@ const ReviewsSection = () => {
                             <div className="text-left mb-3 md:mb-0 md:text-left">
                                 <p
                                     style={{ color: Theme.colors.darkText }}
-                                    className="font-semibold text-sm sm:text-lg md:text-xl mb-2"
+                                    className="font-semibold text-base sm:text-lg md:text-xl mb-2"
                                 >
                                     {review.title}
                                 </p>

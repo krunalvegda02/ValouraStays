@@ -76,7 +76,7 @@ const Wander = () => {
       {/* Photo Cards */}
       <div className="space-y-6 sm:space-y-8">
         {/* First Row */}
-        <div className="flex flex-col items-center sm:flex-row  gap-5 sm:gap-6 justify-center ">
+        <div className="flex flex-col items-center sm:flex-row flex-wrap gap-5 sm:gap-6 justify-center ">
           {photoCards.slice(0, 3).map((card) => (
             <div
               key={card.id}

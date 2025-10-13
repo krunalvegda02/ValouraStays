@@ -18,16 +18,25 @@ const Navbar2 = () => {
   // Close dropdown or mobile menu on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (isMenuOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(e.target)) {
+      if (
+        isMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(e.target)
+      ) {
         setIsMenuOpen(false);
         setShowDestinations(false);
       }
-      if (!e.target.closest(".destination-dropdown")) {
+      // Updated for mobile dropdown detection
+      if (
+        !e.target.closest(".destination-dropdown") &&
+        !e.target.closest(".mobile-destination-dropdown")
+      ) {
         setShowDestinations(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    return () =>
+      document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
 
   const navItems = [
@@ -45,8 +54,7 @@ const Navbar2 = () => {
       <div className={`w-full fixed top-0 z-50 bg-[${Theme.colors.background}] shadow-lg`}>
         <nav className="section-container">
           <div className="flex justify-between items-center py-3">
-
-            {/* Logo - Reduced size for medium screens */}
+            {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src={logo2}
@@ -55,7 +63,7 @@ const Navbar2 = () => {
               />
             </Link>
 
-            {/* Desktop Nav - Optimized spacing */}
+            {/* Desktop Nav */}
             <div className="hidden lg:flex items-center space-x-0 xl:space-x-1 mx-4 flex-1 justify-center">
               {navItems.map((item) => {
                 if (item.label === "Destinations") {
@@ -69,9 +77,8 @@ const Navbar2 = () => {
                           {item.label}
                         </span>
                         <svg
-                          className={`w-3 h-3 transition-transform ${
-                            showDestinations ? "rotate-180" : "rotate-0"
-                          }`}
+                          className={`w-3 h-3 transition-transform ${showDestinations ? "rotate-180" : "rotate-0"
+                            }`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -108,11 +115,10 @@ const Navbar2 = () => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`px-2 lg:px-3 xl:px-4 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base xl:text-lg ${
-                      activePath === item.path
-                        ? "bg-[#E2CAB3] shadow-sm text-[#403B21]"
-                        : "text-gray-600"
-                    }`}
+                    className={`px-2 lg:px-3 xl:px-4 py-2 rounded-full font-medium transition-all duration-300 text-sm lg:text-base xl:text-lg ${activePath === item.path
+                      ? "bg-[#E2CAB3] shadow-sm text-[#403B21]"
+                      : "text-gray-600"
+                      }`}
                   >
                     <span className="flex items-center font-serif whitespace-nowrap">{item.label}</span>
                   </Link>
@@ -120,7 +126,7 @@ const Navbar2 = () => {
               })}
             </div>
 
-            {/* CTA + Mobile toggle - Optimized spacing */}
+            {/* CTA + Mobile toggle */}
             <div className="flex items-center space-x-2 lg:space-x-3 xl:space-x-4 z-50 flex-shrink-0">
               <Button
                 onClick={() => navigate("/villas")}
@@ -133,26 +139,23 @@ const Navbar2 = () => {
                 </span>
               </Button>
 
-              {/* Mobile Menu Button - Show on medium screens */}
+              {/* Mobile Menu Button */}
               <div
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden p-2 rounded-lg bg-[${Theme.colors.background}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
+                className={`lg:hidden p-2 rounded-lg bg-[${Theme.colors.lightText}] border border-white/40 hover:bg-[${Theme.colors.background}]/80 transition-all`}
               >
                 <div className="flex flex-col justify-center space-y-1.5">
                   <span
-                    className={`block h-0.5 bg-current transition-all ${
-                      isMenuOpen ? "rotate-45 translate-y-1.5 w-5" : "w-5"
-                    }`}
+                    className={`block h-0.5 bg-current transition-all ${isMenuOpen ? "rotate-45 translate-y-1.5 w-5" : "w-5"
+                      }`}
                   ></span>
                   <span
-                    className={`block h-0.5 bg-current transition-all ${
-                      isMenuOpen ? "opacity-0" : "w-5"
-                    }`}
+                    className={`block h-0.5 bg-current transition-all ${isMenuOpen ? "opacity-0" : "w-5"
+                      }`}
                   ></span>
                   <span
-                    className={`block h-0.5 bg-current transition-all ${
-                      isMenuOpen ? "-rotate-45 -translate-y-1.5 w-5" : "w-5"
-                    }`}
+                    className={`block h-0.5 bg-current transition-all ${isMenuOpen ? "-rotate-45 -translate-y-1.5 w-5" : "w-5"
+                      }`}
                   ></span>
                 </div>
               </div>
@@ -163,9 +166,8 @@ const Navbar2 = () => {
         {/* Mobile Right Drawer */}
         <div
           ref={mobileMenuRef}
-          className={`fixed top-0 right-0 h-full w-72 bg-[#F1E5D1] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 h-full w-72 bg-[#F1E5D1] shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           {/* Header */}
           <div className="flex justify-between items-center px-6 py-4 border-b border-[#403B21]/20">
@@ -185,15 +187,13 @@ const Navbar2 = () => {
                   <>
                     <div
                       onClick={() => setShowDestinations((prev) => !prev)}
-                      className={`flex justify-between items-center w-full py-2 px-3 rounded-lg cursor-pointer transition-all ${
-                        showDestinations ? "bg-[#E2CAB3] font-semibold" : "hover:bg-[#E2CAB3]/50"
-                      }`}
+                      className={`flex justify-between items-center w-full py-2 px-3 rounded-lg cursor-pointer transition-all ${showDestinations ? "bg-[#E2CAB3] font-semibold" : "hover:bg-[#E2CAB3]/50"
+                        }`}
                     >
                       <span>{item.label}</span>
                       <svg
-                        className={`w-4 h-4 transition-transform ${
-                          showDestinations ? "rotate-180" : ""
-                        }`}
+                        className={`w-4 h-4 transition-transform ${showDestinations ? "rotate-180" : ""
+                          }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -202,22 +202,21 @@ const Navbar2 = () => {
                       </svg>
                     </div>
                     {showDestinations && (
-                      <ul className="pl-6 mt-2 flex flex-col space-y-2">
-                        {["Udaipur"].map((dest) => (
-                          <li key={dest}>
-                            <Link
-                              to={`/destinations/${dest.toLowerCase()}`}
-                              onClick={() => {
-                                setIsMenuOpen(false);
-                                setShowDestinations(false);
-                              }}
-                              className="block py-1 text-[#403B21] hover:text-[#E2CAB3] transition-colors font-medium"
-                            >
-                              {dest}
-                            </Link>
-                          </li>
+                      <div className="pl-6 mt-2 flex flex-col space-y-2 mobile-destination-dropdown">
+                        {["udaipur"].map((dest) => (
+                          <Link
+                            key={dest}
+                            to={`/destinations/${dest.toLowerCase()}`}
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setShowDestinations(false);
+                            }}
+                            className="block py-1 text-[#403B21] hover:text-[#E2CAB3] transition-colors font-medium"
+                          >
+                            {dest}
+                          </Link>
                         ))}
-                      </ul>
+                      </div>
                     )}
                   </>
                 ) : (
@@ -227,11 +226,10 @@ const Navbar2 = () => {
                       setIsMenuOpen(false);
                       setShowDestinations(false);
                     }}
-                    className={`block py-2 px-3 rounded-lg transition-all ${
-                      location.pathname === item.path
-                        ? "bg-[#E2CAB3] font-semibold"
-                        : "hover:bg-[#E2CAB3]/50"
-                    }`}
+                    className={`block py-2 px-3 rounded-lg transition-all ${location.pathname === item.path
+                      ? "bg-[#E2CAB3] font-semibold"
+                      : "hover:bg-[#E2CAB3]/50"
+                      }`}
                   >
                     {item.label}
                   </Link>

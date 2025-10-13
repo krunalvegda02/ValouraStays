@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <div className="relative w-full max-w-[100vw] overflow-x-hidden">
       {/* Desktop Navbar */}
-      <div className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-[${Theme.colors.background}] backdrop-blur-sm shadow-lg sm:py-2` : 'bg-transparent pt-2'}`}>
+      <div className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? `bg-[${Theme.colors.background}] backdrop-blur-sm shadow-lg sm:py-2` : 'bg-transparent '}`}>
         {/* Top contact bar */}
         <div
           className={`transition-all duration-300 overflow-hidden ${isScrolled ? 'max-h-0 opacity-0' : 'max-h-28 sm:max-h-20 opacity-100'
