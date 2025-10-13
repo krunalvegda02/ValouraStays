@@ -175,7 +175,7 @@ const Footer = () => {
                         {item.text}
                       </a>
                     ) : (
-                      <span>{item.text}</span>
+                      <span className="font-semibold">{item.text}</span>
                     )}
                   </div>
                 ))}
