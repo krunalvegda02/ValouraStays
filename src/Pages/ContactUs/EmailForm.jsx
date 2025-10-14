@@ -4,9 +4,27 @@ import Button from '../../components/Button';
 import Theme from '../../Constants/Theme';
 import { useNavigate } from 'react-router-dom';
 import HeaderTitle from '../../components/HeaderTitle';
+import FacebookIcon from "../../assets/social/facebook.svg?react";
+import PinterestIcon from "../../assets/social/pinterest.svg?react";
+import InstagramIcon from "../../assets/social/Instagram.svg?react";
 
 const ContactForm = () => {
     const navigate = useNavigate();
+
+    const socialLinks = [
+        {
+            href: "https://www.facebook.com/people/Veloura-Stays/61581131180973/",
+            icon: <FacebookIcon />,
+        },
+        {
+            href: "https://www.pinterest.com/velourastays/",
+            icon: <PinterestIcon />,
+        },
+        {
+            href: "https://www.instagram.com/velourastays/",
+            icon: <InstagramIcon />,
+        },
+    ];
 
     const [formData, setFormData] = useState({
         firstName: '',
@@ -73,13 +91,15 @@ const ContactForm = () => {
 
     return (
         <div className="section-container px-4 sm:px-6 lg:px-20">
-            <HeaderTitle title="Get In Touch" />
 
             {/* Flex container for equal height sections */}
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 my-8 mb-16">
 
-                {/* Left Section - Contact Details */}
-                <div className="lg:w-2/5 flex flex-col bg-[#F7F5F1] p-6 sm:p-8 lg:p-12 shadow-2xl rounded-2xl lg:h-[600px] border border-[#403B21]/10">
+                {/* Left Section - Contact Details - 40% */}
+                <div className="lg:w-2/5 flex flex-col bg-[#F7F5F1] p-6 sm:p-8 lg:p-12 shadow-2xl rounded-2xl border border-[#403B21]/10 min-h-[600px]">
+
+                    <HeaderTitle title="Get In Touch" />
+
                     <div className="flex-1 flex flex-col justify-center space-y-6 lg:space-y-8">
                         {[
                             {
@@ -105,6 +125,7 @@ const ContactForm = () => {
                             }
                         ].map((item, idx) => (
                             <div key={idx} className="flex items-start space-x-4 group hover:transform hover:translate-x-1 transition-all duration-300">
+
                                 <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg border border-[#403B21]/10 group-hover:shadow-xl transition-all duration-300">
                                     {item.icon}
                                 </div>
@@ -119,10 +140,32 @@ const ContactForm = () => {
                             </div>
                         ))}
                     </div>
+
+                    <div className="mt-8">
+                        <div className="flex justify-center items-center gap-4 md:gap-6">
+                            {socialLinks.map((item, i) => (
+                                <a
+                                    key={i}
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full hover:scale-110 transition-transform duration-300"
+                                    style={{
+                                        marginLeft: i === 0 ? 0 : "-2px",
+                                    }}
+                                >
+                                    {React.cloneElement(item.icon, {
+                                        className:
+                                            "w-full h-full object-contain text-[#403B21]",
+                                    })}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
-                {/* Right Section - Contact Form */}
-                <div className="lg:w-3/5 bg-[#F7F5F1] shadow-2xl rounded-2xl p-6 sm:p-8 lg:p-12 lg:h-[600px] flex flex-col border border-[#403B21]/10">
+                {/* Right Section - Contact Form - 60% */}
+                <div className="lg:w-3/5 flex flex-col bg-[#F7F5F1] shadow-2xl rounded-2xl p-6 sm:p-8 lg:p-12 border border-[#403B21]/10 min-h-[600px]">
                     <div className="flex-1 flex flex-col justify-center">
                         <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
