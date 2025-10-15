@@ -141,11 +141,11 @@ const Rooms = () => {
                 <div className="lg:w-1/2 p-4 sm:p-6 lg:p-8 flex flex-col justify-between">
                   <div>
                     <h2
-                      className={`text-base sm:text-lg lg:text-3xl font-bold text-[${Theme.colors.text}] mb-3 sm:mb-4 font-serif leading-snug`}
+                      className={`text-base sm:text-lg lg:text-2xl font-bold text-[${Theme.colors.text}] mb-3 sm:mb-4 font-serif leading-snug`}
                     >
                       {room.title}
                     </h2>
-                    <p className="text-[#4C4C4C] text-sm sm:text-sm lg:text-2xl leading-relaxed mb-4 sm:mb-6 line-clamp-5">
+                    <p className="text-[#4C4C4C] text-sm sm:text-sm lg:text-xl leading-relaxed mb-4 sm:mb-6 line-clamp-5">
                       {room.description}
                     </p>
                   </div>
@@ -155,7 +155,7 @@ const Rooms = () => {
                       className={`text-base sm:text-xl lg:text-2xl font-sans text-[${Theme.colors.text}]`}
                     >
                       {room.price} /{" "}
-                      <span className="text-xs sm:text-sm font-normal text-gray-500">
+                      <span className="text-xs sm:text-sm font-normal text-[#4C4C4C]">
                         Per Night
                       </span>
                     </p>

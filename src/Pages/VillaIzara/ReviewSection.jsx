@@ -59,22 +59,21 @@ const ReviewsSection = () => {
                 </div>
             </div>
 
-            {/* Main Container */}
             <div
                 className="border-t border-b py-4"
                 style={{ borderColor: dividerColor }}
             >
-                <div className="flex flex-row items-stretch ">
+                <div className="flex md:flex-row items-stretch">
                     {reviewsData.map((review, index) => (
                         <div
                             key={index}
-                            className="flex-1 relative px-4 sm:px-auto py-1 text-center flex flex-col justify-between w-full "
+                            className="flex-1 relative px-4 py-3 text-center md:text-left flex flex-col md:flex-row md:items-center md:justify-between"
                         >
-                            {/* Content - Title and Reviews on top for mobile */}
-                            <div className="text-left mb-3 md:mb-0 md:text-left">
+                            {/* Text Content */}
+                            <div className="mb-3 md:mb-0">
                                 <p
                                     style={{ color: Theme.colors.darkText }}
-                                    className="font-semibold text-base sm:text-lg md:text-xl mb-2"
+                                    className="font-semibold text-base sm:text-lg md:text-xl mb-1"
                                 >
                                     {review.title}
                                 </p>
@@ -86,10 +85,10 @@ const ReviewsSection = () => {
                                 </p>
                             </div>
 
-                            {/* Icon Wrapper - Positioned at bottom for mobile */}
-                            <div className="flex justify-left md:justify-end">
+                            {/* Icon Wrapper */}
+                            <div className="flex justify-center md:justify-end mt-2 md:mt-0">
                                 <div
-                                    className="flex justify-center items-center rounded-full p-2 sm:p-3"
+                                    className="flex justify-center items-center rounded-full p-2 sm:p-1"
                                     style={{
                                         border: `2px solid ${dividerColor}`,
                                         color: dividerColor,
@@ -100,17 +99,16 @@ const ReviewsSection = () => {
                                         alt={review.title}
                                         className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full object-contain"
                                         style={{
-                                            filter:
-                                                'brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(85%)',
+                                            filter: 'brightness(0) saturate(100%) invert(45%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(85%)',
                                         }}
                                     />
                                 </div>
                             </div>
 
-                            {/* Vertical Divider between items */}
+                            {/* Vertical Divider */}
                             {index !== reviewsData.length - 1 && (
                                 <div
-                                    className="absolute top-1/2 right-0 transform -translate-y-1/2 h-26 w-[1px]"
+                                    className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 h-20 w-[1px]"
                                     style={{ backgroundColor: dividerColor + '60' }}
                                 ></div>
                             )}

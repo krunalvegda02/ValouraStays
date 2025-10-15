@@ -45,7 +45,7 @@ const Section3 = () => {
           <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-4  `}>
             The Origin of Veloura Era
           </h2>
-          <p className="text-base sm:text-md md:text-lg  text-gray-600 leading-relaxed">
+          <p className={`text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed`}>
             Veloura Stays was inspired by a simple idea that travel should be effortless, immersive, and luxurious without being
             pretentious. We felt that too many accommodations either had no soul or the comfort was lacking. Our dream was to
             create a place that combines the comfort of home with curated sophistication, designs where guests feel cared for,
@@ -58,7 +58,7 @@ const Section3 = () => {
           <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-4 `}>
             Why Our Retreats Stand Out?
           </h2>
-          <p className="text-base sm:text-md md:text-lg  text-gray-600 leading-relaxed">
+          <p className={`text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed`}>
             What differentiates us is our quiet attention to detail. We take special care in delivering interiors that balance elegance
             and comfort, and our amenities are all chosen to provide convenience for you upon arrival. Every detail conveys thoughtful
             luxury. And here, your stay is not a functional experience at all, but a multi-sensory experience. Imagine plush beds, soft
