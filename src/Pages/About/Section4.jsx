@@ -82,7 +82,7 @@ const Section4 = () => {
             <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-1 `}>
               Our Vision
             </h2>
-            <p className="text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed">
+            <p className={`text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed`}>
               To build a collection of stays around India, where travelers feel at home but enjoy luxurious comfort. A stay where every
               guest leaves with memories that last a lifetime and experiences that live on.
             </p>
@@ -92,7 +92,7 @@ const Section4 = () => {
             <h2 className={`text-3xl sm:text-4xl md:text-4xl font-serif text-[${Theme.colors.text}] mb-1`}>
               Our Story Ahead
             </h2>
-            <p className="text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed">
+            <p className={`text-base sm:text-md md:text-lg  text-[${Theme.colors.darkText}] leading-relaxed`}>
               Veloura Stays is on a mission to change the boutique hospitality space. Every property will have the same DNA, whether
               you are visiting a tranquil retreat or a stunning hilltop property: elegance, comfort, and a personal touch. We hope to create
               a trusted option for the refined traveler who values warmth and sophistication.
